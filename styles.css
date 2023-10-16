@@ -1,0 +1,482 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: sans-serif;
+  line-height: 1.333;
+}
+
+@media(print) {
+  html {
+    font-size: 8pt;
+  }
+}
+
+body {
+  margin: 1rem;
+  background-color: #036;
+  background-image: linear-gradient(180deg, #036, #306, #603);
+  background-size: cover;
+  color: #fff;
+  font-size: 0.9375rem;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 1rem 0;
+}
+
+h1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+h1 strong {
+  flex: 1 1 auto;
+}
+
+h1 a {
+  font-size: 0.875rem;
+  font-weight: normal;
+  color: #fff;
+}
+
+h1 select {
+  padding: 0.35rem 0.5rem;
+  min-height: 2rem;
+}
+
+h1 label {
+  font-size: 0.875rem;
+  font-weight: normal;
+  color: #fff;
+}
+
+h1 label input {
+  vertical-align: middle;
+}
+
+h2 {
+  display: none;
+  flex: 1 1 100%;
+}
+
+a {}
+
+section,
+ol {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 1rem;
+}
+
+ol {
+  display: contents;
+  flex: 1 1 100%;
+}
+
+li {
+  flex: 0 1 calc(100% / 4 - 1rem / 4 * 3);
+  max-width: 30rem;
+  min-width: 19rem;
+  position: relative;
+  margin: 0;
+  padding: 1rem;
+  background-color: #fff;
+  color: #036;
+  min-height: 8rem;
+}
+
+li:empty {
+  display: none;
+}
+
+li:empty:after {
+  display: block;
+  content: "N/A";
+}
+
+li[data-hidden] {
+  display: none !important;
+}
+
+li[data-unavailable] {
+  opacity: 0.5;
+}
+
+li[data-unwanted] {
+  background-image: linear-gradient(45deg, #fff 0%, #fff 45%, #f00 45%, #f00 55%, #fff 55%);
+}
+
+li[data-filtered="false"] {
+  display: none;
+}
+
+/* rating */
+
+li:before {
+  content: "";
+  position: absolute;
+  left: -0.5rem;
+  top: -0.5rem;
+  z-index: 30;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path fill="rgb(255,204,0)" d="M381.2 150.3L524.9 171.5C536.8 173.2 546.8 181.6 550.6 193.1C554.4 204.7 551.3 217.3 542.7 225.9L438.5 328.1L463.1 474.7C465.1 486.7 460.2 498.9 450.2 506C440.3 513.1 427.2 514 416.5 508.3L288.1 439.8L159.8 508.3C149 514 135.9 513.1 126 506C116.1 498.9 111.1 486.7 113.2 474.7L137.8 328.1L33.58 225.9C24.97 217.3 21.91 204.7 25.69 193.1C29.46 181.6 39.43 173.2 51.42 171.5L195 150.3L259.4 17.97C264.7 6.954 275.9-.0391 288.1-.0391C300.4-.0391 311.6 6.954 316.9 17.97L381.2 150.3z"/></svg>');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: #036;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 3.3rem;
+}
+
+ol[data-tier="s"] li:before {
+  content: "5";
+}
+
+ol[data-tier="a"] li:before {
+  content: "4";
+}
+
+ol[data-tier="b"] li:before {
+  content: "3";
+}
+
+ol[data-tier="c"] li:before {
+  content: "2";
+}
+
+ol[data-tier="d"] li:before {
+  content: "1";
+}
+
+ol[data-tier="f"] li:before {
+  display: none;
+}
+
+/* carousel */
+
+figure {
+  background-color: #000;
+  position: relative;
+  margin: 0 0 1rem;
+  padding: 0;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+}
+
+figure img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform ease-in-out 500ms;
+}
+
+figure[data-view="top"] img.top {
+  transform: translate3d(0%, 0, 0);
+}
+figure[data-view="top"] img.side {
+  transform: translate3d(100%, 0, 0);
+}
+figure[data-view="top"] img.bottom {
+  transform: translate3d(200%, 0, 0);
+}
+
+figure[data-view="side"] img.top {
+  transform: translate3d(-100%, 0, 0);
+}
+figure[data-view="side"] img.side {
+  transform: translate3d(0%, 0, 0);
+}
+figure[data-view="side"] img.bottom {
+  transform: translate3d(100%, 0, 0);
+}
+
+figure[data-view="bottom"] img.top {
+  transform: translate3d(-200%, 0, 0);
+}
+figure[data-view="bottom"] img.side {
+  transform: translate3d(-100%, 0, 0);
+}
+figure[data-view="bottom"] img.bottom {
+  transform: translate3d(0%, 0, 0);
+}
+
+figure[data-view="displayed"] img.displayed {
+  transform: translate3d(0%, 0, 0);
+}
+figure[data-view="displayed"] img.kitting {
+  transform: translate3d(100%, 0, 0);
+}
+
+figure[data-view="kitting"] img.displayed {
+  transform: translate3d(-100%, 0, 0);
+}
+figure[data-view="kitting"] img.kitting {
+  transform: translate3d(0%, 0, 0);
+}
+
+figure figcaption {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.667rem;
+  z-index: 20;
+  left: 1rem;
+  right: 1rem;
+  bottom: 1rem;
+}
+
+figure button {
+  border-radius: 50%;
+  border: solid 1px #fecc00;
+  background-color: transparent;
+  width: 0.667rem;
+  height: 0.667rem;
+  padding: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-align: left;
+  text-indent: 150%;
+  cursor: pointer;
+}
+
+figure[data-view="top"] button.top,
+figure[data-view="side"] button.side,
+figure[data-view="bottom"] button.bottom,
+figure[data-view="displayed"] button.displayed,
+figure[data-view="kitting"] button.kitting {
+  background-color: #fecc00;
+}
+
+dl {
+  align-self: start;
+  display: flex;
+  gap: 0.25rem 1rem;
+  flex-wrap: wrap;
+  margin: 0;
+}
+
+dt {
+  flex: 0 1 calc(40% - 0.5rem);
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+}
+
+dd {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.333rem;
+  flex: 0 1 calc(60% - 0.5rem);
+  padding: 0;
+  margin: 0;
+}
+
+dd em {
+  padding-right: 0.5rem;
+  font-size: 0.875rem;
+  white-space: nowrap;
+}
+
+/* tiering */
+
+section[data-sorting="tiers"] ol {
+  display: flex;
+}
+
+section[data-sorting="tiers"] ol {
+  position: relative;
+  padding: 1rem 1rem 1rem min(calc(100% / 5 + 1rem), 32rem);
+  min-height: 8rem;
+}
+
+section[data-sorting="tiers"] ol:before {
+  content: attr(data-tier);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 4rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  bottom: 1rem;
+  width: min(calc(100% / 5 - 1rem), 30rem);
+  z-index: 20;
+}
+
+section[data-sorting="tiers"] ol:after {
+  background-color: #1a1a1a;
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+}
+
+section[data-sorting="tiers"] ol li:empty {
+  display: block;
+}
+
+ol[data-tier="s"]:before {
+  background-color: #f77f7f;
+}
+
+ol[data-tier="a"]:before {
+  background-color: #fabf7f;
+}
+
+ol[data-tier="b"]:before {
+  background-color: #feff7f;
+}
+
+ol[data-tier="c"]:before {
+  background-color: #7fff7f;
+}
+
+ol[data-tier="d"]:before {
+  background-color: #7fbfff;
+}
+
+ol[data-tier="f"]:before {
+  background-color: #7f7fff;
+}
+
+section[data-sorting="tiers"] li {
+  z-index: 30;
+}
+
+section[data-sorting="tiers"] li:before {
+  display: none;
+}
+
+section[data-sorting="tiers"] h2 {
+  display: none;
+}
+
+/* categories */
+
+section[data-sorting="style"] h2,
+section[data-sorting="actuation"] h2 {
+  display: block;
+}
+
+section[data-sorting="style"] ol,
+section[data-sorting="actuation"] ol {
+  display: contents;
+}
+
+section[data-sorting="style"] ol:before,
+section[data-sorting="actuation"] ol:before {
+  display: none;
+}
+
+[data-sorting="style"] h2.linear {
+  order: 1000;
+}
+
+[data-sorting="style"] li[data-actuation="linear"] {
+  order: 1500;
+}
+
+[data-sorting="style"] h2.tactile {
+  order: 2000;
+}
+
+[data-sorting="style"] li[data-actuation="tactile"] {
+  order: 2500;
+}
+
+[data-sorting="style"] h2.silent {
+  order: 3000;
+}
+
+[data-sorting="style"] li[data-actuation="silent"] {
+  order: 3500;
+}
+
+[data-sorting="style"] h2.clicky {
+  order: 4000;
+}
+
+[data-sorting="style"] li[data-actuation="clicky"] {
+  order: 4500;
+}
+
+[data-sorting="style"] h2.doubleshot {
+  order: 5000;
+}
+
+[data-sorting="style"] li[data-style="doubleshot"] {
+  order: 5500;
+}
+
+[data-sorting="style"] h2.dyesub {
+  order: 6000;
+}
+
+[data-sorting="style"] li[data-style="dyesub"] {
+  order: 6500;
+}
+
+/* responsive */
+
+@media (max-width: 767px) {
+  h1 {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+  }
+
+  li {
+    flex: 0 1 100%;
+  }
+
+  section[data-sorting="tiers"] ol {
+    padding: 20rem 1rem 1rem 1rem;
+  }
+
+  section[data-sorting="tiers"] ol:before {
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+    right: 1rem;
+    width: auto;
+    height: 18rem;
+  }
+}
+
+section[data-expand="false"] dl *:not(dd:first-of-type) {
+  display: none;
+}
+
+section[data-unwanted="false"] [data-unwanted] {
+  display: none;
+}

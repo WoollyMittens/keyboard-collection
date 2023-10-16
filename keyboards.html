@@ -1,0 +1,546 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Ranked Keyboard Collection</title>
+	<meta name="viewport" content="initial-scale=1, minimum-scale=1, maximum-scale=1, width=device-width"/>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+
+<body>
+  	<h1>
+		<strong>Ranked Keyboard Collection</strong>
+		<a href="keycaps.html">Keycaps</a>
+		<label>Zoom: <input type="range" min="0.5" max="1.5" step="0.1" value="1" name="zoom"/></label>
+		<label><input type="checkbox" name="expanded" checked/> Expanded</label>
+		<label><input type="checkbox" name="unwanted" checked/> Unwanted</label>
+		<select>
+			<option value="unordered">-- order --</option>
+			<option value="tiers" selected>by tier</option>
+			<option value="actuation">by actuation</option>
+			<option value="ansi_kb">all ANSI</option>
+			<option value="iso_kb">all ISO</option>
+			<option value="hhkb">all HHKB</option>
+			<option value="60pct">all 60%</option>
+			<option value="65pct">all 65%</option>
+			<option value="alice">all Alice</option>
+			<option value="tkl">all TKL</option>
+			<option value="1800">all 1800</option>
+		</select>
+	</h1>
+	<section data-sorting="tiers">
+		<ol data-tier="s">
+			<li data-actuation="linear">
+				<figure data-view="side">
+					<img class="top" loading="lazy" src="media/PXL_20230207_093428204.jpg" alt="Top view"/>
+					<img class="side" loading="lazy" src="media/PXL_20230207_093458371.jpg" alt="Side view"/>
+					<img class="bottom" loading="lazy" src="media/PXL_20230207_094323213.jpg" alt="Bottom view"/>
+					<figcaption>
+						<button class="top">Top</button>
+						<button class="side">Side</button>
+						<button class="bottom">Bottom</button>
+					</figcaption>
+				</figure>
+				<dl>
+					<dt>Case:</dt><dd>Geonworks F1-8X 722</dd>
+					<dt>Keycaps:</dt><dd>Hammer X Swagkeys</dd>
+					<dt>Switches:</dt><dd>Cherry Nixies (62gx18mm TX)</dd>
+					<dt>Actuation:</dt><dd>Linear</dd>
+					<dt>Plate:</dt><dd>Aluminium</dd>
+					<dt>Layout:</dt><dd class="layout">ANSI</dd>
+					<dt>Size:</dt><dd class="size">TKL</dd>
+					<dt>PCB:</dt><dd>Hotswap</dd>
+					<dt>Mount:</dt><dd>Hotdog</dd>
+					<dt>Mods:</dt><dd>Replacement PCB, Polyfill</dd>
+					<dt>Theme:</dt><dd>But does it come in black?</dd>
+					<dt>Problems:</dt><dd>The typing angle is a little bit steep. The skeleton plate impacts the sound.</dd>
+				</dl>
+			</li>
+			<li data-actuation="linear">
+				<figure data-view="side">
+					<img class="top" loading="lazy" src="media/PXL_20230804_103006377.jpg" alt="Top view"/>
+					<img class="side" loading="lazy" src="media/PXL_20230804_103020031.jpg" alt="Side view"/>
+					<img class="bottom" loading="lazy" src="media/PXL_20230804_103043632.jpg" alt="Bottom view"/>
+					<figcaption>
+						<button class="top">Top</button>
+						<button class="side">Side</button>
+						<button class="bottom">Bottom</button>
+					</figcaption>
+				</figure>
+				<dl>
+					<dt>Case:</dt><dd>Thocc Supply XOX70</dd>
+					<dt>Keycaps:</dt><dd>GMK WoB</dd>
+					<dt>Switches:</dt><dd>Cherry Hyperglide (63.5g WS CL635)</dd>
+					<dt>Actuation:</dt><dd>Linear</dd>
+					<dt>Plate:</dt><dd>Aluminium</dd>
+					<dt>Layout:</dt><dd class="layout">ANSI</dd>
+					<dt>Size:</dt><dd class="size">FKL</dd>
+					<dt>PCB:</dt><dd>Soldered</dd>
+					<dt>Mount:</dt><dd>Gasket</dd>
+					<dt>Mods:</dt><dd>No spacebar mount, rubber washers, polyfill</dd>
+					<dt>Theme:</dt><dd>A layout which omits only the least nessecary, but retains practicality.</dd>
+					<dt>Problems:</dt><dd>Spare parts are rare.</dd>
+				</dl>
+			</li>
+			<li data-actuation="linear">
+				<figure data-view="side">
+					<img class="top" loading="lazy" src="media/PXL_20230115_072444326.jpg" alt="Top view"/>
+					<img class="side" loading="lazy" src="media/PXL_20230115_072550825.jpg" alt="Side view"/>
+					<img class="bottom" loading="lazy" src="media/PXL_20230115_072614865.jpg" alt="Bottom view"/>
+					<figcaption>
+						<button class="top">Top</button>
+						<button class="side">Side</button>
+						<button class="bottom">Bottom</button>
+					</figcaption>
+				</figure>
+				<dl>
+					<dt>Case:</dt><dd>AE x Ivery Praxis</dd>
+					<dt>Keycaps:</dt><dd>JC Studio Greek-EN/US</dd>
+					<dt>Switches:</dt><dd>Aeboards Blaeck</dd>
+					<dt>Actuation:</dt><dd>Linear</dd>
+					<dt>Plate:</dt><dd>Impact Modified Acrylic</dd>
+					<dt>Layout:</dt><dd class="layout">Alice</dd>
+					<dt>Size:</dt><dd class="size">60%</dd>
+					<dt>PCB:</dt><dd>Soldered</dd>
+					<dt>Mount:</dt><dd>Top</dd>
+					<dt>Mods:</dt><dd>Bandaid, O-rings</dd>
+					<dt>Theme:</dt><dd>An Alice variant with a polycarbonate base and internal weight, that fits standard Alice parts.</dd>
+					<dt>Problems:</dt><dd>There is barely any room for flex in the case.</dd>
+				</dl>
+			</li>
+		</ol>
+		<ol data-tier="a">
+			<li data-actuation="silent">
+				<figure data-view="side">
+					<img class="top" loading="lazy" src="media/PXL_20230115_072040558.jpg" alt="Top view"/>
+					<img class="side" loading="lazy" src="media/PXL_20230115_072105236.jpg" alt="Side view"/>
+					<img class="bottom" loading="lazy" src="media/PXL_20230115_072137039.jpg" alt="Bottom view"/>
+					<figcaption>
+						<button class="top">Top</button>
+						<button class="side">Side</button>
+						<button class="bottom">Bottom</button>
+					</figcaption>
+				</figure>
+				<dl>
+					<dt>Case:</dt><dd>Geonworks Mini Frog</dd>
+					<dt>Keycaps:</dt><dd>GMK Avanguardia</dd>
+					<dt>Switches:</dt><dd>Durock Shrimp</dd>
+					<dt>Actuation:</dt><dd>Silent (tactile)</dd>
+					<dt>Plate:</dt><dd>Polycarbonate</dd>
+					<dt>Layout:</dt><dd class="layout">HHKB</dd>
+					<dt>Size:</dt><dd class="size">60%</dd>
+					<dt>PCB:</dt><dd>Hotswap</dd>
+					<dt>Mount:</dt><dd>Tadpole</dd>
+					<dt>Mods:</dt><dd>Polyfill, TODO: Tape mod (spacebar only)</dd>
+					<dt>Theme:</dt><dd>A minimalist style that lets the custom Korean metalwork speak for itself.</dd>
+					<dt>Problems:</dt><dd>The low case height impacts the sound of the bottom row keys.</dd>
+				</dl>
+			</li>
+			<li data-actuation="linear">
+				<figure data-view="side">
+					<img class="top" loading="lazy" src="media/frog_tkl_top.jpg" alt="Top view"/>
+					<img class="side" loading="lazy" src="media/frog_tkl_side.jpg" alt="Side view"/>
+					<img class="bottom" loading="lazy" src="media/frog_tkl_bottom.jpg" alt="Bottom view"/>
+					<figcaption>
+						<button class="top">Top</button>
+						<button class="side">Side</button>
+						<button class="bottom">Bottom</button>
+					</figcaption>
+				</figure>
+				<dl>
+					<dt>Case:</dt><dd>Geonworks Frog</dd>
+					<dt>Keycaps:</dt><dd>GMK Hammerhead</dd>
+					<dt>Switches:</dt><dd>JWK T1</dd>
+					<dt>Actuation:</dt><dd>Linear</dd>
+					<dt>Plate:</dt><dd>Polycarbonate</dd>
+					<dt>Layout:</dt><dd class="layout">ANSI</dd>
+					<dt>Size:</dt><dd class="size">TKL</dd>
+					<dt>PCB:</dt><dd>Hotswap</dd>
+					<dt>Mount:</dt><dd>Tadpole</dd>
+					<dt>Mods:</dt><dd>Polyfill, Tape mod (spacebar only)</dd>
+					<dt>Theme:</dt><dd>A minimalist style that lets the custom Korean metalwork speak for itself.</dd>
+					<dt>Problems:</dt><dd>The low case height impacts the sound of the bottom row keys.</dd>
+				</dl>
+			</li>
+			<li data-actuation="tactile">
+				<figure data-view="side">
+					<img class="top" loading="lazy" src="media/class80-top.jpg" alt="Top view"/>
+					<img class="side" loading="lazy" src="media/class80-side.jpg" alt="Side view"/>
+					<img class="bottom" loading="lazy" src="media/class80-bottom.jpg" alt="Bottom view"/>
+					<figcaption>
+						<button class="top">Top</button>
+						<button class="side">Side</button>
+						<button class="bottom">Bottom</button>
+					</figcaption>
+				</figure>
+				<dl>
+					<dt>Case:</dt><dd>MM Studio Class80</dd>
+					<dt>Keycaps:</dt><dd>DCS 9009</dd>
+					<dt>Switches:</dt><dd>NK_ Cream Tactile (63.5g WS CL635)</dd>
+					<dt>Actuation:</dt><dd>Tactile</dd>
+					<dt>Plate:</dt><dd>Polycarbonate</dd>
+					<dt>Layout:</dt><dd class="layout">ANSI</dd>
+					<dt>Size:</dt><dd class="size">TKL</dd>
+					<dt>PCB:</dt><dd>Hotswap</dd>
+					<dt>Mount:</dt><dd>Top Mount</dd>
+					<dt>Mods:</dt><dd>Polyfill, Forcebreak, Boba U4T Spacebar</dd>
+					<dt>Theme:</dt><dd>Retro tribute to classic Cherry keyboards, with buzzer and solenoid.</dd>
+					<dt>Problems:</dt><dd>The internal wiring is fiddly and fragile. The board was not primarily designed for its acoustics.</dd>
+				</dl>
+			</li>
+		</ol>
+		<ol data-tier="b">
+			<li data-actuation="linear">
+				<figure data-view="side">
+					<img class="top" loading="lazy" src="media/PXL_20230115_073322114.jpg" alt="Top view"/>
+					<img class="side" loading="lazy" src="media/PXL_20230115_073333524.jpg" alt="Side view"/>
+					<img class="bottom" loading="lazy" src="media/PXL_20230115_073351379.jpg" alt="Bottom view"/>
+					<figcaption>
+						<button class="top">Top</button>
+						<button class="side">Side</button>
+						<button class="bottom">Bottom</button>
+					</figcaption>
+				</figure>
+				<dl>
+					<dt>Case:</dt><dd>Cannonkeys Brutal V2 1800</dd>
+					<dt>Keycaps:</dt><dd>Cannoncaps Big Blue</dd>
+					<dt>Switches:</dt><dd>Gateron Cap Yellow (62g TX)</dd>
+					<dt>Actuation:</dt><dd>Linear</dd>
+					<dt>Plate:</dt><dd>Polycarbonate</dd>
+					<dt>Layout:</dt><dd class="layout">ANSI</dd>
+					<dt>Size:</dt><dd class="size">1800</dd>
+					<dt>PCB:</dt><dd>Hotswap</dd>
+					<dt>Mount:</dt><dd>Bottom Gasket</dd>
+					<dt>Mods:</dt><dd>Bandaid, Insulator under PCB, No spacebar mount, O-ring on spacebar switch</dd>
+					<dt>Theme:</dt><dd>An affordable 1800 with an uncompromised design.</dd>
+					<dt>Problems:</dt><dd>The PCB can short against the bottom of the case. It will only work once every few dozen times when plugged in. It cannot be trusted.</dd>
+				</dl>
+			</li>
+			<li data-actuation="linear">
+				<figure data-view="side">
+					<img class="top" loading="lazy" src="media/PXL_20230829_112523990.jpg" alt="Top view"/>
+					<img class="side" loading="lazy" src="media/PXL_20230829_112455900.jpg" alt="Side view"/>
+					<img class="bottom" loading="lazy" src="media/PXL_20230829_112615822.jpg" alt="Bottom view"/>
+					<figcaption>
+						<button class="top">Top</button>
+						<button class="side">Side</button>
+						<button class="bottom">Bottom</button>
+					</figcaption>
+				</figure>
+				<dl>
+					<dt>Case:</dt><dd>Monstargears Sangeo65</dd>
+					<dt>Keycaps:</dt><dd>GMK Thinkcaps</dd>
+					<dt>Switches:</dt><dd>Cherry Hyperglide (63.5g WS CL635)</dd>
+					<dt>Actuation:</dt><dd>Linear</dd>
+					<dt>Plate:</dt><dd>Aluminium</dd>
+					<dt>Layout:</dt><dd class="layout">ISO</dd>
+					<dt>Size:</dt><dd class="size">65%</dd>
+					<dt>PCB:</dt><dd>Soldered</dd>
+					<dt>Mount:</dt><dd>Gasket</dd>
+					<dt>Mods:</dt><dd>Minimal gaskets, Bandaid, Polyfill</dd>
+					<dt>Theme:</dt><dd>Elegant curves complemented by elegant keycaps.</dd>
+					<dt>Problems:</dt><dd>Challenging acoustics. Inflexible in default configuration. POM plate fits poorly.</dd>
+				</dl>
+			</li>
+			<li data-actuation="linear" data-unwanted>
+				<figure data-view="side">
+					<img class="top" loading="lazy" src="media/PXL_20230115_073201200.jpg" alt="Top view"/>
+					<img class="side" loading="lazy" src="media/PXL_20230115_073212101.jpg" alt="Side view"/>
+					<img class="bottom" loading="lazy" src="media/PXL_20230115_073239079.jpg" alt="Bottom view"/>
+					<figcaption>
+						<button class="top">Top</button>
+						<button class="side">Side</button>
+						<button class="bottom">Bottom</button>
+					</figcaption>
+				</figure>
+				<dl>
+					<dt>Case:</dt><dd>Monstargears XO K80</dd>
+					<dt>Keycaps:</dt><dd>GMK 8008</dd>
+					<dt>Switches:</dt><dd>OP Blacks</dd>
+					<dt>Actuation:</dt><dd>Linear</dd>
+					<dt>Plate:</dt><dd>Aluminium</dd>
+					<dt>Layout:</dt><dd class="layout">ISO</dd>
+					<dt>Size:</dt><dd class="size">TKL</dd>
+					<dt>PCB:</dt><dd>Soldered</dd>
+					<dt>Mount:</dt><dd>Burger</dd>
+					<dt>Mods:</dt><dd>Bandaid, O-rings, Reduced mounting points.</dd>
+					<dt>Theme:</dt><dd>A classical design but also a classical mounting method.</dd>
+					<dt>Problems:</dt><dd>Bad firmware requires workarounds for LGUI(0) and LALT(0). The gasket kit is unavailable.</dd>
+				</dl>
+			</li>
+			<li data-actuation="tactile" data-unavailable>
+				<figure data-view="side">
+					<img class="top" loading="lazy" src="media/niz_nz87_top.jpg" alt="Top view"/>
+					<img class="side" loading="lazy" src="media/niz_nz87_side.jpg" alt="Side view"/>
+					<img class="bottom" loading="lazy" src="media/niz_nz87_bottom.jpg" alt="Bottom view"/>
+					<figcaption>
+						<button class="top">Top</button>
+						<button class="side">Side</button>
+						<button class="bottom">Bottom</button>
+					</figcaption>
+				</figure>
+				<dl>
+					<dt>Case:</dt><dd>Niz N87 Alu</dd>
+					<dt>Keycaps:</dt><dd>???</dd>
+					<dt>Switches:</dt><dd>EC 45g</dd>
+					<dt>Actuation:</dt><dd>Tactile</dd>
+					<dt>Plate:</dt><dd>???</dd>
+					<dt>Layout:</dt><dd class="layout">ANSI</dd>
+					<dt>Size:</dt><dd class="size">TKL</dd>
+					<dt>PCB:</dt><dd>Electro Capacitive</dd>
+					<dt>Mount:</dt><dd>???</dd>
+					<dt>Mods:</dt><dd>???</dd>
+					<dt>Theme:</dt><dd>A Chinese implementation of electro cacitive rubber domes (like Topre).</dd>
+					<dt>Problems:</dt><dd>???</dd>
+				</dl>
+			</li>
+		</ol>
+		<ol data-tier="c">
+			<li data-actuation="linear" data-unwanted>
+				<figure data-view="side">
+					<img class="top" loading="lazy" src="media/PXL_20230115_073455971.jpg" alt="Top view"/>
+					<img class="side" loading="lazy" src="media/PXL_20230115_073509977.jpg" alt="Side view"/>
+					<img class="bottom" loading="lazy" src="media/PXL_20230115_073528133.jpg" alt="Bottom view"/>
+					<figcaption>
+						<button class="top">Top</button>
+						<button class="side">Side</button>
+						<button class="bottom">Bottom</button>
+					</figcaption>
+				</figure>
+				<dl>
+					<dt>Case:</dt><dd>KBDfans D60</dd>
+					<dt>Keycaps:</dt><dd>DSS Late Harvest</dd>
+					<dt>Switches:</dt><dd>SP Star Meteor R2 (65g TX M)</dd>
+					<dt>Actuation:</dt><dd>Linear</dd>
+					<dt>Plate:</dt><dd>Polycarbonate</dd>
+					<dt>Layout:</dt><dd class="layout">Tsangan</dd>
+					<dt>Size:</dt><dd class="size">60%</dd>
+					<dt>PCB:</dt><dd>Hotswap</dd>
+					<dt>Mount:</dt><dd>Gasket</dd>
+					<dt>Mods:</dt><dd>Bandaid, Polyfill, Tadpole mount.</dd>
+					<dt>Theme:</dt><dd>A mixed build combining the metal and plastic version of the D60.</dd>
+					<dt>Problems:</dt><dd>Little flexibility despite the gasket mount. Weak acoustics.</dd>
+				</dl>
+			</li>
+			<li data-actuation="linear">
+				<figure data-view="side">
+					<img class="top" loading="lazy" src="media/PXL_20230115_072730867.jpg" alt="Top view"/>
+					<img class="side" loading="lazy" src="media/PXL_20230115_072742730.jpg" alt="Side view"/>
+					<img class="bottom" loading="lazy" src="media/PXL_20230115_072755974.jpg" alt="Bottom view"/>
+					<figcaption>
+						<button class="top">Top</button>
+						<button class="side">Side</button>
+						<button class="bottom">Bottom</button>
+					</figcaption>
+				</figure>
+				<dl>
+					<dt>Case:</dt><dd>Mekanisk Fjell</dd>
+					<dt>Keycaps:</dt><dd>GMK Synthwave</dd>
+					<dt>Switches:</dt><dd>H1 Linear (62.5g)</dd>
+					<dt>Actuation:</dt><dd>Linear</dd>
+					<dt>Plate:</dt><dd>Carbon fibre</dd>
+					<dt>Layout:</dt><dd class="layout">Tsangan</dd>
+					<dt>Size:</dt><dd class="size">60%</dd>
+					<dt>PCB:</dt><dd>Soldered</dd>
+					<dt>Mount:</dt><dd>Gummy O-Ring</dd>
+					<dt>Mods:</dt><dd>Bandaid, Polyfill, Tape mod (spacebar only)</dd>
+					<dt>Theme:</dt><dd>A heavy tray mount converted to gummy o-ring mount.</dd>
+					<dt>Problems:</dt><dd>The high case spoils what is otherwise a comfortable typing experience.</dd>
+				</dl>
+			</li>
+			<li data-actuation="linear">
+				<figure data-view="side">
+					<img class="top" loading="lazy" src="media/PXL_20230922_044650346.jpg" alt="Top view"/>
+					<img class="side" loading="lazy" src="media/PXL_20230922_044811485.jpg" alt="Side view"/>
+					<img class="bottom" loading="lazy" src="media/PXL_20230922_044738307.jpg" alt="Bottom view"/>
+					<figcaption>
+						<button class="top">Top</button>
+						<button class="side">Side</button>
+						<button class="bottom">Bottom</button>
+					</figcaption>
+				</figure>
+				<dl>
+					<dt>Case:</dt><dd>KBDfans Tofu65</dd>
+					<dt>Keycaps:</dt><dd>Keykobo WoB</dd>
+					<dt>Switches:</dt><dd>Gateron North Pole (62g TX M)</dd>
+					<dt>Actuation:</dt><dd>Linear</dd>
+					<dt>Plate:</dt><dd>Polycarbonate</dd>
+					<dt>Layout:</dt><dd class="layout">ANSI</dd>
+					<dt>Size:</dt><dd class="size">65%</dd>
+					<dt>PCB:</dt><dd>Soldered</dd>
+					<dt>Mount:</dt><dd>Tray</dd>
+					<dt>Mods:</dt><dd>Polyfill, Removed standoffs</dd>
+					<dt>Theme:</dt><dd>A redo of a classic, but now with a Unix layout.</dd>
+					<dt>Problems:</dt><dd>Scratched interior because of the removed standoffs.</dd>
+				</dl>
+			</li>
+			<li data-actuation="linear">
+				<figure data-view="side">
+					<img class="top" loading="lazy" src="media/PXL_20230924_111330191.jpg" alt="Top view"/>
+					<img class="side" loading="lazy" src="media/PXL_20230924_111320696.jpg" alt="Side view"/>
+					<img class="bottom" loading="lazy" src="media/PXL_20230924_111344772.jpg" alt="Bottom view"/>
+					<figcaption>
+						<button class="top">Top</button>
+						<button class="side">Side</button>
+						<button class="bottom">Bottom</button>
+					</figcaption>
+				</figure>
+				<dl>
+					<dt>Case:</dt><dd>Monsgeek M5</dd>
+					<dt>Keycaps:</dt><dd>Domikey WoB</dd>
+					<dt>Switches:</dt><dd>Cherry Hyperglide (62g TX M)</dd>
+					<dt>Actuation:</dt><dd>Linear</dd>
+					<dt>Plate:</dt><dd>Polycarbonate</dd>
+					<dt>Layout:</dt><dd class="layout">ANSI</dd>
+					<dt>Size:</dt><dd class="size">100%</dd>
+					<dt>PCB:</dt><dd>Hotswap</dd>
+					<dt>Mount:</dt><dd>Gasket socks</dd>
+					<dt>Mods:</dt><dd>Force break, Modified plate to fit stabilisers.</dd>
+					<dt>Theme:</dt><dd>A redo of a classic, but now with a Unix layout.</dd>
+					<dt>Problems:</dt><dd>The accept pieces fit poorly.</dd>
+				</dl>
+			</li>
+		</ol>
+		<ol data-tier="d">
+			<li data-actuation="tactile">
+				<figure data-view="side">
+					<img class="top" loading="lazy" src="media/PXL_20230901_072122657.jpg" alt="Top view"/>
+					<img class="side" loading="lazy" src="media/PXL_20230901_072130180.jpg" alt="Side view"/>
+					<img class="bottom" loading="lazy" src="media/PXL_20230901_072151954.jpg" alt="Bottom view"/>
+					<figcaption>
+						<button class="top">Top</button>
+						<button class="side">Side</button>
+						<button class="bottom">Bottom</button>
+					</figcaption>
+				</figure>
+				<dl>
+					<dt>Case:</dt><dd>Realforce R2TL Mac</dd>
+					<dt>Keycaps:</dt><dd>Stock keycaps</dd>
+					<dt>Switches:</dt><dd>Topre</dd>
+					<dt>Actuation:</dt><dd>Tactile</dd>
+					<dt>Plate:</dt><dd>Plastic</dd>
+					<dt>Layout:</dt><dd class="layout">ANSI</dd>
+					<dt>Size:</dt><dd class="size">TKL</dd>
+					<dt>PCB:</dt><dd>Soldered</dd>
+					<dt>Mount:</dt><dd>Integrated plate</dd>
+					<dt>Mods:</dt><dd>Lubed sliders</dd>
+					<dt>Theme:</dt><dd>Restored second hand classic.</dd>
+					<dt>Problems:</dt><dd>The original keycaps look very worn. The 2U keys are noisy.</dd>
+				</dl>
+			</li>
+			<li data-actuation="tactile">
+				<figure data-view="side">
+					<img class="top" loading="lazy" src="media/PXL_20230605_213429699.jpg" alt="Top view"/>
+					<img class="side" loading="lazy" src="media/PXL_20230605_213449789.jpg" alt="Side view"/>
+					<img class="bottom" loading="lazy" src="media/PXL_20230605_213506165.jpg" alt="Bottom view"/>
+					<figcaption>
+						<button class="top">Top</button>
+						<button class="side">Side</button>
+						<button class="bottom">Bottom</button>
+					</figcaption>
+				</figure>
+				<dl>
+					<dt>Case:</dt><dd>HHKB Professional BT</dd>
+					<dt>Keycaps:</dt><dd>Domikey 1980's</dd>
+					<dt>Switches:</dt><dd>Topre</dd>
+					<dt>Actuation:</dt><dd>Tactile</dd>
+					<dt>Plate:</dt><dd>Plastic</dd>
+					<dt>Layout:</dt><dd class="layout">HHKB</dd>
+					<dt>Size:</dt><dd class="size">60%</dd>
+					<dt>PCB:</dt><dd>Soldered</dd>
+					<dt>Mount:</dt><dd>Integrated plate</dd>
+					<dt>Mods:</dt><dd>Lubed sliders, Replaced feet, Replaced keycaps</dd>
+					<dt>Theme:</dt><dd>Restored second hand classic.</dd>
+					<dt>Problems:</dt><dd>The original keycaps look very worn. The spacebar is noisy.</dd>
+				</dl>
+			</li>
+		</ol>
+		<ol data-tier="f">
+			<li data-actuation="linear" data-unwanted>
+				<figure data-view="side">
+					<img class="top" loading="lazy" src="media/PXL_20221206_201228164.jpg" alt="Top view"/>
+					<img class="side" loading="lazy" src="media/PXL_20221206_201244455.jpg" alt="Side view"/>
+					<img class="bottom" loading="lazy" src="media/PXL_20221206_201210786.jpg" alt="Bottom view"/>
+					<figcaption>
+						<button class="top">Top</button>
+						<button class="side">Side</button>
+						<button class="bottom">Bottom</button>
+					</figcaption>
+				</figure>
+				<dl>
+					<dt>Case:</dt><dd>KBDfans Tiger Lite</dd>
+					<dt>Keycaps:</dt><dd>PBTfans Neon</dd>
+					<dt>Switches:</dt><dd>Vertex V1</dd>
+					<dt>Actuation:</dt><dd>Linear</dd>
+					<dt>Plate:</dt><dd>Polycarbonate</dd>
+					<dt>Layout:</dt><dd class="layout">ANSI</dd>
+					<dt>Size:</dt><dd class="size">TKL</dd>
+					<dt>PCB:</dt><dd>Hotswap</dd>
+					<dt>Mount:</dt><dd>Gasket</dd>
+					<dt>Mods:</dt><dd>Steel weight</dd>
+					<dt>Theme:</dt><dd>Anatoical see through theme.</dd>
+					<dt>Problems:</dt><dd>The original has been sold. Too flexible for comfort.</dd>
+				</dl>
+			</li>
+			<li data-actuation="linear" data-unwanted>
+				<figure data-view="side">
+					<img class="top" loading="lazy" src="media/PXL_20221003_063420394.jpg" alt="Top view"/>
+					<img class="side" loading="lazy" src="media/PXL_20221003_063428191.jpg" alt="Side view"/>
+					<img class="bottom" loading="lazy" src="media/PXL_20221003_063435682.jpg" alt="Bottom view"/>
+					<figcaption>
+						<button class="top">Top</button>
+						<button class="side">Side</button>
+						<button class="bottom">Bottom</button>
+					</figcaption>
+				</figure>
+				<dl>
+					<dt>Case:</dt><dd>KBDfans KBD67 Lite</dd>
+					<dt>Keycaps:</dt><dd>DCS Paperwork</dd>
+					<dt>Switches:</dt><dd>FFF</dd>
+					<dt>Actuation:</dt><dd>Linear</dd>
+					<dt>Plate:</dt><dd>Polycarbonate</dd>
+					<dt>Layout:</dt><dd class="layout">ANSI</dd>
+					<dt>Size:</dt><dd class="size">65%</dd>
+					<dt>PCB:</dt><dd>Hotswap</dd>
+					<dt>Mount:</dt><dd>Gasket</dd>
+					<dt>Mods:</dt><dd>Silicone dampener</dd>
+					<dt>Theme:</dt><dd>Plastic version to house the spare parts.</dd>
+					<dt>Problems:</dt><dd>Case parts are not interchangable.</dd>
+				</dl>
+			</li>
+			<li data-actuation="silent" data-unwanted>
+				<figure data-view="side">
+					<img class="top" loading="lazy" src="media/PXL_20230115_073716279.jpg" alt="Top view"/>
+					<img class="side" loading="lazy" src="media/PXL_20230115_073727719.jpg" alt="Side view"/>
+					<img class="bottom" loading="lazy" src="media/PXL_20230115_073743365.jpg" alt="Bottom view"/>
+					<figcaption>
+						<button class="top">Top</button>
+						<button class="side">Side</button>
+						<button class="bottom">Bottom</button>
+					</figcaption>
+				</figure>
+				<dl>
+					<dt>Case:</dt><dd>KBDfans KBD67</dd>
+					<dt>Keycaps:</dt><dd>DSS Carpinteria</dd>
+					<dt>Switches:</dt><dd>Durock Shrimp</dd>
+					<dt>Actuation:</dt><dd>Silent (tactile)</dd>
+					<dt>Plate:</dt><dd>POM</dd>
+					<dt>Layout:</dt><dd class="layout">ANSI</dd>
+					<dt>Size:</dt><dd class="size">65%</dd>
+					<dt>PCB:</dt><dd>Hotswap</dd>
+					<dt>Mount:</dt><dd>Gasket</dd>
+					<dt>Mods:</dt><dd>Bandaid, Polyfill, Silicone dampener.</dd>
+					<dt>Theme:</dt><dd>A mixed build combining the metal and plastic version of the KBD67.</dd>
+					<dt>Problems:</dt><dd>Sounds dead. Only good for silent switches. Case weight is no longer available.</dd>
+				</dl>
+			</li>
+		</ol>
+		<h2 class="linear">Linear</h2>
+		<h2 class="tactile">Tactile</h2>
+		<h2 class="silent">Silent (tactile)</h2>
+	</section>
+  <script src="scripts.js"></script>
+</body>
+
+</html>
