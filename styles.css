@@ -7,6 +7,7 @@
 html {
   font-family: sans-serif;
   line-height: 1.333;
+  min-height: 100%;
 }
 
 @media(print) {
@@ -398,35 +399,35 @@ section[data-sorting="actuation"] ol:before {
   display: none;
 }
 
-[data-sorting="style"] h2.linear {
+[data-sorting="actuation"] h2.linear {
   order: 1000;
 }
 
-[data-sorting="style"] li[data-actuation="linear"] {
+[data-sorting="actuation"] li[data-actuation="linear"] {
   order: 1500;
 }
 
-[data-sorting="style"] h2.tactile {
+[data-sorting="actuation"] h2.tactile {
   order: 2000;
 }
 
-[data-sorting="style"] li[data-actuation="tactile"] {
+[data-sorting="actuation"] li[data-actuation="tactile"] {
   order: 2500;
 }
 
-[data-sorting="style"] h2.silent {
+[data-sorting="actuation"] h2.silent {
   order: 3000;
 }
 
-[data-sorting="style"] li[data-actuation="silent"] {
+[data-sorting="actuation"] li[data-actuation="silent"] {
   order: 3500;
 }
 
-[data-sorting="style"] h2.clicky {
+[data-sorting="actuation"] h2.clicky {
   order: 4000;
 }
 
-[data-sorting="style"] li[data-actuation="clicky"] {
+[data-sorting="actuation"] li[data-actuation="clicky"] {
   order: 4500;
 }
 
