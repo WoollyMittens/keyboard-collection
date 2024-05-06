@@ -15,15 +15,15 @@
 		<label><input type="checkbox" name="expanded" checked/> Expanded</label>
 		<label><input type="checkbox" name="unwanted" checked/> Unwanted</label>
 		<select id="sorting">
-			<option value="unordered">-- order --</option>
+			<option value="unordered">Unordered</option>
 			<option value="tiers" selected>by tier</option>
-			<option value="grid">in a grid</option>
 			<option value="style">by style</option>
-			<option value="iso">for ISO</option>
+			<option value="iso_uk">for UK ISO</option>
+			<option value="iso_int">for Intl ISO</option>
 			<option value="ansi">for ANSI</option>
 			<option value="tsangan">for Tsangan</option>
 			<option value="alice">for Alice</option>
-			<option value="65pct">for 65%</option>
+			<option value="65%">for 65%</option>
 			<option value="numpad">for Numpad</option>
 		</select>
 	</h1>
@@ -44,7 +44,7 @@
 					<dt>Profile:</dt><dd>DCS</dd>
 					<dt>Style:</dt><dd>Double shot</dd>
 					<dt>Material:</dt><dd>ABS</dd>
-					<dt>Compatibility:</dt><dd class="kitting">ansi, iso, tsangan, 65pct, numpad</dd>
+					<dt>Compatibility:</dt><dd class="kitting">ansi, uk-iso, tsangan, 65pct, numpad</dd>
 				</dl>
 			</li>
 			<li data-style="doubleshot">
@@ -62,7 +62,7 @@
 					<dt>Profile:</dt><dd>DCS</dd>
 					<dt>Style:</dt><dd>Double shot</dd>
 					<dt>Material:</dt><dd>ABS</dd>
-					<dt>Compatibility:</dt><dd class="kitting">ansi, iso, tsangan, 65pct, alice</dd>
+					<dt>Compatibility:</dt><dd class="kitting">ansi, int-iso, tsangan, 65pct, alice</dd>
 				</dl>
 			</li>
 			<li data-style="doubleshot">
@@ -80,7 +80,7 @@
 					<dt>Profile:</dt><dd>DCS</dd>
 					<dt>Style:</dt><dd>Double shot</dd>
 					<dt>Material:</dt><dd>ABS</dd>
-					<dt>Compatibility:</dt><dd class="kitting">ansi, iso, tsangan, 65pct, alice, numpad</dd>
+					<dt>Compatibility:</dt><dd class="kitting">ansi, int-iso, tsangan, 65pct, alice, numpad</dd>
 				</dl>
 			</li>
 			<li data-style="doubleshot">
@@ -103,24 +103,6 @@
 			</li>
 			<li data-style="doubleshot">
 				<figure data-view="displayed">
-					<img class="displayed" loading="lazy" src="media/dss_first_light_displayed.jpg" alt="Displayed view"/>
-					<img class="kitting" loading="lazy" src="media/dss_first_light.jpg" alt="Kitting view"/>
-					<figcaption>
-						<button class="displayed">Displayed</button>
-						<button class="kitting">Kitting</button>
-					</figcaption>
-				</figure>
-				<dl>
-					<dt>Name:</dt><dd>First Light</dd>
-					<dt>Manufacturer:</dt><dd>Signature Plastics</dd>
-					<dt>Profile:</dt><dd>DSS</dd>
-					<dt>Style:</dt><dd>Double shot</dd>
-					<dt>Material:</dt><dd>ABS</dd>
-					<dt>Compatibility:</dt><dd class="kitting">ansi, tsangan, 65pct, alice</dd>
-				</dl>
-			</li>
-			<li data-style="doubleshot">
-				<figure data-view="displayed">
 					<img class="displayed" loading="lazy" src="media/dcs_solarized_dark_displayed.jpg" alt="Displayed view"/>
 					<img class="kitting" loading="lazy" src="media/dcs_solarized_dark.jpg" alt="Kitting view"/>
 					<figcaption>
@@ -134,7 +116,7 @@
 					<dt>Profile:</dt><dd>DCS</dd>
 					<dt>Style:</dt><dd>Double shot</dd>
 					<dt>Material:</dt><dd>ABS</dd>
-					<dt>Compatibility:</dt><dd class="kitting">ansi, iso, tsangan, 65pct, alice, numpad</dd>
+					<dt>Compatibility:</dt><dd class="kitting">ansi, <s>uk-iso</s>, tsangan, 65pct, alice, numpad</dd>
 				</dl>
 			</li>
 			<li data-style="doubleshot">
@@ -152,7 +134,25 @@
 					<dt>Profile:</dt><dd>DCS</dd>
 					<dt>Style:</dt><dd>Double shot</dd>
 					<dt>Material:</dt><dd>ABS</dd>
-					<dt>Compatibility:</dt><dd class="kitting">ansi, iso, tsangan, 65pct, alice, numpad</dd>
+					<dt>Compatibility:</dt><dd class="kitting">ansi, int-iso, tsangan, 65pct, alice, numpad</dd>
+				</dl>
+			</li>
+			<li data-style="doubleshot">
+				<figure data-view="displayed">
+					<img class="displayed" loading="lazy" src="media/dss_first_light_displayed.jpg" alt="Displayed view"/>
+					<img class="kitting" loading="lazy" src="media/dss_first_light.jpg" alt="Kitting view"/>
+					<figcaption>
+						<button class="displayed">Displayed</button>
+						<button class="kitting">Kitting</button>
+					</figcaption>
+				</figure>
+				<dl>
+					<dt>Name:</dt><dd>First Light</dd>
+					<dt>Manufacturer:</dt><dd>Signature Plastics</dd>
+					<dt>Profile:</dt><dd>DSS</dd>
+					<dt>Style:</dt><dd>Double shot</dd>
+					<dt>Material:</dt><dd>ABS</dd>
+					<dt>Compatibility:</dt><dd class="kitting">ansi, tsangan, 65pct, alice</dd>
 				</dl>
 			</li>
 			<li data-style="doubleshot">
@@ -188,7 +188,7 @@
 					<dt>Profile:</dt><dd>DSS</dd>
 					<dt>Style:</dt><dd>Double shot</dd>
 					<dt>Material:</dt><dd>ABS</dd>
-					<dt>Compatibility:</dt><dd class="kitting">ansi, iso, tsangan, 65pct, alice, numpad</dd>
+					<dt>Compatibility:</dt><dd class="kitting">ansi, uk-iso, tsangan, 65pct, alice, numpad</dd>
 				</dl>
 			</li>
 			<li data-style="doubleshot">
@@ -206,25 +206,7 @@
 					<dt>Profile:</dt><dd>DSS</dd>
 					<dt>Style:</dt><dd>Double shot</dd>
 					<dt>Material:</dt><dd>ABS</dd>
-					<dt>Compatibility:</dt><dd class="kitting">ansi, iso, tsangan, 65pct, alice, numpad</dd>
-				</dl>
-			</li>
-			<li data-style="doubleshot">
-				<figure data-view="displayed">
-					<img class="displayed" loading="lazy" src="media/dcs_midnight_displayed.jpg" alt="Displayed view"/>
-					<img class="kitting" loading="lazy" src="media/dcs_midnight.jpg" alt="Kitting view"/>
-					<figcaption>
-						<button class="displayed">Displayed</button>
-						<button class="kitting">Kitting</button>
-					</figcaption>
-				</figure>
-				<dl>
-					<dt>Name:</dt><dd>Midnight</dd>
-					<dt>Manufacturer:</dt><dd>Signature Plastics</dd>
-					<dt>Profile:</dt><dd>DCS</dd>
-					<dt>Style:</dt><dd>Double shot</dd>
-					<dt>Material:</dt><dd>ABS</dd>
-					<dt>Compatibility:</dt><dd class="kitting">ansi, iso, numpad</dd>
+					<dt>Compatibility:</dt><dd class="kitting">ansi, uk-iso, tsangan, 65pct, alice, numpad</dd>
 				</dl>
 			</li>
 			<li data-style="doubleshot">
@@ -242,8 +224,62 @@
 					<dt>Profile:</dt><dd>DCS</dd>
 					<dt>Style:</dt><dd>Double shot</dd>
 					<dt>Material:</dt><dd>ABS</dd>
-					<dt>Compatibility:</dt><dd class="kitting">ansi, iso, tsangan, 65pct, alice, numpad</dd>
+					<dt>Compatibility:</dt><dd class="kitting">ansi, uk-iso, int-iso, tsangan, 65pct, alice, numpad</dd>
 					<dt>Note:</dt><dd>The row 1 page-up key was not received and the seller is unresponsive.</dd>
+				</dl>
+			</li>
+			<li data-style="doubleshot">
+				<figure data-view="displayed">
+					<img class="displayed" loading="lazy" src="media/dcs_midnight_displayed.jpg" alt="Displayed view"/>
+					<img class="kitting" loading="lazy" src="media/dcs_midnight.jpg" alt="Kitting view"/>
+					<figcaption>
+						<button class="displayed">Displayed</button>
+						<button class="kitting">Kitting</button>
+					</figcaption>
+				</figure>
+				<dl>
+					<dt>Name:</dt><dd>Midnight</dd>
+					<dt>Manufacturer:</dt><dd>Signature Plastics</dd>
+					<dt>Profile:</dt><dd>DCS</dd>
+					<dt>Style:</dt><dd>Double shot</dd>
+					<dt>Material:</dt><dd>ABS</dd>
+					<dt>Compatibility:</dt><dd class="kitting">ansi, us-iso, tsangan, numpad</dd>
+				</dl>
+			</li>
+			<li data-style="doubleshot">
+				<figure data-view="displayed">
+					<img class="displayed" loading="lazy" src="media/dcs_nova_displayed.jpg" alt="Displayed view"/>
+					<img class="kitting" loading="lazy" src="media/dcs_nova.jpg" alt="Kitting view"/>
+					<figcaption>
+						<button class="displayed">Displayed</button>
+						<button class="kitting">Kitting</button>
+					</figcaption>
+				</figure>
+				<dl>
+					<dt>Name:</dt><dd>Nova</dd>
+					<dt>Manufacturer:</dt><dd>Signature Plastics</dd>
+					<dt>Profile:</dt><dd>DCS</dd>
+					<dt>Style:</dt><dd>Double shot</dd>
+					<dt>Material:</dt><dd>ABS</dd>
+					<dt>Compatibility:</dt><dd class="kitting">ansi, tsangan</dd>
+				</dl>
+			</li>
+			<li data-style="doubleshot">
+				<figure data-view="displayed">
+					<img class="displayed" loading="lazy" src="media/dss_lightcycle_displayed.jpg" alt="Displayed view"/>
+					<img class="kitting" loading="lazy" src="media/dss_lightcycle.jpg" alt="Kitting view"/>
+					<figcaption>
+						<button class="displayed">Displayed</button>
+						<button class="kitting">Kitting</button>
+					</figcaption>
+				</figure>
+				<dl>
+					<dt>Name:</dt><dd>Lightcycle</dd>
+					<dt>Manufacturer:</dt><dd>Signature Plastics</dd>
+					<dt>Profile:</dt><dd>DSS</dd>
+					<dt>Style:</dt><dd>Double shot</dd>
+					<dt>Material:</dt><dd>ABS</dd>
+					<dt>Compatibility:</dt><dd class="kitting">ansi, tsangan, 65pct</dd>
 				</dl>
 			</li>
 		</ol>
@@ -263,25 +299,25 @@
 					<dt>Profile:</dt><dd>Cherry</dd>
 					<dt>Style:</dt><dd>Double shot</dd>
 					<dt>Material:</dt><dd>ABS</dd>
-					<dt>Compatibility:</dt><dd class="kitting">ansi, iso, tsangan, 65pct, alice, numpad</dd>
+					<dt>Compatibility:</dt><dd class="kitting">ansi, int-iso, tsangan, 65pct, alice, numpad</dd>
 				</dl>
 			</li>
-			<li data-style="doubleshot" data-unwanted>
+			<li data-style="doubleshot">
 				<figure data-view="displayed">
-					<img class="displayed" loading="lazy" src="media/gmk_hallyu_displayed.jpg" alt="Displayed view"/>
-					<img class="kitting" loading="lazy" src="media/gmk_hallyu.jpg" alt="Kitting view"/>
+					<img class="displayed" loading="lazy" src="media/gmk_mictlan_displayed.jpg" alt="Displayed view"/>
+					<img class="kitting" loading="lazy" src="media/gmk_mictlan.jpg" alt="Kitting view"/>
 					<figcaption>
 						<button class="displayed">Displayed</button>
 						<button class="kitting">Kitting</button>
 					</figcaption>
 				</figure>
 				<dl>
-					<dt>Name:</dt><dd>Hallyu</dd>
+					<dt>Name:</dt><dd>Mictlan</dd>
 					<dt>Manufacturer:</dt><dd>GMK</dd>
 					<dt>Profile:</dt><dd>Cherry</dd>
 					<dt>Style:</dt><dd>Double shot</dd>
 					<dt>Material:</dt><dd>ABS</dd>
-					<dt>Compatibility:</dt><dd class="kitting">ansi, iso, tsangan, 65pct, numpad</dd>
+					<dt>Compatibility:</dt><dd class="kitting">ansi, int-iso, tsangan, 65pct, numpad</dd>
 				</dl>
 			</li>
 			<li data-style="doubleshot">
@@ -299,25 +335,7 @@
 					<dt>Profile:</dt><dd>Cherry</dd>
 					<dt>Style:</dt><dd>Double shot</dd>
 					<dt>Material:</dt><dd>ABS</dd>
-					<dt>Compatibility:</dt><dd class="kitting">ansi, iso, tsangan, 65pct, numpad</dd>
-				</dl>
-			</li>
-			<li data-style="doubleshot" data-unwanted>
-				<figure data-view="displayed">
-					<img class="displayed" loading="lazy" src="media/gmk_hennessy_displayed.jpg" alt="Displayed view"/>
-					<img class="kitting" loading="lazy" src="media/gmk_hennessy.jpg" alt="Kitting view"/>
-					<figcaption>
-						<button class="displayed">Displayed</button>
-						<button class="kitting">Kitting</button>
-					</figcaption>
-				</figure>
-				<dl>
-					<dt>Name:</dt><dd>Henessy</dd>
-					<dt>Manufacturer:</dt><dd>GMK</dd>
-					<dt>Profile:</dt><dd>Cherry</dd>
-					<dt>Style:</dt><dd>Double shot</dd>
-					<dt>Material:</dt><dd>ABS</dd>
-					<dt>Compatibility:</dt><dd class="kitting">ansi, tsangan, 65pct</dd>
+					<dt>Compatibility:</dt><dd class="kitting">ansi, uk-iso, tsangan, 65pct, numpad</dd>
 				</dl>
 			</li>
 			<li data-style="doubleshot">
@@ -340,24 +358,6 @@
 			</li>
 			<li data-style="doubleshot">
 				<figure data-view="displayed">
-					<img class="displayed" loading="lazy" src="media/PXL_20221003_055623857.jpg" alt="Displayed view"/>
-					<img class="kitting" loading="lazy" src="media/gmk_synthwave.jpg" alt="Kitting view"/>
-					<figcaption>
-						<button class="displayed">Displayed</button>
-						<button class="kitting">Kitting</button>
-					</figcaption>
-				</figure>
-				<dl>
-					<dt>Name:</dt><dd>Synthwave</dd>
-					<dt>Manufacturer:</dt><dd>GMK</dd>
-					<dt>Profile:</dt><dd>Cherry</dd>
-					<dt>Style:</dt><dd>Double shot</dd>
-					<dt>Material:</dt><dd>ABS</dd>
-					<dt>Compatibility:</dt><dd class="kitting">ansi, tsangan, 65pct, alice</dd>
-				</dl>
-			</li>
-			<li data-style="doubleshot">
-				<figure data-view="displayed">
 					<img class="displayed" loading="lazy" src="media/PXL_20221003_055326434.jpg" alt="Displayed view"/>
 					<img class="kitting" loading="lazy" src="media/gmk_thinkcaps.jpg" alt="Kitting view"/>
 					<figcaption>
@@ -371,7 +371,7 @@
 					<dt>Profile:</dt><dd>Cherry</dd>
 					<dt>Style:</dt><dd>Double shot</dd>
 					<dt>Material:</dt><dd>ABS</dd>
-					<dt>Compatibility:</dt><dd class="kitting">ansi, iso, tsangan, 65pct</dd>
+					<dt>Compatibility:</dt><dd class="kitting">ansi, int-iso, tsangan, 65pct</dd>
 				</dl>
 			</li>
 			<li data-style="doubleshot">
@@ -389,7 +389,7 @@
 					<dt>Profile:</dt><dd>Cherry</dd>
 					<dt>Style:</dt><dd>Double shot</dd>
 					<dt>Material:</dt><dd>ABS</dd>
-					<dt>Compatibility:</dt><dd class="kitting">ansi, iso, tsangan, 65pct, numpad</dd>
+					<dt>Compatibility:</dt><dd class="kitting">ansi, tsangan, 65pct, numpad</dd>
 				</dl>
 			</li>
 			<li data-style="doubleshot">
@@ -407,135 +407,101 @@
 					<dt>Profile:</dt><dd>Cherry</dd>
 					<dt>Style:</dt><dd>Double shot</dd>
 					<dt>Material:</dt><dd>ABS</dd>
-					<dt>Compatibility:</dt><dd class="kitting">ansi, <s>iso</s>, tsangan, 65pct</dd>
-				</dl>
-			</li>
-			<li data-style="doubleshot" data-unwanted>
-				<figure data-view="displayed">
-					<img class="displayed" loading="lazy" src="media/sa_magica_displayed.jpg" alt="Displayed view"/>
-					<img class="kitting" loading="lazy" src="media/sa_magica.jpg" alt="Kitting view"/>
-					<figcaption>
-						<button class="displayed">Displayed</button>
-						<button class="kitting">Kitting</button>
-					</figcaption>
-				</figure>
-				<dl>
-					<dt>Name:</dt><dd>Magica</dd>
-					<dt>Manufacturer:</dt><dd>Signature Plastics</dd>
-					<dt>Profile:</dt><dd>SA</dd>
-					<dt>Style:</dt><dd>Double shot</dd>
-					<dt>Material:</dt><dd>ABS</dd>
-					<dt>Compatibility:</dt><dd class="kitting">ansi, tsangan, 65pct, alice, numpad</dd>
-				</dl>
-			</li>
-			<li data-style="doubleshot" data-unwanted>
-				<figure data-view="displayed">
-					<img class="displayed" loading="lazy" src="media/sa_solarized_displayed.jpg" alt="Displayed view"/>
-					<img class="kitting" loading="lazy" src="media/sa_solarized.jpg" alt="Kitting view"/>
-					<figcaption>
-						<button class="displayed">Displayed</button>
-						<button class="kitting">Kitting</button>
-					</figcaption>
-				</figure>
-				<dl>
-					<dt>Name:</dt><dd>Solarized</dd>
-					<dt>Manufacturer:</dt><dd>Signature Plastics</dd>
-					<dt>Profile:</dt><dd>SA</dd>
-					<dt>Style:</dt><dd>Double shot</dd>
-					<dt>Material:</dt><dd>ABS</dd>
-					<dt>Compatibility:</dt><dd class="kitting">ansi, iso, tsangan, 65pct, numpad</dd>
+					<dt>Compatibility:</dt><dd class="kitting">ansi, <s>int-iso</s>, tsangan, 65pct</dd>
 				</dl>
 			</li>
 			<li data-style="doubleshot">
 				<figure data-view="displayed">
-					<img class="displayed" loading="lazy" src="media/sa_spectra_displayed.jpg" alt="Displayed view"/>
-					<img class="kitting" loading="lazy" src="media/sa_spectra.jpg" alt="Kitting view"/>
+					<img class="displayed" loading="lazy" src="media/gmk_mercury_displayed.jpg" alt="Displayed view"/>
+					<img class="kitting" loading="lazy" src="media/gmk_mercury.jpg" alt="Kitting view"/>
 					<figcaption>
 						<button class="displayed">Displayed</button>
 						<button class="kitting">Kitting</button>
 					</figcaption>
 				</figure>
 				<dl>
-					<dt>Name:</dt><dd>Spectra</dd>
-					<dt>Manufacturer:</dt><dd>Signature Plastics</dd>
-					<dt>Profile:</dt><dd>SA</dd>
-					<dt>Style:</dt><dd>Double shot</dd>
-					<dt>Material:</dt><dd>ABS</dd>
-					<dt>Compatibility:</dt><dd class="kitting">ansi, iso, tsangan, 65pct</dd>
-				</dl>
-			</li>
-			<li data-style="doubleshot">
-				<figure data-view="displayed">
-					<img class="displayed" loading="lazy" src="media/jtk_cyan_displayed.jpg" alt="Displayed view"/>
-					<img class="kitting" loading="lazy" src="media/jtk_cyan.jpg" alt="Kitting view"/>
-					<figcaption>
-						<button class="displayed">Displayed</button>
-						<button class="kitting">Kitting</button>
-					</figcaption>
-				</figure>
-				<dl>
-					<dt>Name:</dt><dd>Cyan</dd>
-					<dt>Manufacturer:</dt><dd>JTK</dd>
+					<dt>Name:</dt><dd>Mercury</dd>
+					<dt>Manufacturer:</dt><dd>GMK</dd>
 					<dt>Profile:</dt><dd>Cherry</dd>
 					<dt>Style:</dt><dd>Double shot</dd>
 					<dt>Material:</dt><dd>ABS</dd>
-					<dt>Compatibility:</dt><dd class="kitting">ansi, iso, tsangan, 65pct, numpad</dd>
+					<dt>Compatibility:</dt><dd class="kitting">ansi, uk-iso, int-iso, tsangan, 65pct</dd>
 				</dl>
 			</li>
 			<li data-style="doubleshot">
 				<figure data-view="displayed">
-					<img class="displayed" loading="lazy" src="media/jtk_404_displayed.jpg" alt="Displayed view"/>
-					<img class="kitting" loading="lazy" src="media/jtk_404.jpg" alt="Kitting view"/>
+					<img class="displayed" loading="lazy" src="media/PXL_20221003_055623857.jpg" alt="Displayed view"/>
+					<img class="kitting" loading="lazy" src="media/gmk_synthwave.jpg" alt="Kitting view"/>
 					<figcaption>
 						<button class="displayed">Displayed</button>
 						<button class="kitting">Kitting</button>
 					</figcaption>
 				</figure>
 				<dl>
-					<dt>Name:</dt><dd>404</dd>
-					<dt>Manufacturer:</dt><dd>JTK</dd>
+					<dt>Name:</dt><dd>Synthwave</dd>
+					<dt>Manufacturer:</dt><dd>GMK</dd>
 					<dt>Profile:</dt><dd>Cherry</dd>
 					<dt>Style:</dt><dd>Double shot</dd>
 					<dt>Material:</dt><dd>ABS</dd>
-					<dt>Compatibility:</dt><dd class="kitting">ansi, iso, tsangan, 65pct, numpad</dd>
+					<dt>Compatibility:</dt><dd class="kitting">ansi, tsangan, 65pct, alice</dd>
 				</dl>
 			</li>
-			<li data-style="doubleshot">
+			<li data-style="dyesub">
 				<figure data-view="displayed">
-					<img class="displayed" loading="lazy" src="media/jtk_9009_displayed.jpg" alt="Displayed view"/>
-					<img class="kitting" loading="lazy" src="media/jtk_9009.jpg" alt="Kitting view"/>
+					<img class="displayed" loading="lazy" src="media/crp_tulip_displayed.jpg" alt="Displayed view"/>
+					<img class="kitting" loading="lazy" src="media/crp_tulip.jpg" alt="Kitting view"/>
 					<figcaption>
 						<button class="displayed">Displayed</button>
 						<button class="kitting">Kitting</button>
 					</figcaption>
 				</figure>
 				<dl>
-					<dt>Name:</dt><dd>9009</dd>
-					<dt>Manufacturer:</dt><dd>JTK</dd>
+					<dt>Name:</dt><dd>Korean + Tulip</dd>
+					<dt>Manufacturer:</dt><dd>Hammer CRP</dd>
 					<dt>Profile:</dt><dd>Cherry</dd>
-					<dt>Style:</dt><dd>Double shot</dd>
-					<dt>Material:</dt><dd>ABS</dd>
-					<dt>Compatibility:</dt><dd class="kitting">ansi, iso, tsangan, 65pct, numpad</dd>
+					<dt>Style:</dt><dd>Dye sublimation</dd>
+					<dt>Material:</dt><dd>PBT</dd>
+					<dt>Compatibility:</dt><dd class="kitting">ansi, int-iso, tsangan, 65pct, alice, numpad</dd>
 				</dl>
 			</li>
-			<li data-style="doubleshot">
+			<li data-style="dyesub">
 				<figure data-view="displayed">
-					<img class="displayed" loading="lazy" src="media/jtk_illusion_displayed.jpg" alt="Displayed view"/>
-					<img class="kitting" loading="lazy" src="media/jtk_illusion.jpg" alt="Kitting view"/>
+					<img class="displayed" loading="lazy" src="media/crp_windgod_displayed.jpg" alt="Displayed view"/>
+					<img class="kitting" loading="lazy" src="media/crp_windgod.jpg" alt="Kitting view"/>
 					<figcaption>
 						<button class="displayed">Displayed</button>
 						<button class="kitting">Kitting</button>
 					</figcaption>
 				</figure>
 				<dl>
-					<dt>Name:</dt><dd>Illusion</dd>
-					<dt>Manufacturer:</dt><dd>JTK</dd>
+					<dt>Name:</dt><dd>Fujin/Wind God</dd>
+					<dt>Manufacturer:</dt><dd>Hammer CRP</dd>
 					<dt>Profile:</dt><dd>Cherry</dd>
-					<dt>Style:</dt><dd>Double shot</dd>
-					<dt>Material:</dt><dd>ABS</dd>
-					<dt>Compatibility:</dt><dd class="kitting">ansi, iso, tsangan, 65pct, numpad</dd>
+					<dt>Style:</dt><dd>Dye sublimation</dd>
+					<dt>Material:</dt><dd>PBT</dd>
+					<dt>Compatibility:</dt><dd class="kitting">ansi, int-iso, tsangan, 65pct, alice, numpad</dd>
 				</dl>
 			</li>
+			<li data-style="dyesub">
+				<figure data-view="displayed">
+					<img class="displayed" loading="lazy" src="media/crp_purple_base_displayed.jpg" alt="Displayed view"/>
+					<img class="kitting" loading="lazy" src="media/crp_purple_base.jpg" alt="Kitting view"/>
+					<figcaption>
+						<button class="displayed">Displayed</button>
+						<button class="kitting">Kitting</button>
+					</figcaption>
+				</figure>
+				<dl>
+					<dt>Name:</dt><dd>Purple Base</dd>
+					<dt>Manufacturer:</dt><dd>Hammer CRP</dd>
+					<dt>Profile:</dt><dd>Cherry</dd>
+					<dt>Style:</dt><dd>Dye sublimation</dd>
+					<dt>Material:</dt><dd>PBT</dd>
+					<dt>Compatibility:</dt><dd class="kitting">ansi, tsangan, 65pct</dd>
+				</dl>
+			</li>
+		</ol>
+		<ol data-tier="b">
 			<li data-style="doubleshot">
 				<figure data-view="displayed">
 					<img class="displayed" loading="lazy" src="media/keykobo_wob_displayed.jpg" alt="Displayed view"/>
@@ -551,7 +517,7 @@
 					<dt>Profile:</dt><dd>Cherry</dd>
 					<dt>Style:</dt><dd>Double shot</dd>
 					<dt>Material:</dt><dd>ABS</dd>
-					<dt>Compatibility:</dt><dd class="kitting">ansi, iso, tsangan, 65pct, alice, numpad</dd>
+					<dt>Compatibility:</dt><dd class="kitting">ansi, uk-iso, tsangan, 65pct, alice, numpad</dd>
 				</dl>
 			</li>
 			<li data-style="doubleshot">
@@ -569,27 +535,224 @@
 					<dt>Profile:</dt><dd>Cherry</dd>
 					<dt>Style:</dt><dd>Double shot</dd>
 					<dt>Material:</dt><dd>ABS</dd>
-					<dt>Compatibility:</dt><dd class="kitting">ansi, iso, tsangan, 65pct, alice, numpad</dd>
+					<dt>Compatibility:</dt><dd class="kitting">ansi, uk-iso, int-iso, tsangan, 65pct, alice, numpad</dd>
 				</dl>
 			</li>
-		</ol>
-		<ol data-tier="b">
 			<li data-style="doubleshot">
 				<figure data-view="displayed">
-					<img class="displayed" loading="lazy" src="media/crp_tulip_displayed.jpg" alt="Displayed view"/>
-					<img class="kitting" loading="lazy" src="media/crp_tulip.jpg" alt="Kitting view"/>
+					<img class="displayed" loading="lazy" src="media/jtk_cyan_displayed.jpg" alt="Displayed view"/>
+					<img class="kitting" loading="lazy" src="media/jtk_cyan.jpg" alt="Kitting view"/>
 					<figcaption>
 						<button class="displayed">Displayed</button>
 						<button class="kitting">Kitting</button>
 					</figcaption>
 				</figure>
 				<dl>
-					<dt>Name:</dt><dd>Hammer X Swagkeys</dd>
-					<dt>Manufacturer:</dt><dd>CRP</dd>
+					<dt>Name:</dt><dd>Cyan</dd>
+					<dt>Manufacturer:</dt><dd>JTK</dd>
+					<dt>Profile:</dt><dd>Cherry</dd>
+					<dt>Style:</dt><dd>Double shot</dd>
+					<dt>Material:</dt><dd>ABS</dd>
+					<dt>Compatibility:</dt><dd class="kitting">ansi, uk-iso, tsangan, 65pct, numpad</dd>
+				</dl>
+			</li>
+			<li data-style="doubleshot">
+				<figure data-view="displayed">
+					<img class="displayed" loading="lazy" src="media/jtk_9009_displayed.jpg" alt="Displayed view"/>
+					<img class="kitting" loading="lazy" src="media/jtk_9009.jpg" alt="Kitting view"/>
+					<figcaption>
+						<button class="displayed">Displayed</button>
+						<button class="kitting">Kitting</button>
+					</figcaption>
+				</figure>
+				<dl>
+					<dt>Name:</dt><dd>9009</dd>
+					<dt>Manufacturer:</dt><dd>JTK</dd>
+					<dt>Profile:</dt><dd>Cherry</dd>
+					<dt>Style:</dt><dd>Double shot</dd>
+					<dt>Material:</dt><dd>ABS</dd>
+					<dt>Compatibility:</dt><dd class="kitting">ansi, <s>uk-iso</s>, tsangan, 65pct, numpad</dd>
+				</dl>
+			</li>
+			<li data-style="doubleshot">
+				<figure data-view="displayed">
+					<img class="displayed" loading="lazy" src="media/jtk_illusion_displayed.jpg" alt="Displayed view"/>
+					<img class="kitting" loading="lazy" src="media/jtk_illusion.jpg" alt="Kitting view"/>
+					<figcaption>
+						<button class="displayed">Displayed</button>
+						<button class="kitting">Kitting</button>
+					</figcaption>
+				</figure>
+				<dl>
+					<dt>Name:</dt><dd>Illusion</dd>
+					<dt>Manufacturer:</dt><dd>JTK</dd>
+					<dt>Profile:</dt><dd>Cherry</dd>
+					<dt>Style:</dt><dd>Double shot</dd>
+					<dt>Material:</dt><dd>ABS</dd>
+					<dt>Compatibility:</dt><dd class="kitting">ansi, uk-iso, tsangan, 65pct, numpad</dd>
+				</dl>
+			</li>
+			<li data-style="dyesub">
+				<figure data-view="displayed">
+					<img class="displayed" loading="lazy" src="media/jcstudio_ansi_enus_displayed.jpg" alt="Displayed view"/>
+					<img class="kitting" loading="lazy" src="media/jcstudio_ansi_enus.jpg" alt="Kitting view"/>
+					<figcaption>
+						<button class="displayed">Displayed</button>
+						<button class="kitting">Kitting</button>
+					</figcaption>
+				</figure>
+				<dl>
+					<dt>Name:</dt><dd>EN/US + Greek + Desko + Runes</dd>
+					<dt>Manufacturer:</dt><dd>JC Studio</dd>
 					<dt>Profile:</dt><dd>Cherry</dd>
 					<dt>Style:</dt><dd>Dye sublimation</dd>
 					<dt>Material:</dt><dd>PBT</dd>
-					<dt>Compatibility:</dt><dd class="kitting">ansi, iso, tsangan, numpad</dd>
+					<dt>Compatibility:</dt><dd class="kitting">ansi, int-iso, tsangan, 65pct, alice, numpad</dd>
+				</dl>
+			</li>
+			<li data-style="dyesub">
+				<figure data-view="displayed">
+					<img class="displayed" loading="lazy" src="media/shenpo_1953_retro_displayed.jpg" alt="Displayed view"/>
+					<img class="kitting" loading="lazy" src="media/shenpo_1953_retro.jpg" alt="Kitting view"/>
+					<figcaption>
+						<button class="displayed">Displayed</button>
+						<button class="kitting">Kitting</button>
+					</figcaption>
+				</figure>
+				<dl>
+					<dt>Name:</dt><dd>1953 Retro</dd>
+					<dt>Manufacturer:</dt><dd>Shenpo</dd>
+					<dt>Profile:</dt><dd>Cherry</dd>
+					<dt>Style:</dt><dd>Dye sublimation</dd>
+					<dt>Material:</dt><dd>PBT</dd>
+					<dt>Compatibility:</dt><dd class="kitting">ansi, tsangan, int-iso, 65pct, alice, numpad</dd>
+					<dt>Notes:</dt><dd>The 00 numpad key is on loan to JC Project Desko on the Frog 8K</dd>
+				</dl>
+			</li>
+			<li data-style="dyesub">
+				<figure data-view="displayed">
+					<img class="displayed" loading="lazy" src="media/shenpo_black_on_black_displayed.jpg" alt="Displayed view"/>
+					<img class="kitting" loading="lazy" src="media/shenpo_black_on_black.jpg" alt="Kitting view"/>
+					<figcaption>
+						<button class="displayed">Displayed</button>
+						<button class="kitting">Kitting</button>
+					</figcaption>
+				</figure>
+				<dl>
+					<dt>Name:</dt><dd>Black on Black</dd>
+					<dt>Manufacturer:</dt><dd>Shenpo</dd>
+					<dt>Profile:</dt><dd>Cherry</dd>
+					<dt>Style:</dt><dd>Dye sublimation</dd>
+					<dt>Material:</dt><dd>PBT</dd>
+					<dt>Compatibility:</dt><dd class="kitting">ansi, tsangan, int-iso, 65pct, alice, numpad</dd>
+				</dl>
+			</li>
+			<li data-style="dyesub">
+				<figure data-view="displayed">
+					<img class="displayed" loading="lazy" src="media/shenpo_retro_simple_grey_displayed.jpg" alt="Displayed view"/>
+					<img class="kitting" loading="lazy" src="media/shenpo_retro_simple_grey.jpg" alt="Kitting view"/>
+					<figcaption>
+						<button class="displayed">Displayed</button>
+						<button class="kitting">Kitting</button>
+					</figcaption>
+				</figure>
+				<dl>
+					<dt>Name:</dt><dd>Retro Simple Grey</dd>
+					<dt>Manufacturer:</dt><dd>Shenpo</dd>
+					<dt>Profile:</dt><dd>Cherry</dd>
+					<dt>Style:</dt><dd>Dye sublimation</dd>
+					<dt>Material:</dt><dd>PBT</dd>
+					<dt>Compatibility:</dt><dd class="kitting">ansi, tsangan, int-iso, 65pct, alice, numpad</dd>
+				</dl>
+			</li>
+			<li data-style="dyesub">
+				<figure data-view="displayed">
+					<img class="displayed" loading="lazy" src="media/shenpo_minimal_red_displayed.jpg" alt="Displayed view"/>
+					<img class="kitting" loading="lazy" src="media/shenpo_minimal_red.jpg" alt="Kitting view"/>
+					<figcaption>
+						<button class="displayed">Displayed</button>
+						<button class="kitting">Kitting</button>
+					</figcaption>
+				</figure>
+				<dl>
+					<dt>Name:</dt><dd>Minimal Red</dd>
+					<dt>Manufacturer:</dt><dd>Shenpo</dd>
+					<dt>Profile:</dt><dd>Cherry</dd>
+					<dt>Style:</dt><dd>Dye sublimation</dd>
+					<dt>Material:</dt><dd>PBT</dd>
+					<dt>Compatibility:</dt><dd class="kitting">ansi, tsangan, int-iso, 65pct, alice, numpad</dd>
+				</dl>
+			</li>
+			<li data-style="dyesub" data-unavailable>
+				<figure data-view="displayed">
+					<img class="displayed" loading="lazy" src="media/shenpo_minimal_white_displayed.jpg" alt="Displayed view"/>
+					<img class="kitting" loading="lazy" src="media/shenpo_minimal_white.jpg" alt="Kitting view"/>
+					<figcaption>
+						<button class="displayed">Displayed</button>
+						<button class="kitting">Kitting</button>
+					</figcaption>
+				</figure>
+				<dl>
+					<dt>Name:</dt><dd>Minimal White</dd>
+					<dt>Manufacturer:</dt><dd>Shenpo</dd>
+					<dt>Profile:</dt><dd>Cherry</dd>
+					<dt>Style:</dt><dd>Dye sublimation</dd>
+					<dt>Material:</dt><dd>PBT</dd>
+					<dt>Compatibility:</dt><dd class="kitting">ansi, tsangan, int-iso, 65pct, alice, numpad</dd>
+				</dl>
+			</li>
+			<li data-style="dyesub">
+				<figure data-view="displayed">
+					<img class="displayed" loading="lazy" src="media/shenpo_2048_displayed.jpg" alt="Displayed view"/>
+					<img class="kitting" loading="lazy" src="media/shenpo_2048.jpg" alt="Kitting view"/>
+					<figcaption>
+						<button class="displayed">Displayed</button>
+						<button class="kitting">Kitting</button>
+					</figcaption>
+				</figure>
+				<dl>
+					<dt>Name:</dt><dd>2048</dd>
+					<dt>Manufacturer:</dt><dd>Shenpo</dd>
+					<dt>Profile:</dt><dd>Cherry</dd>
+					<dt>Style:</dt><dd>Dye sublimation</dd>
+					<dt>Material:</dt><dd>PBT</dd>
+					<dt>Compatibility:</dt><dd class="kitting">ansi, int-iso, 65pct, alice, numpad</dd>
+				</dl>
+			</li>
+			<li data-style="dyesub">
+				<figure data-view="displayed">
+					<img class="displayed" loading="lazy" src="media/shenpo_retro_blue_displayed.jpg" alt="Displayed view"/>
+					<img class="kitting" loading="lazy" src="media/shenpo_retro_blue.jpg" alt="Kitting view"/>
+					<figcaption>
+						<button class="displayed">Displayed</button>
+						<button class="kitting">Kitting</button>
+					</figcaption>
+				</figure>
+				<dl>
+					<dt>Name:</dt><dd>Retro Blue</dd>
+					<dt>Manufacturer:</dt><dd>Shenpo</dd>
+					<dt>Profile:</dt><dd>Cherry</dd>
+					<dt>Style:</dt><dd>Dye sublimation</dd>
+					<dt>Material:</dt><dd>PBT</dd>
+					<dt>Compatibility:</dt><dd class="kitting">ansi, tsangan, int-iso, 65pct, alice, numpad</dd>
+				</dl>
+			</li>
+			<li data-style="dyesub">
+				<figure data-view="displayed">
+					<img class="displayed" loading="lazy" src="media/shenpo_terminal_displayed.jpg" alt="Displayed view"/>
+					<img class="kitting" loading="lazy" src="media/shenpo_terminal.jpg" alt="Kitting view"/>
+					<figcaption>
+						<button class="displayed">Displayed</button>
+						<button class="kitting">Kitting</button>
+					</figcaption>
+				</figure>
+				<dl>
+					<dt>Name:</dt><dd>Terminal</dd>
+					<dt>Manufacturer:</dt><dd>Shenpo (?)</dd>
+					<dt>Profile:</dt><dd>Cherry</dd>
+					<dt>Style:</dt><dd>Dye sublimation</dd>
+					<dt>Material:</dt><dd>PBT</dd>
+					<dt>Compatibility:</dt><dd class="kitting">ansi, tsangan, int-iso, 65pct, alice, numpad</dd>
 				</dl>
 			</li>
 			<li data-style="dyesub">
@@ -602,43 +765,7 @@
 					</figcaption>
 				</figure>
 				<dl>
-					<dt>Name:</dt><dd>ASCII Blue</dd>
-					<dt>Manufacturer:</dt><dd>Xiami (21kb)</dd>
-					<dt>Profile:</dt><dd>Cherry</dd>
-					<dt>Style:</dt><dd>Dye sublimation</dd>
-					<dt>Material:</dt><dd>PBT</dd>
-					<dt>Compatibility:</dt><dd class="kitting">ansi, tsangan, 65pct, alice, numpad</dd>
-				</dl>
-			</li>
-			<li data-style="dyesub">
-				<figure data-view="displayed">
-					<img class="displayed" loading="lazy" src="media/21kb_asci_blue_displayed.jpg" alt="Displayed view"/>
-					<img class="kitting" loading="lazy" src="media/21kb_asci_orange.jpg" alt="Kitting view"/>
-					<figcaption>
-						<button class="displayed">Displayed</button>
-						<button class="kitting">Kitting</button>
-					</figcaption>
-				</figure>
-				<dl>
-					<dt>Name:</dt><dd>ASCII Orange</dd>
-					<dt>Manufacturer:</dt><dd>Xiami (21kb)</dd>
-					<dt>Profile:</dt><dd>Cherry</dd>
-					<dt>Style:</dt><dd>Dye sublimation</dd>
-					<dt>Material:</dt><dd>PBT</dd>
-					<dt>Compatibility:</dt><dd class="kitting">ansi, tsangan, 65pct, alice, numpad</dd>
-				</dl>
-			</li>
-			<li data-style="dyesub">
-				<figure data-view="displayed">
-					<img class="displayed" loading="lazy" src="media/21kb_classic_displayed.jpg" alt="Displayed view"/>
-					<img class="kitting" loading="lazy" src="media/21kb_classic.jpg" alt="Kitting view"/>
-					<figcaption>
-						<button class="displayed">Displayed</button>
-						<button class="kitting">Kitting</button>
-					</figcaption>
-				</figure>
-				<dl>
-					<dt>Name:</dt><dd>Classic</dd>
+					<dt>Name:</dt><dd>Classic + ASCII</dd>
 					<dt>Manufacturer:</dt><dd>Xiami (21kb)</dd>
 					<dt>Profile:</dt><dd>Cherry</dd>
 					<dt>Style:</dt><dd>Dye sublimation</dd>
@@ -664,243 +791,8 @@
 					<dt>Compatibility:</dt><dd class="kitting">ansi, tsangan, 65pct, alice, numpad</dd>
 				</dl>
 			</li>
-			<li data-style="dyesub">
-				<figure data-view="displayed">
-					<img class="displayed" loading="lazy" src="media/jcstudio_ansi_enus_displayed.jpg" alt="Displayed view"/>
-					<img class="kitting" loading="lazy" src="media/jcstudio_ansi_enus.jpg" alt="Kitting view"/>
-					<figcaption>
-						<button class="displayed">Displayed</button>
-						<button class="kitting">Kitting</button>
-					</figcaption>
-				</figure>
-				<dl>
-					<dt>Name:</dt><dd>ANSI-EN/US</dd>
-					<dt>Manufacturer:</dt><dd>JC Studio</dd>
-					<dt>Profile:</dt><dd>Cherry</dd>
-					<dt>Style:</dt><dd>Dye sublimation</dd>
-					<dt>Material:</dt><dd>PBT</dd>
-					<dt>Compatibility:</dt><dd class="kitting">ansi, iso, tsangan, 65pct, alice, numpad</dd>
-				</dl>
-			</li>
-			<li data-style="dyesub">
-				<figure data-view="displayed">
-					<img class="displayed" loading="lazy" src="media/jcstudio_greek_enus_displayed.jpg" alt="Displayed view"/>
-					<img class="kitting" loading="lazy" src="media/jcstudio_greek_enus.jpg" alt="Kitting view"/>
-					<figcaption>
-						<button class="displayed">Displayed</button>
-						<button class="kitting">Kitting</button>
-					</figcaption>
-				</figure>
-				<dl>
-					<dt>Name:</dt><dd>Greek-EN/US</dd>
-					<dt>Manufacturer:</dt><dd>JC Studio</dd>
-					<dt>Profile:</dt><dd>Cherry</dd>
-					<dt>Style:</dt><dd>Dye sublimation</dd>
-					<dt>Material:</dt><dd>PBT</dd>
-					<dt>Compatibility:</dt><dd class="kitting">ansi, iso, tsangan, 65pct, alice, numpad</dd>
-				</dl>
-			</li>
-			<li data-style="dyesub">
-				<figure data-view="displayed">
-					<img class="displayed" loading="lazy" src="media/jcstudio_desko_colour_displayed.jpg" alt="Displayed view"/>
-					<img class="kitting" loading="lazy" src="media/jcstudio_desko_colour.jpg" alt="Kitting view"/>
-					<figcaption>
-						<button class="displayed">Displayed</button>
-						<button class="kitting">Kitting</button>
-					</figcaption>
-				</figure>
-				<dl>
-					<dt>Name:</dt><dd>Desko Colour</dd>
-					<dt>Manufacturer:</dt><dd>JC Studio</dd>
-					<dt>Profile:</dt><dd>Cherry</dd>
-					<dt>Style:</dt><dd>Dye sublimation</dd>
-					<dt>Material:</dt><dd>PBT</dd>
-					<dt>Compatibility:</dt><dd class="kitting">ansi, iso, tsangan, 65pct, alice, numpad</dd>
-				</dl>
-			</li>
-			<li data-style="dyesub" data-unwanted>
-				<figure data-view="displayed">
-					<img class="displayed" loading="lazy" src="media/shenpo_vintage_gray_blue_displayed.jpg" alt="Displayed view"/>
-					<img class="kitting" loading="lazy" src="media/shenpo_vintage_gray_blue.jpg" alt="Kitting view"/>
-					<figcaption>
-						<button class="displayed">Displayed</button>
-						<button class="kitting">Kitting</button>
-					</figcaption>
-				</figure>
-				<dl>
-					<dt>Name:</dt><dd>Vintage Gray</dd>
-					<dt>Manufacturer:</dt><dd>Shenpo</dd>
-					<dt>Profile:</dt><dd>Cherry</dd>
-					<dt>Style:</dt><dd>Dye sublimation</dd>
-					<dt>Material:</dt><dd>PBT</dd>
-					<dt>Compatibility:</dt><dd class="kitting">ansi, tsangan, 65pct, alice, numpad</dd>
-				</dl>
-			</li>
-			<li data-style="dyesub" data-unwanted>
-				<figure data-view="displayed">
-					<img class="displayed" loading="lazy" src="media/shenpo_froyo_displayed.jpg" alt="Displayed view"/>
-					<img class="kitting" loading="lazy" src="media/shenpo_froyo.jpg" alt="Kitting view"/>
-					<figcaption>
-						<button class="displayed">Displayed</button>
-						<button class="kitting">Kitting</button>
-					</figcaption>
-				</figure>
-				<dl>
-					<dt>Name:</dt><dd>Ice Yoghurt</dd>
-					<dt>Manufacturer:</dt><dd>Shenpo</dd>
-					<dt>Profile:</dt><dd>Cherry</dd>
-					<dt>Style:</dt><dd>Dye sublimation</dd>
-					<dt>Material:</dt><dd>PBT</dd>
-					<dt>Compatibility:</dt><dd class="kitting">ansi, tsangan, 65pct, alice, numpad</dd>
-				</dl>
-			</li>
-			<li data-style="dyesub">
-				<figure data-view="displayed">
-					<img class="displayed" loading="lazy" src="media/shenpo_black_on_black_displayed.jpg" alt="Displayed view"/>
-					<img class="kitting" loading="lazy" src="media/shenpo_black_on_black.jpg" alt="Kitting view"/>
-					<figcaption>
-						<button class="displayed">Displayed</button>
-						<button class="kitting">Kitting</button>
-					</figcaption>
-				</figure>
-				<dl>
-					<dt>Name:</dt><dd>Black on Black</dd>
-					<dt>Manufacturer:</dt><dd>Shenpo</dd>
-					<dt>Profile:</dt><dd>Cherry</dd>
-					<dt>Style:</dt><dd>Dye sublimation</dd>
-					<dt>Material:</dt><dd>PBT</dd>
-					<dt>Compatibility:</dt><dd class="kitting">ansi, tsangan, 65pct, alice, numpad</dd>
-				</dl>
-			</li>
-			<li data-style="dyesub" data-unavailable>
-				<figure data-view="displayed">
-					<img class="displayed" loading="lazy" src="media/shenpo_minimal_red_displayed.jpg" alt="Displayed view"/>
-					<img class="kitting" loading="lazy" src="media/shenpo_minimal_red.jpg" alt="Kitting view"/>
-					<figcaption>
-						<button class="displayed">Displayed</button>
-						<button class="kitting">Kitting</button>
-					</figcaption>
-				</figure>
-				<dl>
-					<dt>Name:</dt><dd>Minimal Red</dd>
-					<dt>Manufacturer:</dt><dd>Shenpo</dd>
-					<dt>Profile:</dt><dd>Cherry</dd>
-					<dt>Style:</dt><dd>Dye sublimation</dd>
-					<dt>Material:</dt><dd>PBT</dd>
-					<dt>Compatibility:</dt><dd class="kitting">ansi, tsangan, 65pct, alice, numpad</dd>
-				</dl>
-			</li>
-			<li data-style="dyesub" data-unavailable>
-				<figure data-view="displayed">
-					<img class="displayed" loading="lazy" src="media/shenpo_retro_simple_grey_displayed.jpg" alt="Displayed view"/>
-					<img class="kitting" loading="lazy" src="media/shenpo_retro_simple_grey.jpg" alt="Kitting view"/>
-					<figcaption>
-						<button class="displayed">Displayed</button>
-						<button class="kitting">Kitting</button>
-					</figcaption>
-				</figure>
-				<dl>
-					<dt>Name:</dt><dd>Simple Grey</dd>
-					<dt>Manufacturer:</dt><dd>Shenpo</dd>
-					<dt>Profile:</dt><dd>Cherry</dd>
-					<dt>Style:</dt><dd>Dye sublimation</dd>
-					<dt>Material:</dt><dd>PBT</dd>
-					<dt>Compatibility:</dt><dd class="kitting">ansi, tsangan, 65pct, alice, numpad</dd>
-				</dl>
-			</li>
 		</ol>
 		<ol data-tier="c">
-			<li data-style="doubleshot" data-unavailable>
-				<figure data-view="displayed">
-					<img class="displayed" loading="lazy" src="media/rama_kate_displayed.jpg" alt="Displayed view"/>
-					<img class="kitting" loading="lazy" src="media/rama_kate.jpg" alt="Kitting view"/>
-					<figcaption>
-						<button class="displayed">Displayed</button>
-						<button class="kitting">Kitting</button>
-					</figcaption>
-				</figure>
-				<dl>
-					<dt>Name:</dt><dd>Heavy Industry Dark</dd>
-					<dt>Manufacturer:</dt><dd>Rama</dd>
-					<dt>Profile:</dt><dd>CAPS</dd>
-					<dt>Style:</dt><dd>Double shot</dd>
-					<dt>Material:</dt><dd>ABS</dd>
-					<dt>Compatibility:</dt><dd class="kitting">ansi, tsangan, 65pct, numpad</dd>
-				</dl>
-			</li>
-			<li data-style="doubleshot">
-				<figure data-view="displayed">
-					<img class="displayed" loading="lazy" src="media/PXL_20221003_063420394.jpg" alt="Displayed view"/>
-					<img class="kitting" loading="lazy" src="media/kbdfans_neon.jpg" alt="Kitting view"/>
-					<figcaption>
-						<button class="displayed">Displayed</button>
-						<button class="kitting">Kitting</button>
-					</figcaption>
-				</figure>
-				<dl>
-					<dt>Name:</dt><dd>Neon</dd>
-					<dt>Manufacturer:</dt><dd>PBTfans</dd>
-					<dt>Profile:</dt><dd>Cherry</dd>
-					<dt>Style:</dt><dd>Double shot</dd>
-					<dt>Material:</dt><dd>ABS</dd>
-					<dt>Compatibility:</dt><dd class="kitting">ansi, iso, tsangan, 65pct, alice, numpad</dd>
-				</dl>
-			</li>
-			<li data-style="doubleshot" data-unwanted>
-				<figure data-view="displayed">
-					<img class="displayed" loading="lazy" src="media/kbdfans_pyga_displayed.jpg" alt="Displayed view"/>
-					<img class="kitting" loading="lazy" src="media/kbdfans_pyga.jpg" alt="Kitting view"/>
-					<figcaption>
-						<button class="displayed">Displayed</button>
-						<button class="kitting">Kitting</button>
-					</figcaption>
-				</figure>
-				<dl>
-					<dt>Name:</dt><dd>Pyga</dd>
-					<dt>Manufacturer:</dt><dd>PBTfans</dd>
-					<dt>Profile:</dt><dd>Cherry</dd>
-					<dt>Style:</dt><dd>Double shot</dd>
-					<dt>Material:</dt><dd>ABS</dd>
-					<dt>Compatibility:</dt><dd class="kitting">ansi, iso, tsangan, 65pct, alice</dd>
-				</dl>
-			</li>
-			<li data-style="doubleshot">
-				<figure data-view="displayed">
-					<img class="displayed" loading="lazy" src="media/kbdfans_wob_displayed.jpg" alt="Displayed view"/>
-					<img class="kitting" loading="lazy" src="media/kbdfans_wob.jpg" alt="Kitting view"/>
-					<figcaption>
-						<button class="displayed">Displayed</button>
-						<button class="kitting">Kitting</button>
-					</figcaption>
-				</figure>
-				<dl>
-					<dt>Name:</dt><dd>WoB</dd>
-					<dt>Manufacturer:</dt><dd>PBTfans</dd>
-					<dt>Profile:</dt><dd>Cherry</dd>
-					<dt>Style:</dt><dd>Double shot</dd>
-					<dt>Material:</dt><dd>ABS</dd>
-					<dt>Compatibility:</dt><dd class="kitting">ansi, iso, tsangan, 65pct, alice, numpad</dd>
-				</dl>
-			</li>
-			<li data-style="dyesub">
-				<figure data-view="displayed">
-					<img class="displayed" loading="lazy" src="media/epbt_grand_tour_displayed.jpg" alt="Displayed view"/>
-					<img class="kitting" loading="lazy" src="media/epbt_grand_tour.jpg" alt="Kitting view"/>
-					<figcaption>
-						<button class="displayed">Displayed</button>
-						<button class="kitting">Kitting</button>
-					</figcaption>
-				</figure>
-				<dl>
-					<dt>Name:</dt><dd>Grand Tour</dd>
-					<dt>Manufacturer:</dt><dd>EnjoyPBT</dd>
-					<dt>Profile:</dt><dd>Cherry</dd>
-					<dt>Style:</dt><dd>Dye sublimation</dd>
-					<dt>Material:</dt><dd>PBT</dd>
-					<dt>Compatibility:</dt><dd class="kitting">ansi, iso, tsangan, 65pct, alice, numpad</dd>
-					<dt>Problems:</dt><dd>The stabilised caps are too badly warped to actuate properly.</dd>
-				</dl>
-			</li>
 			<li data-style="doubleshot">
 				<figure data-view="displayed">
 					<img class="displayed" loading="lazy" src="media/domikey_topre_semiconductor_displayed.jpg" alt="Displayed view"/>
@@ -937,6 +829,132 @@
 					<dt>Compatibility:</dt><dd class="kitting">ansi, hhkb</dd>
 				</dl>
 			</li>
+			<li data-style="doubleshot">
+				<figure data-view="displayed">
+					<img class="displayed" loading="lazy" src="media/domikey_snaakechaser_displayed.jpg" alt="Displayed view"/>
+					<img class="kitting" loading="lazy" src="media/domikey_snaakechaser.jpg" alt="Kitting view"/>
+					<figcaption>
+						<button class="displayed">Displayed</button>
+						<button class="kitting">Kitting</button>
+					</figcaption>
+				</figure>
+				<dl>
+					<dt>Name:</dt><dd>Snaake Chaser</dd>
+					<dt>Manufacturer:</dt><dd>Domikey</dd>
+					<dt>Profile:</dt><dd>Cherry</dd>
+					<dt>Style:</dt><dd>Double shot</dd>
+					<dt>Material:</dt><dd>ABS</dd>
+					<dt>Compatibility:</dt><dd class="kitting">ansi, uk-iso, tsangan, 65pct, alice, numpad</dd>
+				</dl>
+			</li>
+			<li data-style="dyesub">
+				<figure data-view="displayed">
+					<img class="displayed" loading="lazy" src="media/epbt_grand_tour_displayed.jpg" alt="Displayed view"/>
+					<img class="kitting" loading="lazy" src="media/epbt_grand_tour.jpg" alt="Kitting view"/>
+					<figcaption>
+						<button class="displayed">Displayed</button>
+						<button class="kitting">Kitting</button>
+					</figcaption>
+				</figure>
+				<dl>
+					<dt>Name:</dt><dd>Grand Tour</dd>
+					<dt>Manufacturer:</dt><dd>EnjoyPBT</dd>
+					<dt>Profile:</dt><dd>Cherry</dd>
+					<dt>Style:</dt><dd>Dye sublimation</dd>
+					<dt>Material:</dt><dd>PBT</dd>
+					<dt>Compatibility:</dt><dd class="kitting">ansi, int-iso, tsangan, 65pct, alice, numpad</dd>
+				</dl>
+			</li>
+			<li data-style="dyesub">
+				<figure data-view="displayed">
+					<img class="displayed" loading="lazy" src="media/epbt_6085s_displayed.jpg" alt="Displayed view"/>
+					<img class="kitting" loading="lazy" src="media/epbt_6085s.jpg" alt="Kitting view"/>
+					<figcaption>
+						<button class="displayed">Displayed</button>
+						<button class="kitting">Kitting</button>
+					</figcaption>
+				</figure>
+				<dl>
+					<dt>Name:</dt><dd>6085S</dd>
+					<dt>Manufacturer:</dt><dd>EnjoyPBT</dd>
+					<dt>Profile:</dt><dd>Cherry</dd>
+					<dt>Style:</dt><dd>Dye sublimation</dd>
+					<dt>Material:</dt><dd>PBT</dd>
+					<dt>Compatibility:</dt><dd class="kitting">ansi, tsangan, 65pct</dd>
+				</dl>
+			</li>
+			<li data-style="dyesub">
+				<figure data-view="displayed">
+					<img class="displayed" loading="lazy" src="media/epbt_winter_breath_displayed.jpg" alt="Displayed view"/>
+					<img class="kitting" loading="lazy" src="media/epbt_winter_breath.jpg" alt="Kitting view"/>
+					<figcaption>
+						<button class="displayed">Displayed</button>
+						<button class="kitting">Kitting</button>
+					</figcaption>
+				</figure>
+				<dl>
+					<dt>Name:</dt><dd>Winter Breath</dd>
+					<dt>Manufacturer:</dt><dd>EnjoyPBT</dd>
+					<dt>Profile:</dt><dd>Cherry</dd>
+					<dt>Style:</dt><dd>Dye sublimation</dd>
+					<dt>Material:</dt><dd>PBT</dd>
+					<dt>Compatibility:</dt><dd class="kitting">ansi, int-iso, tsangan, 65pct</dd>
+				</dl>
+			</li>
+			<li data-style="dyesub">
+				<figure data-view="displayed">
+					<img class="displayed" loading="lazy" src="media/epbt_kavala_displayed.jpg" alt="Displayed view"/>
+					<img class="kitting" loading="lazy" src="media/epbt_kavala.jpg" alt="Kitting view"/>
+					<figcaption>
+						<button class="displayed">Displayed</button>
+						<button class="kitting">Kitting</button>
+					</figcaption>
+				</figure>
+				<dl>
+					<dt>Name:</dt><dd>Kavala</dd>
+					<dt>Manufacturer:</dt><dd>EnjoyPBT</dd>
+					<dt>Profile:</dt><dd>Cherry</dd>
+					<dt>Style:</dt><dd>Dye sublimation</dd>
+					<dt>Material:</dt><dd>PBT</dd>
+					<dt>Compatibility:</dt><dd class="kitting">ansi, int-iso, tsangan, 65pct, alice, numpad</dd>
+				</dl>
+			</li>
+			<li data-style="dyesub">
+				<figure data-view="displayed">
+					<img class="displayed" loading="lazy" src="media/epbt_simplebaybayin_displayed.jpg" alt="Displayed view"/>
+					<img class="kitting" loading="lazy" src="media/epbt_simplebaybayin.jpg" alt="Kitting view"/>
+					<figcaption>
+						<button class="displayed">Displayed</button>
+						<button class="kitting">Kitting</button>
+					</figcaption>
+				</figure>
+				<dl>
+					<dt>Name:</dt><dd>Simple Baybayin (Latin)</dd>
+					<dt>Manufacturer:</dt><dd>EnjoyPBT</dd>
+					<dt>Profile:</dt><dd>Cherry</dd>
+					<dt>Style:</dt><dd>Dye sublimation</dd>
+					<dt>Material:</dt><dd>PBT</dd>
+					<dt>Compatibility:</dt><dd class="kitting">ansi, int-iso, tsangan, 65pct, alice</dd>
+				</dl>
+			</li>
+			<li data-style="dyesub">
+				<figure data-view="displayed">
+					<img class="displayed" loading="lazy" src="media/epbt_fall_displayed.jpg" alt="Displayed view"/>
+					<img class="kitting" loading="lazy" src="media/epbt_fall.jpg" alt="Kitting view"/>
+					<figcaption>
+						<button class="displayed">Displayed</button>
+						<button class="kitting">Kitting</button>
+					</figcaption>
+				</figure>
+				<dl>
+					<dt>Name:</dt><dd>Fall</dd>
+					<dt>Manufacturer:</dt><dd>EnjoyPBT</dd>
+					<dt>Profile:</dt><dd>Cherry</dd>
+					<dt>Style:</dt><dd>Dye sublimation</dd>
+					<dt>Material:</dt><dd>PBT</dd>
+					<dt>Compatibility:</dt><dd class="kitting">ansi, int-iso, tsangan, 65pct, alice</dd>
+				</dl>
+			</li>
 			<li data-style="dyesub">
 				<figure data-view="displayed">
 					<img class="displayed" loading="lazy" src="media/cannoncaps_bigblue_displayed.jpg" alt="Displayed view"/>
@@ -955,278 +973,26 @@
 					<dt>Compatibility:</dt><dd class="kitting">ansi, tsangan, 65pct, alice, numpad</dd>
 				</dl>
 			</li>
-			<li data-style="dyesub" data-unwanted>
-				<figure data-view="displayed">
-					<img class="displayed" loading="lazy" src="media/cannonkeys_earlgrey_displayed.jpg" alt="Displayed view"/>
-					<img class="kitting" loading="lazy" src="media/cannonkeys_earlgrey.jpg" alt="Kitting view"/>
-					<figcaption>
-						<button class="displayed">Displayed</button>
-						<button class="kitting">Kitting</button>
-					</figcaption>
-				</figure>
-				<dl>
-					<dt>Name:</dt><dd>Earl Grey Lavender</dd>
-					<dt>Manufacturer:</dt><dd>Cannoncaps</dd>
-					<dt>Profile:</dt><dd>Cherry</dd>
-					<dt>Style:</dt><dd>Dye sublimation</dd>
-					<dt>Material:</dt><dd>PBT</dd>
-					<dt>Compatibility:</dt><dd class="kitting">ansi, iso, tsangan, 65pct, alice, numpad</dd>
-				</dl>
-			</li>
-
-			<li data-style="doubleshot">
-				<figure data-view="displayed">
-					<img class="displayed" loading="lazy" src="media/domikey_wob_displayed.jpg" alt="Displayed view"/>
-					<img class="kitting" loading="lazy" src="media/domikey_wob.jpg" alt="Kitting view"/>
-					<figcaption>
-						<button class="displayed">Displayed</button>
-						<button class="kitting">Kitting</button>
-					</figcaption>
-				</figure>
-				<dl>
-					<dt>Name:</dt><dd>White on Black</dd>
-					<dt>Manufacturer:</dt><dd>Domikey</dd>
-					<dt>Profile:</dt><dd>Cherry</dd>
-					<dt>Style:</dt><dd>Double shot</dd>
-					<dt>Material:</dt><dd>ABS</dd>
-					<dt>Compatibility:</dt><dd class="kitting">ansi, iso, tsangan, 65pct, alice, numpad</dd>
-				</dl>
-			</li>
-			<li data-style="doubleshot" data-unwanted>
-				<figure data-view="displayed">
-					<img class="displayed" loading="lazy" src="media/domikey_hush_displayed.jpg" alt="Displayed view"/>
-					<img class="kitting" loading="lazy" src="media/domikey_hush.jpg" alt="Kitting view"/>
-					<figcaption>
-						<button class="displayed">Displayed</button>
-						<button class="kitting">Kitting</button>
-					</figcaption>
-				</figure>
-				<dl>
-					<dt>Name:</dt><dd>Hush</dd>
-					<dt>Manufacturer:</dt><dd>Domikey</dd>
-					<dt>Profile:</dt><dd>Cherry</dd>
-					<dt>Style:</dt><dd>Double shot</dd>
-					<dt>Material:</dt><dd>ABS</dd>
-					<dt>Compatibility:</dt><dd class="kitting">ansi, iso, tsangan, 65pct, alice, numpad</dd>
-				</dl>
-			</li>
-			<li data-style="doubleshot" data-unwanted>
-				<figure data-view="displayed">
-					<img class="displayed" loading="lazy" src="media/domikey_astronaut_displayed.jpg" alt="Displayed view"/>
-					<img class="kitting" loading="lazy" src="media/domikey_astronaut.jpg" alt="Kitting view"/>
-					<figcaption>
-						<button class="displayed">Displayed</button>
-						<button class="kitting">Kitting</button>
-					</figcaption>
-				</figure>
-				<dl>
-					<dt>Name:</dt><dd>Astronaut</dd>
-					<dt>Manufacturer:</dt><dd>Domikey</dd>
-					<dt>Profile:</dt><dd>Cherry</dd>
-					<dt>Style:</dt><dd>Double shot</dd>
-					<dt>Material:</dt><dd>ABS</dd>
-					<dt>Compatibility:</dt><dd class="kitting">ansi, iso, tsangan, 65pct, alice, numpad</dd>
-				</dl>
-			</li>
-			<li data-style="doubleshot" data-unwanted>
-				<figure data-view="displayed">
-					<img class="displayed" loading="lazy" src="media/domikey_dolch_displayed.jpg" alt="Displayed view"/>
-					<img class="kitting" loading="lazy" src="media/domikey_dolch.jpg" alt="Kitting view"/>
-					<figcaption>
-						<button class="displayed">Displayed</button>
-						<button class="kitting">Kitting</button>
-					</figcaption>
-				</figure>
-				<dl>
-					<dt>Name:</dt><dd>Dolch</dd>
-					<dt>Manufacturer:</dt><dd>Domikey</dd>
-					<dt>Profile:</dt><dd>Cherry</dd>
-					<dt>Style:</dt><dd>Double shot</dd>
-					<dt>Material:</dt><dd>ABS</dd>
-					<dt>Compatibility:</dt><dd class="kitting">ansi, iso, tsangan, 65pct, alice, numpad</dd>
-				</dl>
-			</li>
-			<li data-style="doubleshot" data-unwanted>
-				<figure data-view="displayed">
-					<img class="displayed" loading="lazy" src="media/domikey_silentforest_displayed.jpg" alt="Displayed view"/>
-					<img class="kitting" loading="lazy" src="media/domikey_silentforest.jpg" alt="Kitting view"/>
-					<figcaption>
-						<button class="displayed">Displayed</button>
-						<button class="kitting">Kitting</button>
-					</figcaption>
-				</figure>
-				<dl>
-					<dt>Name:</dt><dd>Silent Forest</dd>
-					<dt>Manufacturer:</dt><dd>Domikey</dd>
-					<dt>Profile:</dt><dd>Cherry</dd>
-					<dt>Style:</dt><dd>Double shot</dd>
-					<dt>Material:</dt><dd>ABS</dd>
-					<dt>Compatibility:</dt><dd class="kitting">ansi, tsangan, 65pct</dd>
-				</dl>
-			</li>
-			<li data-style="doubleshot" data-unwanted>
-				<figure data-view="displayed">
-					<img class="displayed" loading="lazy" src="media/domikey_singlechip_displayed.jpg" alt="Displayed view"/>
-					<img class="kitting" loading="lazy" src="media/domikey_singlechip.jpg" alt="Kitting view"/>
-					<figcaption>
-						<button class="displayed">Displayed</button>
-						<button class="kitting">Kitting</button>
-					</figcaption>
-				</figure>
-				<dl>
-					<dt>Name:</dt><dd>Single Chip</dd>
-					<dt>Manufacturer:</dt><dd>Domikey</dd>
-					<dt>Profile:</dt><dd>Cherry</dd>
-					<dt>Style:</dt><dd>Double shot</dd>
-					<dt>Material:</dt><dd>ABS</dd>
-					<dt>Compatibility:</dt><dd class="kitting">ansi, iso, tsangan, 65pct, alice, numpad</dd>
-				</dl>
-			</li>
-			<li data-style="doubleshot" data-unwanted>
-				<figure data-view="displayed">
-					<img class="displayed" loading="lazy" src="media/domikey_semiconductor_displayed.jpg" alt="Displayed view"/>
-					<img class="kitting" loading="lazy" src="media/domikey_semiconductor.jpg" alt="Kitting view"/>
-					<figcaption>
-						<button class="displayed">Displayed</button>
-						<button class="kitting">Kitting</button>
-					</figcaption>
-				</figure>
-				<dl>
-					<dt>Name:</dt><dd>Semiconductor</dd>
-					<dt>Manufacturer:</dt><dd>Domikey</dd>
-					<dt>Profile:</dt><dd>Cherry</dd>
-					<dt>Style:</dt><dd>Double shot</dd>
-					<dt>Material:</dt><dd>ABS</dd>
-					<dt>Compatibility:</dt><dd class="kitting">ansi, iso, tsangan, 65pct, alice, numpad</dd>
-				</dl>
-			</li>
 		</ol>
 		<ol data-tier="d">
-			<li data-style="doubleshot" data-unwanted>
-				<figure data-view="displayed">
-					<img class="displayed" loading="lazy" src="media/taihao_smokey_quartz_displayed.jpg" alt="Displayed view"/>
-					<img class="kitting" loading="lazy" src="media/taihao_smokey_quartz.jpg" alt="Kitting view"/>
-					<figcaption>
-						<button class="displayed">Displayed</button>
-						<button class="kitting">Kitting</button>
-					</figcaption>
-				</figure>
-				<dl>
-					<dt>Name:</dt><dd>Smokey Quartz</dd>
-					<dt>Manufacturer:</dt><dd>Tai Hao</dd>
-					<dt>Profile:</dt><dd>OEM</dd>
-					<dt>Style:</dt><dd>Double shot</dd>
-					<dt>Material:</dt><dd>ABS</dd>
-					<dt>Compatibility:</dt><dd class="kitting">ansi, iso, tsangan, numpad</dd>
-				</dl>
-			</li>
-			<li data-style="doubleshot" data-unwanted>
-				<figure data-view="displayed">
-					<img class="displayed" loading="lazy" src="media/taihao_dark_night_displayed.jpg" alt="Displayed view"/>
-					<img class="kitting" loading="lazy" src="media/taihao_dark_night.jpg" alt="Kitting view"/>
-					<figcaption>
-						<button class="displayed">Displayed</button>
-						<button class="kitting">Kitting</button>
-					</figcaption>
-				</figure>
-				<dl>
-					<dt>Name:</dt><dd>Dark Night</dd>
-					<dt>Manufacturer:</dt><dd>Tai Hao</dd>
-					<dt>Profile:</dt><dd>OEM</dd>
-					<dt>Style:</dt><dd>Double shot</dd>
-					<dt>Material:</dt><dd>ABS</dd>
-					<dt>Compatibility:</dt><dd class="kitting">ansi, tsangan, numpad</dd>
-				</dl>
-			</li>
-			<li data-style="doubleshot" data-unwanted>
-				<figure data-view="displayed">
-					<img class="displayed" loading="lazy" src="media/taihao_shell_sand_beach_displayed.jpg" alt="Displayed view"/>
-					<img class="kitting" loading="lazy" src="media/taihao_shell_sand_beach.jpg" alt="Kitting view"/>
-					<figcaption>
-						<button class="displayed">Displayed</button>
-						<button class="kitting">Kitting</button>
-					</figcaption>
-				</figure>
-				<dl>
-					<dt>Name:</dt><dd>Shell Sand Beach</dd>
-					<dt>Manufacturer:</dt><dd>Tai Hao</dd>
-					<dt>Profile:</dt><dd>OEM</dd>
-					<dt>Style:</dt><dd>Double shot</dd>
-					<dt>Material:</dt><dd>ABS</dd>
-					<dt>Compatibility:</dt><dd class="kitting">ansi, iso, tsangan, numpad</dd>
-				</dl>
-			</li>
-			<li data-style="doubleshot" data-unwanted>
-				<figure data-view="displayed">
-					<img class="displayed" loading="lazy" src="media/taihao_vintage_camel_displayed.jpg" alt="Displayed view"/>
-					<img class="kitting" loading="lazy" src="media/taihao_vintage_camel.jpg" alt="Kitting view"/>
-					<figcaption>
-						<button class="displayed">Displayed</button>
-						<button class="kitting">Kitting</button>
-					</figcaption>
-				</figure>
-				<dl>
-					<dt>Name:</dt><dd>Vintage Camel</dd>
-					<dt>Manufacturer:</dt><dd>Tai Hao</dd>
-					<dt>Profile:</dt><dd>OEM</dd>
-					<dt>Style:</dt><dd>Double shot</dd>
-					<dt>Material:</dt><dd>ABS</dd>
-					<dt>Compatibility:</dt><dd class="kitting">ansi, iso, tsangan, numpad</dd>
-				</dl>
-			</li>
+			<li></li>
 		</ol>
 		<ol data-tier="f">
-			<li data-style="dyesub" data-unwanted>
+			<li data-style="doubleshot" data-unavailable>
 				<figure data-view="displayed">
-					<img class="displayed" loading="lazy" src="media/epbt_camo_displayed.jpg" alt="Displayed view"/>
-					<img class="kitting" loading="lazy" src="media/epbt_camo.jpg" alt="Kitting view"/>
+					<img class="displayed" loading="lazy" src="media/rama_kate_displayed.jpg" alt="Displayed view"/>
+					<img class="kitting" loading="lazy" src="media/rama_kate.jpg" alt="Kitting view"/>
 					<figcaption>
 						<button class="displayed">Displayed</button>
 						<button class="kitting">Kitting</button>
 					</figcaption>
 				</figure>
 				<dl>
-					<dt>Name:</dt><dd>Camo</dd>
-					<dt>Manufacturer:</dt><dd>EnjoyPBT</dd>
-					<dt>Profile:</dt><dd>Cherry</dd>
-					<dt>Style:</dt><dd>Dye sublimation</dd>
-					<dt>Material:</dt><dd>PBT</dd>
-					<dt>Compatibility:</dt><dd class="kitting">ansi, tsangan, 65pct, alice, numpad</dd>
-				</dl>
-			</li>
-			<li data-style="dyesub" data-unwanted>
-				<figure data-view="displayed">
-					<img class="displayed" loading="lazy" src="media/novelkeys_ghostbustin_displayed.jpg" alt="Displayed view"/>
-					<img class="kitting" loading="lazy" src="media/novelkeys_ghostbustin.jpg" alt="Kitting view"/>
-					<figcaption>
-						<button class="displayed">Displayed</button>
-						<button class="kitting">Kitting</button>
-					</figcaption>
-				</figure>
-				<dl>
-					<dt>Name:</dt><dd>Ghostbustin'</dd>
-					<dt>Manufacturer:</dt><dd>Novelkeys</dd>
-					<dt>Profile:</dt><dd>Cherry</dd>
-					<dt>Style:</dt><dd>Dye sublimated</dd>
-					<dt>Material:</dt><dd>PBT</dd>
-					<dt>Compatibility:</dt><dd class="kitting">ansi, iso, tsangan, 65pct, numpad</dd>
-				</dl>
-			</li>
-			<li data-style="dyesub" data-unwanted>
-				<figure data-view="displayed">
-					<img class="displayed" loading="lazy" src="media/gks_summer_peach_displayed.jpg" alt="Displayed view"/>
-					<img class="kitting" loading="lazy" src="media/gks_summer_peach.jpg" alt="Kitting view"/>
-					<figcaption>
-						<button class="displayed">Displayed</button>
-						<button class="kitting">Kitting</button>
-					</figcaption>
-				</figure>
-				<dl>
-					<dt>Name:</dt><dd>Summer Peach</dd>
-					<dt>Manufacturer:</dt><dd>gks</dd>
-					<dt>Profile:</dt><dd>Cherry</dd>
-					<dt>Style:</dt><dd>Dye sublimated</dd>
-					<dt>Material:</dt><dd>PBT</dd>
+					<dt>Name:</dt><dd>Heavy Industry Dark</dd>
+					<dt>Manufacturer:</dt><dd>Rama</dd>
+					<dt>Profile:</dt><dd>CAPS</dd>
+					<dt>Style:</dt><dd>Double shot</dd>
+					<dt>Material:</dt><dd>ABS</dd>
 					<dt>Compatibility:</dt><dd class="kitting">ansi, tsangan, 65pct, numpad</dd>
 				</dl>
 			</li>
