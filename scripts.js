@@ -90,7 +90,7 @@ class OrderBy {
 			case "ansi": this.refilter(/ansi/i, this.cfg.kittingsRule); break;
 			case "ansi_kb": this.refilter(/ansi/i, this.cfg.layoutRule); break;
 			case "tsangan": this.refilter(/tsangan/i, this.cfg.layoutRule); break;
-			case "special": this.refilter(/alice|8k|frltkl|1800/i, this.cfg.sizeRule); break;
+			case "1800_kb": this.refilter(/8k|1800/i, this.cfg.sizeRule); break;
 			case "alice": this.refilter(/alice/i, this.cfg.kittingsRule); break;
 			case "numpad": this.refilter(/numpad/i, this.cfg.kittingsRule); break;
 			case "60pct": this.refilter(/60%|60pct/i, this.cfg.sizeRule); break;
