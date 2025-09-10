@@ -97,7 +97,7 @@ class OrderBy {
 			case "65pct": this.refilter(/65%|65pct/i, this.cfg.sizeRule); break;
 			case "60%": this.refilter(/60%|60pct/i, this.cfg.kittingsRule); break;
 			case "65%": this.refilter(/65%|65pct/i, this.cfg.kittingsRule); break;
-			case "tkl": this.refilter(/tkl/i, this.cfg.sizeRule); break;
+			case "tkl": this.refilter(/^tkl$/i, this.cfg.sizeRule); break;
 			case "1800": this.refilter(/1800/i, this.cfg.sizeRule); break;
 			case "normal_travel": this.refilter(/normal/i, this.cfg.travelRule); break;
 			case "reduced_travel": this.refilter(/long pole/i, this.cfg.travelRule); break;
