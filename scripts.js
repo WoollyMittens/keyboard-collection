@@ -81,26 +81,26 @@ class OrderBy {
 		this.container.setAttribute("data-sorting", this.sorter.value);
 		console.log('this.sorter.value', this.sorter.value);
 		switch(this.sorter.value) {
-			case "hotswap": this.refilter(/hotswap/i, this.cfg.socketsRule); break;
-			case "soldered": this.refilter(/soldered/i, this.cfg.socketsRule); break;
-			case "topre": this.refilter(/topre/i, this.cfg.socketsRule); break;
+			case "hotswap_kb": this.refilter(/hotswap/i, this.cfg.socketsRule); break;
+			case "soldered_kb": this.refilter(/soldered/i, this.cfg.socketsRule); break;
+			case "topre_kb": this.refilter(/topre/i, this.cfg.socketsRule); break;
+			case "iso_kb": this.refilter(/iso/i, this.cfg.layoutRule); break;
+			case "ansi_kb": this.refilter(/ansi/i, this.cfg.layoutRule); break;
+			case "tsangan_kb": this.refilter(/tsangan/i, this.cfg.layoutRule); break;
+			case "1800_kb": this.refilter(/8k|1800/i, this.cfg.sizeRule); break;
+			case "60pct_kb": this.refilter(/60%|60pct/i, this.cfg.sizeRule); break;
+			case "65pct_kb": this.refilter(/65%|65pct|frltkl/i, this.cfg.sizeRule); break;
+			case "tkl_kb": this.refilter(/^tkl$/i, this.cfg.sizeRule); break;
+			case "1800_kb": this.refilter(/1800/i, this.cfg.sizeRule); break;
+			case "normal_travel_kb": this.refilter(/normal/i, this.cfg.travelRule); break;
+			case "reduced_travel_kb": this.refilter(/long pole/i, this.cfg.travelRule); break;
+			case "ansi": this.refilter(/ansi/i, this.cfg.kittingsRule); break;
 			case "iso_int": this.refilter(/int-iso/i, this.cfg.kittingsRule); break;
 			case "iso_uk": this.refilter(/uk-iso/i, this.cfg.kittingsRule); break;
-			case "iso_kb": this.refilter(/iso/i, this.cfg.layoutRule); break;
-			case "ansi": this.refilter(/ansi/i, this.cfg.kittingsRule); break;
-			case "ansi_kb": this.refilter(/ansi/i, this.cfg.layoutRule); break;
-			case "tsangan": this.refilter(/tsangan/i, this.cfg.layoutRule); break;
-			case "1800_kb": this.refilter(/8k|1800/i, this.cfg.sizeRule); break;
 			case "alice": this.refilter(/alice/i, this.cfg.kittingsRule); break;
 			case "numpad": this.refilter(/numpad/i, this.cfg.kittingsRule); break;
-			case "60pct": this.refilter(/60%|60pct/i, this.cfg.sizeRule); break;
-			case "65pct": this.refilter(/65%|65pct|frltkl/i, this.cfg.sizeRule); break;
-			case "60%": this.refilter(/60%|60pct/i, this.cfg.kittingsRule); break;
-			case "65%": this.refilter(/65%|65pct/i, this.cfg.kittingsRule); break;
-			case "tkl": this.refilter(/^tkl$/i, this.cfg.sizeRule); break;
-			case "1800": this.refilter(/1800/i, this.cfg.sizeRule); break;
-			case "normal_travel": this.refilter(/normal/i, this.cfg.travelRule); break;
-			case "reduced_travel": this.refilter(/long pole/i, this.cfg.travelRule); break;
+			case "60pct": this.refilter(/60%|60pct/i, this.cfg.kittingsRule); break;
+			case "65pct": this.refilter(/65%|65pct/i, this.cfg.kittingsRule); break;
 			default: this.refilter(/.*/, "dd");
 		}
 		// update the stored values
