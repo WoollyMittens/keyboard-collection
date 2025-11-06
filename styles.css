@@ -172,7 +172,8 @@ ol[data-tier="d"] li:before {
   content: "1";
 }
 
-ol[data-tier="f"] li:before {
+ol[data-tier="f"] li:before,
+ol[data-tier="x"] li:before {
   display: none;
 }
 
@@ -392,7 +393,8 @@ ol[data-tier="d"]:before {
   background-color: #7fbfff;
 }
 
-ol[data-tier="f"]:before {
+ol[data-tier="f"]:before,
+ol[data-tier="x"]:before {
   background-color: #7f7fff;
 }
 
