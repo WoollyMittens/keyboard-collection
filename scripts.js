@@ -84,6 +84,7 @@ class OrderBy {
 			case "hotswap_kb": this.refilter(/hotswap/i, this.cfg.socketsRule); break;
 			case "soldered_kb": this.refilter(/soldered/i, this.cfg.socketsRule); break;
 			case "topre_kb": this.refilter(/topre/i, this.cfg.socketsRule); break;
+			case "weighted_kb": this.refilter(/internal|external|through/i, this.cfg.weightRule); break;
 			case "iso_kb": this.refilter(/iso/i, this.cfg.layoutRule); break;
 			case "ansi_kb": this.refilter(/ansi/i, this.cfg.layoutRule); break;
 			case "tsangan_kb": this.refilter(/tsangan/i, this.cfg.layoutRule); break;
@@ -133,6 +134,7 @@ new OrderBy({
 	socketsRule: "dd.sockets",
 	kittingsRule: "dd.kitting",
 	layoutRule: "dd.layout, dd.kitting",
+	weightRule: "dd.weight",
 	sizeRule: "dd.size",
 	sortingRule: "select",
 	zoomingRule: '[name="zoom"]',
