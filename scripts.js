@@ -84,6 +84,7 @@ class OrderBy {
 			case "hotswap_kb": this.refilter(/hotswap/i, this.cfg.socketsRule); break;
 			case "soldered_kb": this.refilter(/soldered/i, this.cfg.socketsRule); break;
 			case "topre_kb": this.refilter(/topre/i, this.cfg.socketsRule); break;
+			case "pcb_kb": this.refilter(/dz60|gh60|wt60|dz65|h87|alice|arisu/i, this.cfg.pcbRule); break;
 			case "weighted_kb": this.refilter(/internal|external|through/i, this.cfg.weightRule); break;
 			case "iso_kb": this.refilter(/iso/i, this.cfg.layoutRule); break;
 			case "ansi_kb": this.refilter(/ansi/i, this.cfg.layoutRule); break;
@@ -131,6 +132,7 @@ class OrderBy {
 new OrderBy({
 	containerRule: "section",
 	itemsRule: "li",
+	pcbRule: "dd.pcb",
 	socketsRule: "dd.sockets",
 	kittingsRule: "dd.kitting",
 	layoutRule: "dd.layout, dd.kitting",
