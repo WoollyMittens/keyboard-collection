@@ -18,7 +18,7 @@
 			<option value="unordered">Unordered</option>
 			<option value="tiers" selected>by tier</option>
 			<option value="actuation">by actuation</option>
-			<option value="pcb_kb">standard PCB</option>
+			<option value="standard">by standard</option>
 			<option value="hotswap_kb">only hotswap</option>
 			<option value="soldered_kb">only soldered</option>
 			<option value="weighted_kb">has weight</option>
@@ -34,7 +34,7 @@
 	</h1>
 	<section data-sorting="tiers">
 		<ol data-tier="s">
-			<li data-actuation="linear">
+			<li data-actuation="linear" data-standard="common">
 				<figure data-view="side">
 					<img class="top" loading="lazy" src="media/safa-top.jpg" alt="Top view"/>
 					<img class="side" loading="lazy" src="media/safa-side.jpg" alt="Side view"/>
@@ -61,9 +61,10 @@
 					<dt>Spares:</dt><dd>Soldered PCB, Alu plate, FR4 plate, PP plate</dd>
 					<dt>Theme:</dt><dd>A small scale, simple, lightweight, but high quality project. Plates are also compatible with Jane v2, KFE and other similar mounted boards. </dd>
 					<dt>Problems:</dt><dd>Some scratches around the screw holes on the inside.</dd>
+					<dt>Score:</dt><dd class="score">-</dd>
 				</dl>
 			</li>
-			<li data-actuation="linear">
+			<li data-actuation="linear" data-standard="common">
 				<figure data-view="side">
 					<img class="top" loading="lazy" src="media/PXL_20230207_093428204.jpg" alt="Top view"/>
 					<img class="side" loading="lazy" src="media/PXL_20230207_093458371.jpg" alt="Side view"/>
@@ -90,9 +91,10 @@
 					<dt>Spares:</dt><dd>Hotswap PCB, PP plate, Alu plate</dd>
 					<dt>Theme:</dt><dd>But does it come in black?</dd>
 					<dt>Problems:</dt><dd>The typing angle is a little bit steep. The skeleton plate impacts the sound.</dd>
+					<dt>Score:</dt><dd class="score">-</dd>
 				</dl>
 			</li>
-			<li data-actuation="linear">
+			<li data-actuation="linear" data-standard="common">
 				<figure data-view="side">
 					<img class="top" loading="lazy" src="media/luminkey-lx60-top.jpg" alt="Top view"/>
 					<img class="side" loading="lazy" src="media/luminkey-lx60-side.jpg" alt="Side view"/>
@@ -119,11 +121,12 @@
 					<dt>Spares:</dt><dd>The spare PCB of the Dolphin 60 should fit this.</dd>
 					<dt>Theme:</dt><dd>The extravagant raw alumininium and copper version of an otherwise cheap consumer keyboard.</dd>
 					<dt>Problems:</dt><dd>The universal daughterboard was hot-glued, because the holes in the case don't line up.</dd>
+					<dt>Score:</dt><dd class="score">-</dd>
 				</dl>
 			</li>
 		</ol>
 		<ol data-tier="a">
-			<li data-actuation="linear">
+			<li data-actuation="linear" data-standard="unique">
 				<figure data-view="side">
 					<img class="top" loading="lazy" src="media/PXL_20230804_103006377.jpg" alt="Top view"/>
 					<img class="side" loading="lazy" src="media/PXL_20230804_103020031.jpg" alt="Side view"/>
@@ -142,7 +145,7 @@
 					<dt>Plate:</dt><dd>Aluminium</dd>
 					<dt>Layout:</dt><dd class="layout">ANSI</dd>
 					<dt>Size:</dt><dd class="size">FRLTKL</dd>
-					<dt>PCB</dt><dd class="pcb">Custom</dd>
+					<dt>PCB</dt><dd class="pcb">Unique</dd>
 					<dt>Sockets:</dt><dd class="sockets">Soldered</dd>
 					<dt>Mount:</dt><dd>Gasket</dd>
 					<dt>Weight:</dt><dd class="weight">Brass, Internal</dd>
@@ -150,9 +153,10 @@
 					<dt>Spares:</dt><dd>Hotswap PCB, PC plate</dd>
 					<dt>Theme:</dt><dd>A layout which omits only the least nessecary, but retains practicality.</dd>
 					<dt>Problems:</dt><dd>Spare parts are rare.</dd>
+					<dt>Score:</dt><dd class="score">-</dd>
 				</dl>
 			</li>
-			<li data-actuation="linear">
+			<li data-actuation="linear" data-standard="common">
 				<figure data-view="side">
 					<img class="top" loading="lazy" src="media/enter_80_top.jpg" alt="Top view"/>
 					<img class="side" loading="lazy" src="media/enter_80_side.jpg" alt="Side view"/>
@@ -179,9 +183,10 @@
 					<dt>Spares:</dt><dd>Any HB88 PCB with daughterboard.</dd>
 					<dt>Theme:</dt><dd>An affordable TKL with an uncompromised design.</dd>
 					<dt>Problems:</dt><dd>---</dd>
+					<dt>Score:</dt><dd class="score">-</dd>
 				</dl>
 			</li>
-			<li data-actuation="linear">
+			<li data-actuation="linear" data-standard="common">
 				<figure data-view="side">
 					<img class="top" loading="lazy" src="media/PXL_20240814_221945981.jpg" alt="Top view"/>
 					<img class="side" loading="lazy" src="media/PXL_20240814_222007542.jpg" alt="Side view"/>
@@ -208,9 +213,10 @@
 					<dt>Spares:</dt><dd>Soldered + 2 PC plate</dd>
 					<dt>Theme:</dt><dd>Impressive curves, but no nonsense internals.</dd>
 					<dt>Problems:</dt><dd>The spare alu plate has been soldered into an assembly.</dd>
+					<dt>Score:</dt><dd class="score">-</dd>
 				</dl>
 			</li>
-			<li data-actuation="tactile">
+			<li data-actuation="tactile" data-standard="common">
 				<figure data-view="side">
 					<img class="top" loading="lazy" src="media/PXL_20230115_072040558.jpg" alt="Top view"/>
 					<img class="side" loading="lazy" src="media/PXL_20230115_072105236.jpg" alt="Side view"/>
@@ -237,9 +243,10 @@
 					<dt>Spares:</dt><dd>Hotswap PCB, Alu plate (2)</dd>
 					<dt>Theme:</dt><dd>A minimalist style that lets the custom Korean metalwork speak for itself.</dd>
 					<dt>Problems:</dt><dd>The low case height impacts the sound of the bottom row keys.</dd>
+					<dt>Score:</dt><dd class="score">-</dd>
 				</dl>
 			</li>
-			<li data-actuation="tactile">
+			<li data-actuation="tactile" data-standard="unique">
 				<figure data-view="side">
 					<img class="top" loading="lazy" src="media/frog_tkl8k_top.jpg" alt="Top view"/>
 					<img class="side" loading="lazy" src="media/frog_tkl8k_side.jpg" alt="Side view"/>
@@ -258,7 +265,7 @@
 					<dt>Plate:</dt><dd>Aluminium</dd>
 					<dt>Layout:</dt><dd class="layout">ANSI</dd>
 					<dt>Size:</dt><dd class="size">8K</dd>
-					<dt>PCB</dt><dd class="pcb">H87/88-8K</dd>
+					<dt>PCB</dt><dd class="pcb">Unique</dd>
 					<dt>Sockets:</dt><dd class="sockets">Hotswap</dd>
 					<dt>Mount:</dt><dd>Tadpole</dd>
 					<dt>Weight:</dt><dd class="weight">Brass, Internal, External</dd>
@@ -266,10 +273,11 @@
 					<dt>Spares:</dt><dd>Soldered PCB</dd>
 					<dt>Theme:</dt><dd>A minimalist style that lets the custom Korean metalwork speak for itself.</dd>
 					<dt>Problems:</dt><dd>The firmware makes Vial crash: Backlight cannot be turned off.</dd>
+					<dt>Score:</dt><dd class="score">-</dd>
 				</dl>
 			</li>
 			<!--
-			<li data-actuation="topre">
+			<li data-actuation="topre" data-standard="unique">
 				<figure data-view="side">
 					<img class="top" loading="lazy" src="media/constellation_top.jpg" alt="Top view"/>
 					<img class="side" loading="lazy" src="media/constellation_side.jpg" alt="Side view"/>
@@ -295,10 +303,11 @@
 					<dt>Spares:</dt><dd>Soldered PCB, EC PCB, Alu plate, PC plate</dd>
 					<dt>Theme:</dt><dd>A versatile classic in a rare colourway.</dd>
 					<dt>Problems:</dt><dd>The switches are loose in the plate. Scratch on bottom of board.</dd>
+					<dt>Score:</dt><dd class="score">-</dd>
 				</dl>
 			</li>
 			-->
-			<li data-actuation="linear">
+			<li data-actuation="linear" data-standard="unique">
 				<figure data-view="side">
 					<img class="top" loading="lazy" src="media/constellation_top.jpg" alt="Top view"/>
 					<img class="side" loading="lazy" src="media/constellation_side.jpg" alt="Side view"/>
@@ -317,7 +326,7 @@
 					<dt>Plate:</dt><dd>Aluminium</dd>
 					<dt>Layout:</dt><dd class="layout">ANSI</dd>
 					<dt>Size:</dt><dd class="size">65%</dd>
-					<dt>PCB</dt><dd class="pcb">Custom</dd>
+					<dt>PCB</dt><dd class="pcb">Unique</dd>
 					<dt>Sockets:</dt><dd class="sockets">Soldered</dd>
 					<dt>Mount:</dt><dd>Top</dd>
 					<dt>Weight:</dt><dd class="weight">Brass, Internal, External</dd>
@@ -325,9 +334,10 @@
 					<dt>Spares:</dt><dd>Soldered PCB, EC PCB, Alu plate, PC plate</dd>
 					<dt>Theme:</dt><dd>A versatile classic in a rare colourway.</dd>
 					<dt>Problems:</dt><dd>Scratch on bottom of board.</dd>
+					<dt>Score:</dt><dd class="score">-</dd>
 				</dl>
 			</li>
-			<li data-actuation="tactile">
+			<li data-actuation="tactile" data-standard="unique">
 				<figure data-view="side">
 					<img class="top" loading="lazy" src="media/iron_alice_top.jpg" alt="Top view"/>
 					<img class="side" loading="lazy" src="media/iron_alice_side.jpg" alt="Side view"/>
@@ -346,7 +356,7 @@
 					<dt>Plate:</dt><dd>Aluminium</dd>
 					<dt>Layout:</dt><dd class="layout">ANSI</dd>
 					<dt>Size:</dt><dd class="size">Alice</dd>
-					<dt>PCB</dt><dd class="pcb">Custom</dd>
+					<dt>PCB</dt><dd class="pcb">Unique</dd>
 					<dt>Sockets:</dt><dd class="sockets">Soldered</dd>
 					<dt>Mount:</dt><dd>Gasket</dd>
 					<dt>Weight:</dt><dd class="weight">Brass, Internal, External</dd>
@@ -354,9 +364,10 @@
 					<dt>Spares:</dt><dd>Soldered PCB, Alu plate</dd>
 					<dt>Theme:</dt><dd>Very exotic in every sense.</dd>
 					<dt>Problems:</dt><dd>The USB-C cable channel is slight off centre. A spare PCB remains to be ordered.</dd>
+					<dt>Score:</dt><dd class="score">-</dd>
 				</dl>
 			</li>
-			<li data-actuation="linear">
+			<li data-actuation="linear" data-standard="unique">
 				<figure data-view="side">
 					<img class="top" loading="lazy" src="media/PXL_20230115_073322114.jpg" alt="Top view"/>
 					<img class="side" loading="lazy" src="media/PXL_20230115_073333524.jpg" alt="Side view"/>
@@ -375,7 +386,7 @@
 					<dt>Plate:</dt><dd>FR4</dd>
 					<dt>Layout:</dt><dd class="layout">ANSI</dd>
 					<dt>Size:</dt><dd class="size">1800</dd>
-					<dt>PCB</dt><dd class="pcb">Custom</dd>
+					<dt>PCB</dt><dd class="pcb">Unique</dd>
 					<dt>Sockets:</dt><dd class="sockets">Hotswap</dd>
 					<dt>Mount:</dt><dd>Bottom Gasket</dd>
 					<dt>Weight:</dt><dd class="weight">Zinc, Internal</dd>
@@ -383,11 +394,12 @@
 					<dt>Spares:</dt><dd>PC plate, Alu plate</dd>
 					<dt>Theme:</dt><dd>An affordable 1800 with an uncompromised design.</dd>
 					<dt>Problems:</dt><dd>Requires being plugged in several times before it will work.</dd>
+					<dt>Score:</dt><dd class="score">-</dd>
 				</dl>
 			</li>
 		</ol>
 		<ol data-tier="b">
-			<li data-actuation="tactile">
+			<li data-actuation="tactile" data-standard="unique">
 				<figure data-view="side">
 					<img class="top" loading="lazy" src="media/class80-top.jpg" alt="Top view"/>
 					<img class="side" loading="lazy" src="media/class80-side.jpg" alt="Side view"/>
@@ -406,7 +418,7 @@
 					<dt>Plate:</dt><dd>Polycarbonate</dd>
 					<dt>Layout:</dt><dd class="layout">ANSI</dd>
 					<dt>Size:</dt><dd class="size">TKL</dd>
-					<dt>PCB</dt><dd class="pcb">Custom</dd>
+					<dt>PCB</dt><dd class="pcb">Unique</dd>
 					<dt>Sockets:</dt><dd class="sockets">Hotswap</dd>
 					<dt>Mount:</dt><dd>Top Mount</dd>
 					<dt>Weight:</dt><dd class="weight">Brass, Internal</dd>
@@ -414,68 +426,10 @@
 					<dt>Spares:</dt><dd>Soldered PCB, EC PCB, Hotswap PCB, PC plate</dd>
 					<dt>Theme:</dt><dd>Retro tribute to classic Cherry keyboards, with buzzer and solenoid.</dd>
 					<dt>Problems:</dt><dd>The internal wiring is fiddly and fragile. The board was not primarily designed for its acoustics.</dd>
+					<dt>Score:</dt><dd class="score">-</dd>
 				</dl>
 			</li>
-			<!--
-			<li data-actuation="topre">
-				<figure data-view="side">
-					<img class="top" loading="lazy" src="media/PXL_20230115_072444326.jpg" alt="Top view"/>
-					<img class="side" loading="lazy" src="media/PXL_20230115_072550825.jpg" alt="Side view"/>
-					<img class="bottom" loading="lazy" src="media/PXL_20230115_072614865.jpg" alt="Bottom view"/>
-					<figcaption>
-						<button class="top">Top</button>
-						<button class="side">Side</button>
-						<button class="bottom">Bottom</button>
-					</figcaption>
-				</figure>
-				<dl>
-					<dt>Case:</dt><dd>AE x Ivery Praxis</dd>
-					<dt>Keycaps:</dt><dd>Shenpo Red Alert</dd>
-					<dt>Switches:</dt><dd>Naevies EC Switches</dd>
-					<dt>Actuation:</dt><dd>Tactile</dd>
-					<dt>Plate:</dt><dd>Aluminium</dd>
-					<dt>Layout:</dt><dd class="layout">ANSI</dd>
-					<dt>Size:</dt><dd class="size">Alice</dd>
-					<dt>Sockets:</dt><dd class="sockets">Topre</dd>
-					<dt>Mount:</dt><dd>Top</dd>
-					<dt>Weight:</dt><dd class="weight">Brass, Internal</dd>
-					<dt>Mods:</dt><dd>Bandaid, Plate foam glued down to work as offsets.</dd>
-					<dt>Spares:</dt><dd>Hotswap PCB, Soldered PCB + Blaecks, EC PCB, Alu plate, POM plate, PC plate</dd>
-					<dt>Theme:</dt><dd>An Alice variant with a polycarbonate base and internal weight, that fits standard Alice parts.</dd>
-					<dt>Problems:</dt><dd>The improvised plate/pcb assembly is fragile.</dd>
-				</dl>
-			</li>
-			-->
-			<li data-actuation="linear">
-				<figure data-view="side">
-					<img class="top" loading="lazy" src="media/PXL_20230115_072444326.jpg" alt="Top view"/>
-					<img class="side" loading="lazy" src="media/PXL_20230115_072550825.jpg" alt="Side view"/>
-					<img class="bottom" loading="lazy" src="media/PXL_20230115_072614865.jpg" alt="Bottom view"/>
-					<figcaption>
-						<button class="top">Top</button>
-						<button class="side">Side</button>
-						<button class="bottom">Bottom</button>
-					</figcaption>
-				</figure>
-				<dl>
-					<dt>Case:</dt><dd>AE x Ivery Praxis</dd>
-					<dt>Keycaps:</dt><dd>Shenpo Red Alert</dd>
-					<dt>Switches:</dt><dd>Aeboards Blaeck</dd>
-					<dt>Actuation:</dt><dd>Linear</dd>
-					<dt>Plate:</dt><dd>Impact Modified Acrylic</dd>
-					<dt>Layout:</dt><dd class="layout">ANSI</dd>
-					<dt>Size:</dt><dd class="size">Alice</dd>
-					<dt>PCB</dt><dd class="pcb">Alice</dd>
-					<dt>Sockets:</dt><dd class="sockets">Soldered</dd>
-					<dt>Mount:</dt><dd>Top</dd>
-					<dt>Weight:</dt><dd class="weight">Brass, Internal</dd>
-					<dt>Mods:</dt><dd>Bandaid, Plate foam glued down to work as offsets.</dd>
-					<dt>Spares:</dt><dd>Hotswap PCB, Soldered PCB + Blaecks, EC PCB, Alu plate, POM plate, PC plate</dd>
-					<dt>Theme:</dt><dd>An Alice variant with a polycarbonate base and internal weight, that fits standard Alice parts.</dd>
-					<dt>Problems:</dt><dd>The Blaeck switches are very fragile.</dd>
-				</dl>
-			</li>
-			<li data-actuation="linear">
+			<li data-actuation="linear" data-standard="common">
 				<figure data-view="side">
 					<img class="top" loading="lazy" src="media/PXL_20230829_112523990.jpg" alt="Top view"/>
 					<img class="side" loading="lazy" src="media/PXL_20230829_112455900.jpg" alt="Side view"/>
@@ -502,9 +456,71 @@
 					<dt>Spares:</dt><dd>Assembly, Hotswap PCB (2 ANSI + 1 ISO), FR4 plate (2 ANSI), POM plate (1 ISO)</dd>
 					<dt>Theme:</dt><dd>Elegant curves complemented by elegant keycaps.</dd>
 					<dt>Problems:</dt><dd>Scratch in anodisation near blocker. Challenging acoustics. Inflexible mounting system.</dd>
+					<dt>Score:</dt><dd class="score">-</dd>
 				</dl>
 			</li>
-			<li data-actuation="topre">
+			<!--
+			<li data-actuation="topre" data-standard="common">
+				<figure data-view="side">
+					<img class="top" loading="lazy" src="media/PXL_20230115_072444326.jpg" alt="Top view"/>
+					<img class="side" loading="lazy" src="media/PXL_20230115_072550825.jpg" alt="Side view"/>
+					<img class="bottom" loading="lazy" src="media/PXL_20230115_072614865.jpg" alt="Bottom view"/>
+					<figcaption>
+						<button class="top">Top</button>
+						<button class="side">Side</button>
+						<button class="bottom">Bottom</button>
+					</figcaption>
+				</figure>
+				<dl>
+					<dt>Case:</dt><dd>AE x Ivery Praxis</dd>
+					<dt>Keycaps:</dt><dd>Shenpo Red Alert</dd>
+					<dt>Switches:</dt><dd>Naevies EC Switches</dd>
+					<dt>Actuation:</dt><dd>Tactile</dd>
+					<dt>Plate:</dt><dd>Aluminium</dd>
+					<dt>Layout:</dt><dd class="layout">ANSI</dd>
+					<dt>Size:</dt><dd class="size">Alice</dd>
+					<dt>Sockets:</dt><dd class="sockets">Topre</dd>
+					<dt>Mount:</dt><dd>Top</dd>
+					<dt>Weight:</dt><dd class="weight">Brass, Internal</dd>
+					<dt>Mods:</dt><dd>Bandaid, Plate foam glued down to work as offsets.</dd>
+					<dt>Spares:</dt><dd>Hotswap PCB, Soldered PCB + Blaecks, EC PCB, Alu plate, POM plate, PC plate</dd>
+					<dt>Theme:</dt><dd>An Alice variant with a polycarbonate base and internal weight, that fits standard Alice parts.</dd>
+					<dt>Problems:</dt><dd>The improvised plate/pcb assembly is fragile.</dd>
+					<dt>Score:</dt><dd class="score">-</dd>
+				</dl>
+			</li>
+			-->
+			<li data-actuation="linear" data-standard="common">
+				<figure data-view="side">
+					<img class="top" loading="lazy" src="media/PXL_20230115_072444326.jpg" alt="Top view"/>
+					<img class="side" loading="lazy" src="media/PXL_20230115_072550825.jpg" alt="Side view"/>
+					<img class="bottom" loading="lazy" src="media/PXL_20230115_072614865.jpg" alt="Bottom view"/>
+					<figcaption>
+						<button class="top">Top</button>
+						<button class="side">Side</button>
+						<button class="bottom">Bottom</button>
+					</figcaption>
+				</figure>
+				<dl>
+					<dt>Case:</dt><dd>AE x Ivery Praxis</dd>
+					<dt>Keycaps:</dt><dd>Shenpo Red Alert</dd>
+					<dt>Switches:</dt><dd>Aeboards Blaeck</dd>
+					<dt>Actuation:</dt><dd>Linear</dd>
+					<dt>Plate:</dt><dd>Impact Modified Acrylic</dd>
+					<dt>Layout:</dt><dd class="layout">ANSI</dd>
+					<dt>Size:</dt><dd class="size">Alice</dd>
+					<dt>PCB</dt><dd class="pcb">Alice</dd>
+					<dt>Sockets:</dt><dd class="sockets">Soldered</dd>
+					<dt>Mount:</dt><dd>Top</dd>
+					<dt>Weight:</dt><dd class="weight">Brass, Internal</dd>
+					<dt>Mods:</dt><dd>Bandaid, Plate foam glued down to work as offsets.</dd>
+					<dt>Spares:</dt><dd>Hotswap PCB, Soldered PCB + Blaecks, EC PCB, Alu plate, POM plate, PC plate</dd>
+					<dt>Theme:</dt><dd>An Alice variant with a polycarbonate base and internal weight, that fits standard Alice parts.</dd>
+					<dt>Problems:</dt><dd>The Blaeck switches are very fragile.</dd>
+					<dt>Score:</dt><dd class="score">-</dd>
+				</dl>
+			</li>
+			<li data-actuation="topre" data-standard="unique">
 				<figure data-view="side">
 					<img class="top" loading="lazy" src="media/niz_nz87_top.jpg" alt="Top view"/>
 					<img class="side" loading="lazy" src="media/niz_nz87_side.jpg" alt="Side view"/>
@@ -523,7 +539,7 @@
 					<dt>Plate:</dt><dd>Aluminium</dd>
 					<dt>Layout:</dt><dd class="layout">ANSI</dd>
 					<dt>Size:</dt><dd class="size">TKL</dd>
-					<dt>PCB</dt><dd class="pcb">Custom</dd>
+					<dt>PCB</dt><dd class="pcb">Unique</dd>
 					<dt>Sockets:</dt><dd class="sockets">Topre</dd>
 					<dt>Mount:</dt><dd>Gasket</dd>
 					<dt>Weight:</dt><dd class="weight">Brass, Through</dd>
@@ -531,9 +547,10 @@
 					<dt>Spares:</dt><dd>---</dd>
 					<dt>Theme:</dt><dd>A Chinese implementation of electro cacitive rubber domes (like Topre).</dd>
 					<dt>Problems:</dt><dd>The mounting system has poor tolerances. The Costar stabilisers are cumbersome.</dd>
+					<dt>Score:</dt><dd class="score">-</dd>
 				</dl>
 			</li>
-			<li data-actuation="linear">
+			<li data-actuation="linear" data-standard="unique">
 				<figure data-view="side">
 					<img class="top" loading="lazy" src="media/PXL_20240814_220917753.jpg" alt="Top view"/>
 					<img class="side" loading="lazy" src="media/PXL_20240814_220926708.jpg" alt="Side view"/>
@@ -552,7 +569,7 @@
 					<dt>Plate:</dt><dd>Aluminium</dd>
 					<dt>Layout:</dt><dd class="layout">ANSI</dd>
 					<dt>Size:</dt><dd class="size">Numpad</dd>
-					<dt>PCB</dt><dd class="pcb">Custom</dd>
+					<dt>PCB</dt><dd class="pcb">Unique</dd>
 					<dt>Sockets:</dt><dd class="sockets">Hotswap</dd>
 					<dt>Mount:</dt><dd>Tadpole</dd>
 					<dt>Weight:</dt><dd class="weight">Brass, External</dd>
@@ -560,11 +577,12 @@
 					<dt>Spares:</dt><dd>---</dd>
 					<dt>Theme:</dt><dd>An overly elaborate numpad.</dd>
 					<dt>Problems:</dt><dd>The daughter board cable barely fits under the PCB.</dd>
+					<dt>Score:</dt><dd class="score">-</dd>
 				</dl>
 			</li>
 		</ol>
 		<ol data-tier="c">
-			<li data-actuation="tactile">
+			<li data-actuation="tactile" data-standard="common">
 				<figure data-view="side">
 					<img class="top" loading="lazy" src="media/PXL_20230115_072730867.jpg" alt="Top view"/>
 					<img class="side" loading="lazy" src="media/PXL_20230115_072742730.jpg" alt="Side view"/>
@@ -591,9 +609,10 @@
 					<dt>Spares:</dt><dd>Any Poker style PCB and plate should fit.</dd>
 					<dt>Theme:</dt><dd>An EC conversion of a classic heavy tray mount housing.</dd>
 					<dt>Problems:</dt><dd>It's still a tray mount.</dd>
+					<dt>Score:</dt><dd class="score">-</dd>
 				</dl>
 			</li>
-			<li data-actuation="linear">
+			<li data-actuation="linear" data-standard="common">
 				<figure data-view="side">
 					<img class="top" loading="lazy" src="media/ymdk60v1-top.jpg" alt="Top view"/>
 					<img class="side" loading="lazy" src="media/ymdk60v1-side.jpg" alt="Side view"/>
@@ -620,9 +639,10 @@
 					<dt>Spares:</dt><dd>Any 60% Poker style parts should fit.</dd>
 					<dt>Theme:</dt><dd>A case intended to be a replacement one for the Wooting 60.</dd>
 					<dt>Problems:</dt><dd>It's still a tray mount.</dd>
+					<dt>Score:</dt><dd class="score">-</dd>
 				</dl>
 			</li>
-			<li data-actuation="silent">
+			<li data-actuation="silent" data-standard="common">
 				<figure data-view="side">
 					<img class="top" loading="lazy" src="media/frog_leggera_top.jpg" alt="Top view"/>
 					<img class="side" loading="lazy" src="media/frog_leggera_side.jpg" alt="Side view"/>
@@ -649,9 +669,10 @@
 					<dt>Spares:</dt><dd>Any HB88 style PCB should fit.</dd>
 					<dt>Theme:</dt><dd>A weight reduced version of the Frog TKL.</dd>
 					<dt>Problems:</dt><dd>Being this light makes it feel insubstantial and sound hollow.</dd>
+					<dt>Score:</dt><dd class="score">-</dd>
 				</dl>
 			</li>
-			<li data-actuation="linear">
+			<li data-actuation="linear" data-standard="unique">
 				<figure data-view="side">
 					<img class="top" loading="lazy" src="media/hex_3cv2_60_top.jpg" alt="Top view"/>
 					<img class="side" loading="lazy" src="media/hex_3cv2_60_side.jpg" alt="Side view"/>
@@ -670,7 +691,7 @@
 					<dt>Plate:</dt><dd>FR4</dd>
 					<dt>Layout:</dt><dd class="layout">WKL</dd>
 					<dt>Size:</dt><dd class="size">60%</dd>
-					<dt>PCB</dt><dd class="pcb">Custom</dd>
+					<dt>PCB</dt><dd class="pcb">Unique</dd>
 					<dt>Sockets:</dt><dd class="sockets">Soldered</dd>
 					<dt>Mount:</dt><dd>Gasket, PCB</dd>
 					<dt>Weight:</dt><dd class="weight">None</dd>
@@ -678,11 +699,12 @@
 					<dt>Spares:</dt><dd>Soldered PCB, aluminium case bottom.</dd>
 					<dt>Theme:</dt><dd>A budget implementation of a PCB mounted keyboard. The PC bottom negates the need for a weight.</dd>
 					<dt>Problems:</dt><dd>The PCBs are unique and only soldered versions are available.</dd>
+					<dt>Score:</dt><dd class="score">-</dd>
 				</dl>
 			</li>
 		</ol>
 		<ol data-tier="d">
-			<li data-actuation="silent">
+			<li data-actuation="silent" data-standard="common">
 				<figure data-view="side">
 					<img class="top" loading="lazy" src="media/hollow60_top.jpg" alt="Top view"/>
 					<img class="side" loading="lazy" src="media/hollow60_side.jpg" alt="Side view"/>
@@ -709,9 +731,10 @@
 					<dt>Spares:</dt><dd>Any "Poker" style 60% plate and PCB should fit.</dd>
 					<dt>Theme:</dt><dd>A weight reduced version of basically everything, that still manages a satisfying sound and typing feel.</dd>
 					<dt>Problems:</dt><dd>The case appears to get bent out of shape easily.</dd>
+					<dt>Score:</dt><dd class="score">-</dd>
 				</dl>
 			</li>
-			<li data-actuation="silent">
+			<li data-actuation="silent" data-standard="unique">
 				<figure data-view="side">
 					<img class="top" loading="lazy" src="media/hiexa_v80_top.jpg" alt="Top view"/>
 					<img class="side" loading="lazy" src="media/hiexa_v80_side.jpg" alt="Side view"/>
@@ -730,7 +753,7 @@
 					<dt>Plate:</dt><dd>Aluminium</dd>
 					<dt>Layout:</dt><dd class="layout">ISO</dd>
 					<dt>Size:</dt><dd class="size">TKL</dd>
-					<dt>PCB</dt><dd class="pcb">Custom</dd>
+					<dt>PCB</dt><dd class="pcb">Unique</dd>
 					<dt>Sockets:</dt><dd class="sockets">Hotswap</dd>
 					<dt>Mount:</dt><dd>Top Mount</dd>
 					<dt>Weight:</dt><dd class="weight">None</dd>
@@ -738,9 +761,10 @@
 					<dt>Spares:</dt><dd>---</dd>
 					<dt>Theme:</dt><dd>One of a multitude of cheap ball catch keyboards.</dd>
 					<dt>Problems:</dt><dd>Still quite noisy despite silent switches. Top mount makes opening the case difficult.</dd>
+					<dt>Score:</dt><dd class="score">-</dd>
 				</dl>
 			</li>
-			<li data-actuation="tactile">
+			<li data-actuation="tactile" data-standard="unique">
 				<figure data-view="side">
 					<img class="top" loading="lazy" src="media/80retros-xt1981-top.jpg" alt="Top view"/>
 					<img class="side" loading="lazy" src="media/80retros-xt1981-side.jpg" alt="Side view"/>
@@ -759,7 +783,7 @@
 					<dt>Plate:</dt><dd>Polycarbonate</dd>
 					<dt>Layout:</dt><dd class="layout">ANSI</dd>
 					<dt>Size:</dt><dd class="size">FRLTKL</dd>
-					<dt>PCB</dt><dd class="pcb">Custom</dd>
+					<dt>PCB</dt><dd class="pcb">Unique</dd>
 					<dt>Sockets:</dt><dd class="sockets">Hotswap</dd>
 					<dt>Mount:</dt><dd>Gasket Mount</dd>
 					<dt>Weight:</dt><dd class="weight">None</dd>
@@ -767,9 +791,10 @@
 					<dt>Spares:</dt><dd>The spare PCB of the XOX70 might fit this.</dd>
 					<dt>Theme:</dt><dd>A cheap gasket mounted 70% inspired by 1980's IBM keyboards.</dd>
 					<dt>Problems:</dt><dd>Since the board tries to capture a legacy design, the acoustics were not a priority.</dd>
+					<dt>Score:</dt><dd class="score">-</dd>
 				</dl>
 			</li>
-			<li data-actuation="silent">
+			<li data-actuation="silent" data-standard="common">
 				<figure data-view="side">
 					<img class="top" loading="lazy" src="media/lm60_top.jpg" alt="Top view"/>
 					<img class="side" loading="lazy" src="media/lm60_side.jpg" alt="Side view"/>
@@ -796,11 +821,12 @@
 					<dt>Spares:</dt><dd>Any "Poker" style 60% plate and PCB should fit.</dd>
 					<dt>Theme:</dt><dd>A two piece gasket mount comprised almost entirelyt of Aliexpress bargains.</dd>
 					<dt>Problems:</dt><dd>Slight colour difference between top and bottom case. The bottom row of the plate is too loose for a hotswap build. The switches chatter.</dd>
+					<dt>Score:</dt><dd class="score">-</dd>
 				</dl>
 			</li>
 		</ol>
 		<ol data-tier="x">
-			<li data-actuation="linear">
+			<li data-actuation="linear" data-standard="common">
 				<figure data-view="side">
 					<img class="top" loading="lazy" src="media/fate-nozomi-arisu-top.jpg" alt="Top view"/>
 					<img class="side" loading="lazy" src="media/fate-nozomi-arisu-side.jpg" alt="Side view"/>
@@ -827,9 +853,10 @@
 					<dt>Spares:</dt><dd>None</dd>
 					<dt>Theme:</dt><dd>A self laser cut glittery stacked acrylic keyboard.</dd>
 					<dt>Problems:</dt><dd>The Jels PCB is abandoned firmware support if sketchy.</dd>
+					<dt>Score:</dt><dd class="score">-</dd>
 				</dl>
 			</li>
-			<li data-actuation="topre">
+			<li data-actuation="topre" data-standard="common">
 				<figure data-view="side">
 					<img class="top" loading="lazy" src="media/freebird-tkl-top.jpg" alt="Top view"/>
 					<img class="side" loading="lazy" src="media/freebird-tkl-side.jpg" alt="Side view"/>
@@ -856,13 +883,16 @@
 					<dt>Spares:</dt><dd>Any HB88 style PCB should fit. TGR Jane style plates should fit.</dd>
 					<dt>Theme:</dt><dd>A low cost H87/88 compatible case to house an EC build.</dd>
 					<dt>Problems:</dt><dd>There improvisedplate/pcb assembly is fragile. The right shift key seems extra unresponsive. The left shift stabilisers had to be cut down to be replaced in situ.</dd>
+					<dt>Score:</dt><dd class="score">-</dd>
 				</dl>
 			</li>
 		</ol>
-		<h2 class="linear">Linear</h2>
-		<h2 class="tactile">Tactile</h2>
-		<h2 class="silent">Silent</h2>
-		<h2 class="topre">Topre</h2>
+		<h2 data-by="actuation" class="linear">Linear</h2>
+		<h2 data-by="actuation" class="tactile">Tactile</h2>
+		<h2 data-by="actuation" class="silent">Silent</h2>
+		<h2 data-by="actuation" class="topre">Topre</h2>
+		<h2 data-by="standard" class="common">Common</h2>
+		<h2 data-by="standard" class="unique">Unique</h2>
 	</section>
   <script src="scripts.js"></script>
 </body>

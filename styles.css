@@ -412,18 +412,21 @@ section[data-sorting="tiers"] h2 {
 
 /* categories */
 
-section[data-sorting="style"] h2,
-section[data-sorting="actuation"] h2 {
+section[data-sorting="style"] h2[data-by="style"],
+section[data-sorting="actuation"] h2[data-by="actuation"],
+section[data-sorting="standard"] h2[data-by="standard"] {
   display: block;
 }
 
 section[data-sorting="style"] ol,
-section[data-sorting="actuation"] ol {
+section[data-sorting="actuation"] ol,
+section[data-sorting="standard"] ol {
   display: contents;
 }
 
 section[data-sorting="style"] ol:before,
-section[data-sorting="actuation"] ol:before {
+section[data-sorting="actuation"] ol:before,
+section[data-sorting="standard"] ol:before {
   display: none;
 }
 
@@ -481,6 +484,22 @@ section[data-sorting="actuation"] ol:before {
 
 [data-sorting="actuation"] li[data-actuation="topre"] {
   order: 7500;
+}
+
+[data-sorting="standard"] h2.common {
+  order: 8000;
+}
+
+[data-sorting="standard"] li[data-standard="common"] {
+  order: 8500;
+}
+
+[data-sorting="standard"] h2.unique {
+  order: 9000;
+}
+
+[data-sorting="standard"] li[data-standard="unique"] {
+  order: 9500;
 }
 
 /* responsive */
