@@ -58,6 +58,28 @@ class OrderBy {
 		// restore the wanted value
 		this.unwanter.checked = values?.wanted;
 		this.unwant();
+		// restore the scoring system
+		this.rescore();
+	}
+
+	rescore() {
+		// for every item
+		for (let item of this.items) {
+			// set the default score
+			let total = 0;
+			// add points for favourable properties
+			// weight type
+			// weight material
+			// pcb standard
+			// available spares
+			// mounting style
+			// plate material
+			// actuation style
+			// switch quality
+			// keycaps quality
+			// update the score
+			item.querySelector(this.cfg.scoresRule).innerHTML = total;
+		}
 	}
 
 	refilter(value, rule) {
@@ -84,7 +106,6 @@ class OrderBy {
 			case "hotswap_kb": this.refilter(/hotswap/i, this.cfg.socketsRule); break;
 			case "soldered_kb": this.refilter(/soldered/i, this.cfg.socketsRule); break;
 			case "topre_kb": this.refilter(/topre/i, this.cfg.socketsRule); break;
-			//case "standard": this.refilter(/dz60|gh60|wt60|dz65|h87|alice|arisu/i, this.cfg.pcbRule); break;
 			case "weighted_kb": this.refilter(/internal|external|through/i, this.cfg.weightRule); break;
 			case "iso_kb": this.refilter(/iso/i, this.cfg.layoutRule); break;
 			case "ansi_kb": this.refilter(/ansi/i, this.cfg.layoutRule); break;
@@ -143,5 +164,6 @@ new OrderBy({
 	expandingRule: '[name="expanded"]',
 	unwantingRule: '[name="unwanted"]',
 	indicatorsRule: "figure button",
+	scoresRule: "dd.score",
 	travelRule: "dd.travel"
 });
