@@ -153,7 +153,6 @@ class OrderBy {
 new OrderBy({
 	containerRule: "section",
 	itemsRule: "li",
-	pcbRule: "dd.pcb",
 	socketsRule: "dd.sockets",
 	kittingsRule: "dd.kitting",
 	layoutRule: "dd.layout, dd.kitting",
