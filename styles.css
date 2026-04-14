@@ -328,6 +328,12 @@ dd em {
   white-space: nowrap;
 }
 
+/* unsorted */
+
+section[data-sorting="unordered"] li {
+  order: initial !important;
+}
+
 /* tiering */
 
 section[data-sorting="tiers"] ol {
@@ -434,7 +440,7 @@ section[data-sorting="standard"] ol:before {
   order: 1000;
 }
 
-[data-sorting="actuation"] li[data-actuation="linear"] {
+[data-sorting="actuation"] li[data-actuation*="linear"] {
   order: 1500;
 }
 
@@ -442,7 +448,7 @@ section[data-sorting="standard"] ol:before {
   order: 2000;
 }
 
-[data-sorting="actuation"] li[data-actuation="tactile"] {
+[data-sorting="actuation"] li[data-actuation*="tactile"] {
   order: 2500;
 }
 
@@ -450,7 +456,7 @@ section[data-sorting="standard"] ol:before {
   order: 3000;
 }
 
-[data-sorting="actuation"] li[data-actuation="silent"] {
+[data-sorting="actuation"] li[data-actuation*="silent"] {
   order: 3500;
 }
 
@@ -458,7 +464,7 @@ section[data-sorting="standard"] ol:before {
   order: 4000;
 }
 
-[data-sorting="actuation"] li[data-actuation="clicky"] {
+[data-sorting="actuation"] li[data-actuation*="clicky"] {
   order: 4500;
 }
 
@@ -482,7 +488,7 @@ section[data-sorting="standard"] ol:before {
   order: 7000;
 }
 
-[data-sorting="actuation"] li[data-actuation="topre"] {
+[data-sorting="actuation"] li[data-actuation*="topre"] {
   order: 7500;
 }
 
