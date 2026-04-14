@@ -63,68 +63,71 @@ class OrderBy {
 	}
 
 	rescore() {
-		// for every item
-		for (let item of this.items) {
-			// set the default score
-			let total = 0;
-			// bottom material
-			total += /polycarbonate|acrylic/i.test(item.querySelector(this.cfg.bottomRule).innerHTML) ? 32 : 0;
-			total += /brass|copper/i.test(item.querySelector(this.cfg.bottomRule).innerHTML) ? 96 : 0;
-			// weight type
-			total += /external/i.test(item.querySelector(this.cfg.weightRule).innerHTML) ? 8 : 0;
-			total += /internal|through/i.test(item.querySelector(this.cfg.weightRule).innerHTML) ? 32 : 0;
-			// weight material
-			total += /steel|zinc/i.test(item.querySelector(this.cfg.weightRule).innerHTML) ? 8 : 0;
-			total += /brass|copper/i.test(item.querySelector(this.cfg.weightRule).innerHTML) ? 16 : 0;
-			// pcb standard
-			total += /common/i.test(item.getAttribute('data-standard')) ? 32 : 0;
-			// available spares
-			total += item.querySelector(this.cfg.sparesRule).innerHTML.split(/\.|,/g).length * 4;
-			// socket style
-			total += /hotswap/i.test(item.querySelector(this.cfg.socketsRule).innerHTML) ? 8 : 0;
-			total += /soldered/i.test(item.querySelector(this.cfg.socketsRule).innerHTML) ? 16 : 0;
-			total += /topre/i.test(item.querySelector(this.cfg.socketsRule).innerHTML) ? 32 : 0;
-			// mounting style
-			total += /sandwich/i.test(item.querySelector(this.cfg.mountRule).innerHTML) ? -16 : 0;
-			total += /tray|pcb/i.test(item.querySelector(this.cfg.mountRule).innerHTML) ? -8 : 0;
-			total += /gasket|hotdog|o-ring/i.test(item.querySelector(this.cfg.mountRule).innerHTML) ? 16 : 0;
-			total += /tadpole/i.test(item.querySelector(this.cfg.mountRule).innerHTML) ? 24 : 0;
-			total += /top/i.test(item.querySelector(this.cfg.mountRule).innerHTML) ? 32 : 0;
-			// plate material
-			total += /brass|copper/i.test(item.querySelector(this.cfg.plateRule).innerHTML) ? 4 : 0;
-			total += /steel/i.test(item.querySelector(this.cfg.plateRule).innerHTML) ? 8 : 0;
-			total += /pom/i.test(item.querySelector(this.cfg.plateRule).innerHTML) ? 12 : 0;
-			total += /carbon fibre/i.test(item.querySelector(this.cfg.plateRule).innerHTML) ? 16 : 0;
-			total += /polycarbonate/i.test(item.querySelector(this.cfg.plateRule).innerHTML) ? 20 : 0;
-			total += /acrylic/i.test(item.querySelector(this.cfg.plateRule).innerHTML) ? 24 : 0;
-			total += /fr4/i.test(item.querySelector(this.cfg.plateRule).innerHTML) ? 28 : 0;
-			total += /aluminium/i.test(item.querySelector(this.cfg.plateRule).innerHTML) ? 32 : 0;
-			// actuation style
-			total += /(?=silent)(?=linear)/i.test(item.querySelector(this.cfg.actuationRule).innerHTML) ? -16 : 0;
-			total += /(?=silent)(?=tactile)/i.test(item.querySelector(this.cfg.actuationRule).innerHTML) ? 8 : 0;
-			total += /tactile/i.test(item.querySelector(this.cfg.actuationRule).innerHTML) ? 24 : 0;
-			total += /linear/i.test(item.querySelector(this.cfg.actuationRule).innerHTML) ? 32 : 0;
-			// switch quality
-			total += /durock|jwk/i.test(item.querySelector(this.cfg.switchesRule).innerHTML) ? 16 : 0;
-			total += /gateron/i.test(item.querySelector(this.cfg.switchesRule).innerHTML) ? 24 : 0;
-			total += /cherry|topre/i.test(item.querySelector(this.cfg.switchesRule).innerHTML) ? 32 : 0;
-			// keycaps quality
-			total += /jtk|xmi|xiami|jkdk/i.test(item.querySelector(this.cfg.keycapsRule).innerHTML) ? 4 : 0;
-			total += /epbt|cannoncaps/i.test(item.querySelector(this.cfg.keycapsRule).innerHTML) ? 8 : 0;
-			total += /gmk|shenpo|keykobo|kkb|jc/i.test(item.querySelector(this.cfg.keycapsRule).innerHTML) ? 16 : 0;
-			total += /dcs|crp/i.test(item.querySelector(this.cfg.keycapsRule).innerHTML) ? 24 : 0;
-			// form factor
-			total += /alice/i.test(item.querySelector(this.cfg.sizeRule).innerHTML) ? 8 : 0;
-			total += /60pct|60%/i.test(item.querySelector(this.cfg.sizeRule).innerHTML) ? 16 : 0;
-			total += /tkl/i.test(item.querySelector(this.cfg.sizeRule).innerHTML) ? 32 : 0;
-			// layout
-			total += /ISO/i.test(item.querySelector(this.cfg.layoutRule).innerHTML) ? 16 : 0;
-			// problems
-			total += item.querySelector(this.cfg.problemsRule).innerHTML.split(/\.|,/g).length * -10;
-			// update the score
-			item.querySelector(this.cfg.scoresRule).innerHTML = total;
-			// update the sort order
-			item.style.order = 1000 - total;
+		// if the keyboard properties are on the page
+		if (document.querySelector(this.cfg.bottomRule)) {
+			// for every item
+			for (let item of this.items) {
+				// set the default score
+				let total = 0;
+				// bottom material
+				total += /polycarbonate|acrylic/i.test(item.querySelector(this.cfg.bottomRule).innerHTML) ? 32 : 0;
+				total += /brass|copper/i.test(item.querySelector(this.cfg.bottomRule).innerHTML) ? 96 : 0;
+				// weight type
+				total += /external/i.test(item.querySelector(this.cfg.weightRule).innerHTML) ? 8 : 0;
+				total += /internal|through/i.test(item.querySelector(this.cfg.weightRule).innerHTML) ? 32 : 0;
+				// weight material
+				total += /steel|zinc/i.test(item.querySelector(this.cfg.weightRule).innerHTML) ? 8 : 0;
+				total += /brass|copper/i.test(item.querySelector(this.cfg.weightRule).innerHTML) ? 16 : 0;
+				// pcb standard
+				total += /common/i.test(item.getAttribute('data-standard')) ? 32 : 0;
+				// available spares
+				total += item.querySelector(this.cfg.sparesRule).innerHTML.split(/\.|,/g).length * 4;
+				// socket style
+				total += /hotswap/i.test(item.querySelector(this.cfg.socketsRule).innerHTML) ? 8 : 0;
+				total += /soldered/i.test(item.querySelector(this.cfg.socketsRule).innerHTML) ? 16 : 0;
+				total += /topre/i.test(item.querySelector(this.cfg.socketsRule).innerHTML) ? 32 : 0;
+				// mounting style
+				total += /sandwich/i.test(item.querySelector(this.cfg.mountRule).innerHTML) ? -16 : 0;
+				total += /tray|pcb/i.test(item.querySelector(this.cfg.mountRule).innerHTML) ? -8 : 0;
+				total += /gasket|hotdog|o-ring/i.test(item.querySelector(this.cfg.mountRule).innerHTML) ? 16 : 0;
+				total += /tadpole/i.test(item.querySelector(this.cfg.mountRule).innerHTML) ? 24 : 0;
+				total += /top/i.test(item.querySelector(this.cfg.mountRule).innerHTML) ? 32 : 0;
+				// plate material
+				total += /brass|copper/i.test(item.querySelector(this.cfg.plateRule).innerHTML) ? 4 : 0;
+				total += /steel/i.test(item.querySelector(this.cfg.plateRule).innerHTML) ? 8 : 0;
+				total += /pom/i.test(item.querySelector(this.cfg.plateRule).innerHTML) ? 12 : 0;
+				total += /carbon fibre/i.test(item.querySelector(this.cfg.plateRule).innerHTML) ? 16 : 0;
+				total += /polycarbonate/i.test(item.querySelector(this.cfg.plateRule).innerHTML) ? 20 : 0;
+				total += /acrylic/i.test(item.querySelector(this.cfg.plateRule).innerHTML) ? 24 : 0;
+				total += /fr4/i.test(item.querySelector(this.cfg.plateRule).innerHTML) ? 28 : 0;
+				total += /aluminium/i.test(item.querySelector(this.cfg.plateRule).innerHTML) ? 32 : 0;
+				// actuation style
+				total += /(?=silent)(?=linear)/i.test(item.querySelector(this.cfg.actuationRule).innerHTML) ? -16 : 0;
+				total += /(?=silent)(?=tactile)/i.test(item.querySelector(this.cfg.actuationRule).innerHTML) ? 8 : 0;
+				total += /tactile/i.test(item.querySelector(this.cfg.actuationRule).innerHTML) ? 24 : 0;
+				total += /linear/i.test(item.querySelector(this.cfg.actuationRule).innerHTML) ? 32 : 0;
+				// switch quality
+				total += /durock|jwk/i.test(item.querySelector(this.cfg.switchesRule).innerHTML) ? 16 : 0;
+				total += /gateron/i.test(item.querySelector(this.cfg.switchesRule).innerHTML) ? 24 : 0;
+				total += /cherry|topre/i.test(item.querySelector(this.cfg.switchesRule).innerHTML) ? 32 : 0;
+				// keycaps quality
+				total += /jtk|xmi|xiami|jkdk/i.test(item.querySelector(this.cfg.keycapsRule).innerHTML) ? 4 : 0;
+				total += /epbt|cannoncaps/i.test(item.querySelector(this.cfg.keycapsRule).innerHTML) ? 8 : 0;
+				total += /gmk|shenpo|keykobo|kkb|jc/i.test(item.querySelector(this.cfg.keycapsRule).innerHTML) ? 16 : 0;
+				total += /dcs|crp/i.test(item.querySelector(this.cfg.keycapsRule).innerHTML) ? 24 : 0;
+				// form factor
+				total += /alice/i.test(item.querySelector(this.cfg.sizeRule).innerHTML) ? 8 : 0;
+				total += /60pct|60%/i.test(item.querySelector(this.cfg.sizeRule).innerHTML) ? 16 : 0;
+				total += /tkl/i.test(item.querySelector(this.cfg.sizeRule).innerHTML) ? 32 : 0;
+				// layout
+				total += /ISO/i.test(item.querySelector(this.cfg.layoutRule).innerHTML) ? 16 : 0;
+				// problems
+				total += item.querySelector(this.cfg.problemsRule).innerHTML.split(/\.|,/g).length * -10;
+				// update the score
+				item.querySelector(this.cfg.scoresRule).innerHTML = total;
+				// update the sort order
+				item.style.order = 1000 - total;
+			}
 		}
 	}
 
