@@ -13,7 +13,7 @@
 		<a href="keycaps.html">Keycaps</a>
 		<label>Zoom: <input type="range" min="0.5" max="1.5" step="0.05" value="1" name="zoom"/></label>
 		<label><input type="checkbox" name="expanded" checked/> Expanded</label>
-		<label><input type="checkbox" name="unwanted" checked/> Unwanted</label>
+		<label><input type="checkbox" name="excluded" checked/> Excluded</label>
 		<select>
 			<option value="unordered">unordered</option>
 			<option value="score">by score</option>
@@ -34,7 +34,12 @@
 		</select>
 	</h1>
 	<section data-sorting="tiers">
-		<ol data-tier="s">
+		<ol data-tier="s"></ol>
+		<ol data-tier="a"></ol>
+		<ol data-tier="b"></ol>
+		<ol data-tier="c"></ol>
+		<ol data-tier="d"></ol>
+		<ol data-tier="x">
 			<li data-actuation="linear" data-standard="common">
 				<figure data-view="side">
 					<img class="top" loading="lazy" src="media/safa-top.jpg" alt="Top view"/>
@@ -185,8 +190,6 @@
 					<dt>Score:</dt><dd class="score"></dd>
 				</dl>
 			</li>
-		</ol>
-		<ol data-tier="a">
 			<li data-actuation="linear" data-standard="unique">
 				<figure data-view="side">
 					<img class="top" loading="lazy" src="media/PXL_20230804_103006377.jpg" alt="Top view"/>
@@ -337,8 +340,6 @@
 					<dt>Score:</dt><dd class="score"></dd>
 				</dl>
 			</li>
-		</ol>
-		<ol data-tier="b">
 			<li data-actuation="topre" data-standard="common">
 				<figure data-view="side">
 					<img class="top" loading="lazy" src="media/PXL_20230115_072730867.jpg" alt="Top view"/>
@@ -489,8 +490,6 @@
 					<dt>Score:</dt><dd class="score"></dd>
 				</dl>
 			</li>
-		</ol>
-		<ol data-tier="c">
 			<li data-actuation="silent,tactile" data-standard="common">
 				<figure data-view="side">
 					<img class="top" loading="lazy" src="media/freebird-tkl-top.jpg" alt="Top view"/>
@@ -641,8 +640,6 @@
 					<dt>Score:</dt><dd class="score"></dd>
 				</dl>
 			</li>
-		</ol>
-		<ol data-tier="d">
 			<li data-actuation="linear" data-standard="unique">
 				<figure data-view="side">
 					<img class="top" loading="lazy" src="media/PXL_20230115_073322114.jpg" alt="Top view"/>
@@ -759,7 +756,7 @@
 					<dt>Mods:</dt><dd></dd>
 					<dt>Spares:</dt><dd class="spares">Any Hineybush H60 USB-C style PCB. Any Poker style PCB.</dd>
 					<dt>Theme:</dt><dd>A weight reduced version of basically everything, that still manages a satisfying sound and typing feel.</dd>
-					<dt>Problems:</dt><dd class="problems">Feels insubstantial. Fragile exposed internals.</dd>
+					<dt>Problems:</dt><dd class="problems">Fragile exposed internals.</dd>
 					<dt>Score:</dt><dd class="score"></dd>
 				</dl>
 			</li>
@@ -793,9 +790,7 @@
 					<dt>Score:</dt><dd class="score"></dd>
 				</dl>
 			</li>
-		</ol>
-		<ol data-tier="x">
-			<li data-actuation="linear" data-standard="unique">
+			<li data-actuation="linear" data-standard="unique" data-excluded>
 				<figure data-view="side">
 					<img class="top" loading="lazy" src="media/fate-nozomi-arisu-top.jpg" alt="Top view"/>
 					<img class="side" loading="lazy" src="media/fate-nozomi-arisu-side.jpg" alt="Side view"/>
@@ -821,7 +816,7 @@
 					<dt>Mods:</dt><dd>Standoffs made out of bumpons.</dd>
 					<dt>Spares:</dt><dd class="spares"></dd>
 					<dt>Theme:</dt><dd>A self laser cut glittery stacked acrylic keyboard.</dd>
-					<dt>Problems:</dt><dd class="problems">The Jels PCB is abandoned firmware support if sketchy.</dd>
+					<dt>Problems:</dt><dd class="problems">Firmware has been abandoned.</dd>
 					<dt>Score:</dt><dd class="score"></dd>
 				</dl>
 			</li>

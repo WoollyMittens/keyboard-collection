@@ -11,7 +11,9 @@ class OrderBy {
 		this.cfg = cfg;
 		// objects
 		this.container = document.querySelector(cfg.containerRule);
+		this.tiers = document.querySelectorAll(cfg.tiersRule);
 		this.items = document.querySelectorAll(cfg.itemsRule);
+		this.included = [...document.querySelectorAll(cfg.includedRule)];
 		this.sorter = document.querySelector(cfg.sortingRule);
 		this.zoomer = document.querySelector(cfg.zoomingRule);
 		this.expander = document.querySelector(cfg.expandingRule);
@@ -58,82 +60,85 @@ class OrderBy {
 		// restore the wanted value
 		this.unwanter.checked = values?.wanted;
 		this.unwant();
-		// restore the scoring system
-		this.rescore();
+		// for now just on the keyboards page
+		if (document.querySelector(this.cfg.bottomRule)) {
+			// restore the scoring system
+			this.rescore();
+			// restore the distributions across tiers
+			this.redistribute();
+		}
 	}
 
 	rescore() {
-		// if the keyboard properties are on the page
-		if (document.querySelector(this.cfg.bottomRule)) {
-			// for every item
-			for (let item of this.items) {
-				// set the default score
-				let total = 0;
-				// bottom material
-				total += /polycarbonate|acrylic/i.test(item.querySelector(this.cfg.bottomRule).innerHTML) ? 32 : 0;
-				total += /brass|copper/i.test(item.querySelector(this.cfg.bottomRule).innerHTML) ? 96 : 0;
-				// weight type
-				total += /external/i.test(item.querySelector(this.cfg.weightRule).innerHTML) ? 8 : 0;
-				total += /internal|through/i.test(item.querySelector(this.cfg.weightRule).innerHTML) ? 32 : 0;
-				// weight material
-				total += /steel|zinc/i.test(item.querySelector(this.cfg.weightRule).innerHTML) ? 8 : 0;
-				total += /brass|copper/i.test(item.querySelector(this.cfg.weightRule).innerHTML) ? 16 : 0;
-				// pcb standard
-				total += /common/i.test(item.getAttribute('data-standard')) ? 32 : 0;
-				// available spares
-				total += item.querySelector(this.cfg.sparesRule).innerHTML.split(/\.|,/g).length * 4;
-				// socket style
-				total += /hotswap/i.test(item.querySelector(this.cfg.socketsRule).innerHTML) ? 8 : 0;
-				total += /soldered/i.test(item.querySelector(this.cfg.socketsRule).innerHTML) ? 16 : 0;
-				total += /topre/i.test(item.querySelector(this.cfg.socketsRule).innerHTML) ? 32 : 0;
-				// mounting style
-				total += /sandwich/i.test(item.querySelector(this.cfg.mountRule).innerHTML) ? -16 : 0;
-				total += /tray|pcb/i.test(item.querySelector(this.cfg.mountRule).innerHTML) ? -8 : 0;
-				total += /gasket|hotdog|o-ring/i.test(item.querySelector(this.cfg.mountRule).innerHTML) ? 16 : 0;
-				total += /tadpole/i.test(item.querySelector(this.cfg.mountRule).innerHTML) ? 24 : 0;
-				total += /top/i.test(item.querySelector(this.cfg.mountRule).innerHTML) ? 32 : 0;
-				// plate material
-				total += /brass|copper/i.test(item.querySelector(this.cfg.plateRule).innerHTML) ? 4 : 0;
-				total += /steel/i.test(item.querySelector(this.cfg.plateRule).innerHTML) ? 8 : 0;
-				total += /pom/i.test(item.querySelector(this.cfg.plateRule).innerHTML) ? 12 : 0;
-				total += /carbon fibre/i.test(item.querySelector(this.cfg.plateRule).innerHTML) ? 16 : 0;
-				total += /polycarbonate/i.test(item.querySelector(this.cfg.plateRule).innerHTML) ? 20 : 0;
-				total += /acrylic/i.test(item.querySelector(this.cfg.plateRule).innerHTML) ? 24 : 0;
-				total += /fr4/i.test(item.querySelector(this.cfg.plateRule).innerHTML) ? 28 : 0;
-				total += /aluminium/i.test(item.querySelector(this.cfg.plateRule).innerHTML) ? 32 : 0;
-				// actuation style
-				total += /(?=silent)(?=linear)/i.test(item.querySelector(this.cfg.actuationRule).innerHTML) ? -8 : 0;
-				total += /(?=silent)(?=tactile)/i.test(item.querySelector(this.cfg.actuationRule).innerHTML) ? 8 : 0;
-				total += /tactile/i.test(item.querySelector(this.cfg.actuationRule).innerHTML) ? 24 : 0;
-				total += /linear/i.test(item.querySelector(this.cfg.actuationRule).innerHTML) ? 32 : 0;
-				// switch quality
-				total += /durock|jwk/i.test(item.querySelector(this.cfg.switchesRule).innerHTML) ? 16 : 0;
-				total += /gateron/i.test(item.querySelector(this.cfg.switchesRule).innerHTML) ? 24 : 0;
-				total += /cherry|topre/i.test(item.querySelector(this.cfg.switchesRule).innerHTML) ? 32 : 0;
-				// keycaps quality
-				total += /jtk|xmi|xiami|jkdk/i.test(item.querySelector(this.cfg.keycapsRule).innerHTML) ? 4 : 0;
-				total += /epbt|cannoncaps/i.test(item.querySelector(this.cfg.keycapsRule).innerHTML) ? 8 : 0;
-				total += /gmk|shenpo|keykobo|kkb|jc/i.test(item.querySelector(this.cfg.keycapsRule).innerHTML) ? 16 : 0;
-				total += /dcs|crp/i.test(item.querySelector(this.cfg.keycapsRule).innerHTML) ? 24 : 0;
-				// form factor
-				total += /alice/i.test(item.querySelector(this.cfg.sizeRule).innerHTML) ? 8 : 0;
-				total += /60pct|60%/i.test(item.querySelector(this.cfg.sizeRule).innerHTML) ? 16 : 0;
-				total += /tkl/i.test(item.querySelector(this.cfg.sizeRule).innerHTML) ? 32 : 0;
-				// layout
-				total += /ISO/i.test(item.querySelector(this.cfg.layoutRule).innerHTML) ? 16 : 0;
-				// problems
-				total += item.querySelector(this.cfg.problemsRule).innerHTML.split(/\.|,/g).length * -10;
-				// update the score
-				item.querySelector(this.cfg.scoresRule).innerHTML = total;
-				// update the sort order
-				item.style.order = 1000 - total;
-			}
+		// for every item
+		for (let item of this.items) {
+			// set the default score
+			let total = 0;
+			// bottom material
+			total += /polycarbonate|acrylic/i.test(item.querySelector(this.cfg.bottomRule).innerHTML) ? 32 : 0;
+			total += /brass|copper/i.test(item.querySelector(this.cfg.bottomRule).innerHTML) ? 96 : 0;
+			// weight type
+			total += /external/i.test(item.querySelector(this.cfg.weightRule).innerHTML) ? 8 : 0;
+			total += /internal|through/i.test(item.querySelector(this.cfg.weightRule).innerHTML) ? 32 : 0;
+			// weight material
+			total += /steel|zinc/i.test(item.querySelector(this.cfg.weightRule).innerHTML) ? 8 : 0;
+			total += /brass|copper/i.test(item.querySelector(this.cfg.weightRule).innerHTML) ? 16 : 0;
+			// pcb standard
+			total += /common/i.test(item.getAttribute('data-standard')) ? 32 : 0;
+			// available spares
+			total += item.querySelector(this.cfg.sparesRule).innerHTML.split(/\.|,/g).length * 4;
+			// socket style
+			total += /hotswap/i.test(item.querySelector(this.cfg.socketsRule).innerHTML) ? 8 : 0;
+			total += /soldered/i.test(item.querySelector(this.cfg.socketsRule).innerHTML) ? 16 : 0;
+			total += /topre/i.test(item.querySelector(this.cfg.socketsRule).innerHTML) ? 32 : 0;
+			// mounting style
+			total += /sandwich/i.test(item.querySelector(this.cfg.mountRule).innerHTML) ? -16 : 0;
+			total += /tray|pcb/i.test(item.querySelector(this.cfg.mountRule).innerHTML) ? -8 : 0;
+			total += /gasket|hotdog|o-ring/i.test(item.querySelector(this.cfg.mountRule).innerHTML) ? 16 : 0;
+			total += /tadpole/i.test(item.querySelector(this.cfg.mountRule).innerHTML) ? 24 : 0;
+			total += /top/i.test(item.querySelector(this.cfg.mountRule).innerHTML) ? 32 : 0;
+			// plate material
+			total += /brass|copper/i.test(item.querySelector(this.cfg.plateRule).innerHTML) ? 4 : 0;
+			total += /steel/i.test(item.querySelector(this.cfg.plateRule).innerHTML) ? 8 : 0;
+			total += /pom/i.test(item.querySelector(this.cfg.plateRule).innerHTML) ? 12 : 0;
+			total += /carbon fibre/i.test(item.querySelector(this.cfg.plateRule).innerHTML) ? 16 : 0;
+			total += /polycarbonate/i.test(item.querySelector(this.cfg.plateRule).innerHTML) ? 20 : 0;
+			total += /acrylic/i.test(item.querySelector(this.cfg.plateRule).innerHTML) ? 24 : 0;
+			total += /fr4/i.test(item.querySelector(this.cfg.plateRule).innerHTML) ? 28 : 0;
+			total += /aluminium/i.test(item.querySelector(this.cfg.plateRule).innerHTML) ? 32 : 0;
+			// actuation style
+			total += /(?=silent)(?=linear)/i.test(item.querySelector(this.cfg.actuationRule).innerHTML) ? -8 : 0;
+			total += /(?=silent)(?=tactile)/i.test(item.querySelector(this.cfg.actuationRule).innerHTML) ? 8 : 0;
+			total += /tactile/i.test(item.querySelector(this.cfg.actuationRule).innerHTML) ? 24 : 0;
+			total += /linear/i.test(item.querySelector(this.cfg.actuationRule).innerHTML) ? 32 : 0;
+			// switch quality
+			total += /gateron/i.test(item.querySelector(this.cfg.switchesRule).innerHTML) ? 16 : 0;
+			total += /cherry/i.test(item.querySelector(this.cfg.switchesRule).innerHTML) ? 24 : 0;
+			total += /topre/i.test(item.querySelector(this.cfg.switchesRule).innerHTML) ? 24 : 0;
+			// keycaps quality
+			total += /jtk|xmi|xiami|jkdk/i.test(item.querySelector(this.cfg.keycapsRule).innerHTML) ? 4 : 0;
+			total += /epbt|cannoncaps/i.test(item.querySelector(this.cfg.keycapsRule).innerHTML) ? 8 : 0;
+			total += /gmk|shenpo|keykobo|kkb|jc/i.test(item.querySelector(this.cfg.keycapsRule).innerHTML) ? 16 : 0;
+			total += /dcs|crp/i.test(item.querySelector(this.cfg.keycapsRule).innerHTML) ? 24 : 0;
+			// form factor
+			total += /1800|8k/i.test(item.querySelector(this.cfg.sizeRule).innerHTML) ? 8 : 0;
+			total += /alice/i.test(item.querySelector(this.cfg.sizeRule).innerHTML) ? 12 : 0;
+			total += /60pct|60%/i.test(item.querySelector(this.cfg.sizeRule).innerHTML) ? 16 : 0;
+			total += /frltkl/i.test(item.querySelector(this.cfg.sizeRule).innerHTML) ? 24 : 0;
+			total += /^tkl/i.test(item.querySelector(this.cfg.sizeRule).innerHTML) ? 32 : 0;
+			// layout
+			total += /ISO/i.test(item.querySelector(this.cfg.layoutRule).innerHTML) ? 16 : 0;
+			// problems
+			total += item.querySelector(this.cfg.problemsRule).innerHTML.split(/\.|,/g).length * -10;
+			// update the score
+			item.querySelector(this.cfg.scoresRule).innerHTML = total;
+			// update the sort order
+			item.style.order = 1000 - total;
 		}
 	}
 
 	refilter(value, rule) {
 		// filter the items
-		console.log(value, rule);
 		for(let item of this.items) {
 			let container = item.querySelector(rule);
 			if (container) item.setAttribute("data-filtered", value.test(container.innerHTML));
@@ -150,7 +155,6 @@ class OrderBy {
 	resort(evt) {
 		// apply specific filter
 		this.container.setAttribute("data-sorting", this.sorter.value);
-		console.log('this.sorter.value', this.sorter.value);
 		switch(this.sorter.value) {
 			case "score": this.rescore(); break;
 			case "hotswap_kb": this.refilter(/hotswap/i, this.cfg.socketsRule); break;
@@ -180,6 +184,22 @@ class OrderBy {
 		if (evt) this.store();
 	}
 
+	redistribute() {
+		// sort the items by score
+		this.included.sort((a,b) => +a.style.order - +b.style.order);
+		// for all the items
+		const tierCount = this.tiers.length;
+		for (let index in this.included) {
+			// do not move experimental items
+			if (!this.included[index].hasAttribute('data-experimental')) {
+				// calculate their tier
+				let tierIndex = Math.floor(tierCount * index / this.included.length);
+				// copy the element to the tier
+				this.tiers[tierIndex].appendChild(this.included[index]);
+			}
+		}
+	}
+
 	expand(evt) {
 		// add the expand flag
 		this.container.setAttribute("data-expand", this.expander.checked);
@@ -188,8 +208,8 @@ class OrderBy {
 	}
 
 	unwant(evt) {
-		// add the unwanted flag
-		this.container.setAttribute("data-unwanted", this.unwanter.checked);
+		// add the excluded flag
+		this.container.setAttribute("data-excluded", this.unwanter.checked);
 		// update the stored values
 		if (evt) this.store();
 	}
@@ -202,7 +222,9 @@ class OrderBy {
 
 new OrderBy({
 	containerRule: "section",
+	tiersRule: "ol:not([data-tier=\"x\"])",
 	itemsRule: "li",
+	includedRule: "li:not([data-excluded])",
 	socketsRule: "dd.sockets",
 	kittingsRule: "dd.kitting",
 	layoutRule: "dd.layout, dd.kitting",
@@ -211,7 +233,7 @@ new OrderBy({
 	sortingRule: "select",
 	zoomingRule: '[name="zoom"]',
 	expandingRule: '[name="expanded"]',
-	unwantingRule: '[name="unwanted"]',
+	unwantingRule: '[name="excluded"]',
 	indicatorsRule: "figure button",
 	scoresRule: "dd.score",
 	travelRule: "dd.travel",
