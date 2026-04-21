@@ -102,7 +102,7 @@ class OrderBy {
 				total += /fr4/i.test(item.querySelector(this.cfg.plateRule).innerHTML) ? 28 : 0;
 				total += /aluminium/i.test(item.querySelector(this.cfg.plateRule).innerHTML) ? 32 : 0;
 				// actuation style
-				total += /(?=silent)(?=linear)/i.test(item.querySelector(this.cfg.actuationRule).innerHTML) ? -16 : 0;
+				total += /(?=silent)(?=linear)/i.test(item.querySelector(this.cfg.actuationRule).innerHTML) ? -8 : 0;
 				total += /(?=silent)(?=tactile)/i.test(item.querySelector(this.cfg.actuationRule).innerHTML) ? 8 : 0;
 				total += /tactile/i.test(item.querySelector(this.cfg.actuationRule).innerHTML) ? 24 : 0;
 				total += /linear/i.test(item.querySelector(this.cfg.actuationRule).innerHTML) ? 32 : 0;
