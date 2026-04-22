@@ -78,8 +78,8 @@ class OrderBy {
 			total += /polycarbonate|acrylic/i.test(item.querySelector(this.cfg.bottomRule).innerHTML) ? 32 : 0;
 			total += /brass|copper/i.test(item.querySelector(this.cfg.bottomRule).innerHTML) ? 96 : 0;
 			// weight type
-			total += /external/i.test(item.querySelector(this.cfg.weightRule).innerHTML) ? 8 : 0;
-			total += /internal|through/i.test(item.querySelector(this.cfg.weightRule).innerHTML) ? 32 : 0;
+			total += /external/i.test(item.querySelector(this.cfg.weightRule).innerHTML) ? 32 : 0;
+			total += /internal|through/i.test(item.querySelector(this.cfg.weightRule).innerHTML) ? 48 : 0;
 			// weight material
 			total += /steel|zinc/i.test(item.querySelector(this.cfg.weightRule).innerHTML) ? 8 : 0;
 			total += /brass|copper/i.test(item.querySelector(this.cfg.weightRule).innerHTML) ? 16 : 0;
