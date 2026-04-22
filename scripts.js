@@ -93,8 +93,9 @@ class OrderBy {
 			total += /topre/i.test(item.querySelector(this.cfg.socketsRule).innerHTML) ? 32 : 0;
 			// mounting style
 			total += /sandwich/i.test(item.querySelector(this.cfg.mountRule).innerHTML) ? -16 : 0;
-			total += /tray|pcb/i.test(item.querySelector(this.cfg.mountRule).innerHTML) ? -8 : 0;
-			total += /gasket|hotdog|o-ring/i.test(item.querySelector(this.cfg.mountRule).innerHTML) ? 16 : 0;
+			total += /tray/i.test(item.querySelector(this.cfg.mountRule).innerHTML) ? -8 : 0;
+			total += /gasket|hotdog|o-ring/i.test(item.querySelector(this.cfg.mountRule).innerHTML) ? 12 : 0;
+			total += /pcb/i.test(item.querySelector(this.cfg.mountRule).innerHTML) ? 16 : 0;
 			total += /tadpole/i.test(item.querySelector(this.cfg.mountRule).innerHTML) ? 24 : 0;
 			total += /top/i.test(item.querySelector(this.cfg.mountRule).innerHTML) ? 32 : 0;
 			// plate material
@@ -127,9 +128,9 @@ class OrderBy {
 			total += /frltkl/i.test(item.querySelector(this.cfg.sizeRule).innerHTML) ? 24 : 0;
 			total += /^tkl/i.test(item.querySelector(this.cfg.sizeRule).innerHTML) ? 32 : 0;
 			// layout: ANSI vs ISO --- bottom row: OEM vs Tsangan --- blockers: Full vs HHKB vs WKL
-			total += /ISO/i.test(item.querySelector(this.cfg.layoutRule).innerHTML) ? 12 : 0;
-			total += /TSANGAN/i.test(item.querySelector(this.cfg.layoutRule).innerHTML) ? 12 : 0;
-			total += /HHKB|WKL/i.test(item.querySelector(this.cfg.layoutRule).innerHTML) ? 12 : 0;
+			total += /iso/i.test(item.querySelector(this.cfg.layoutRule).innerHTML) ? 12 : 0;
+			total += /tsangan/i.test(item.querySelector(this.cfg.layoutRule).innerHTML) ? 12 : 0;
+			total += /hhkb|wkl/i.test(item.querySelector(this.cfg.layoutRule).innerHTML) ? 12 : 0;
 			// problems
 			total += item.querySelector(this.cfg.problemsRule).innerHTML.split(/\.|,/g).length * -10;
 			// update the score
