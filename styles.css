@@ -494,7 +494,7 @@ section[data-sorting="standard"] ol:before {
 }
 
 [data-sorting="actuation"] li[data-actuation*="topre"] {
-  order: 7500;
+  order: 7500 !important;
 }
 
 [data-sorting="standard"] h2.common {
@@ -502,7 +502,7 @@ section[data-sorting="standard"] ol:before {
 }
 
 [data-sorting="standard"] li[data-standard="common"] {
-  order: 8500;
+  order: 8500 !important;
 }
 
 [data-sorting="standard"] h2.unique {
@@ -510,7 +510,7 @@ section[data-sorting="standard"] ol:before {
 }
 
 [data-sorting="standard"] li[data-standard="unique"] {
-  order: 9500;
+  order: 9500 !important;
 }
 
 /* responsive */
