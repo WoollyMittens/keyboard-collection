@@ -347,7 +347,7 @@ section[data-sorting="tiers"] ol {
 
 section[data-sorting="tiers"] ol {
   position: relative;
-  padding: 1rem 1rem 1rem min(calc(100% / 5 + 1rem), 32rem);
+  padding: 1rem 1rem 1rem min(calc(100% / 6 + 1rem), 32rem);
   min-height: 8rem;
 }
 
@@ -364,7 +364,7 @@ section[data-sorting="tiers"] ol:before {
   left: 1rem;
   top: 1rem;
   bottom: 1rem;
-  width: min(calc(100% / 5 - 1rem), 30rem);
+  width: min(calc(100% / 6 - 1rem), 30rem);
   z-index: 20;
 }
 
