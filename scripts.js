@@ -81,6 +81,7 @@ class OrderBy {
 			total += /external/i.test(item.querySelector(this.cfg.weightRule).innerHTML) ? 32 : 0;
 			total += /internal|through/i.test(item.querySelector(this.cfg.weightRule).innerHTML) ? 48 : 0;
 			// weight material
+			total += /carbon/i.test(item.querySelector(this.cfg.weightRule).innerHTML) ? -32 : 0;
 			total += /steel|zinc/i.test(item.querySelector(this.cfg.weightRule).innerHTML) ? 8 : 0;
 			total += /brass|copper/i.test(item.querySelector(this.cfg.weightRule).innerHTML) ? 16 : 0;
 			// pcb standard
@@ -227,7 +228,7 @@ new OrderBy({
 	containerRule: "section",
 	tiersRule: "ol:not([data-tier=\"x\"])",
 	itemsRule: "li",
-	includedRule: "li:not([data-excluded])",
+	includedRule: "li:not([data-excluded]):not([data-unavailable])",
 	socketsRule: "dd.sockets",
 	kittingsRule: "dd.kitting",
 	layoutRule: "dd.layout, dd.kitting",
