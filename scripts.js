@@ -133,7 +133,7 @@ class OrderBy {
 			total += /^tkl/i.test(item.querySelector(this.cfg.sizeRule).innerHTML) ? 32 : 0;
 			// layout: ANSI vs ISO --- bottom row: OEM vs Tsangan --- blockers: Full vs HHKB vs WKL
 			total += /iso/i.test(item.querySelector(this.cfg.layoutRule).innerHTML) ? 12 : 0;
-			total += /tsangan/i.test(item.querySelector(this.cfg.layoutRule).innerHTML) ? 12 : 0;
+			total += /tsangan|7u/i.test(item.querySelector(this.cfg.layoutRule).innerHTML) ? 12 : 0;
 			total += /hhkb|wkl/i.test(item.querySelector(this.cfg.layoutRule).innerHTML) ? 12 : 0;
 			// problems
 			total += item.querySelector(this.cfg.problemsRule).innerHTML.split(/\.|,/g).length * -10;
