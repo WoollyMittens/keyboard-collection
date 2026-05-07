@@ -179,6 +179,7 @@ ol[data-tier="x"] li:before {
 
 /* state */
 
+li[data-used]:after,
 li[data-pending]:after {
   content: "";
   position: absolute;
