@@ -114,6 +114,9 @@ class OrderBy {
 			total += /tactile/i.test(item.querySelector(this.cfg.actuationRule).innerHTML) ? 24 : 0;
 			total += /linear/i.test(item.querySelector(this.cfg.actuationRule).innerHTML) ? 32 : 0;
 			// switch quality
+			total += /kailh|novelkeys/i.test(item.querySelector(this.cfg.switchesRule).innerHTML) ? -4 : 0;
+			total += /durock/i.test(item.querySelector(this.cfg.switchesRule).innerHTML) ? 4 : 0;
+			total += /sp star|haimu/i.test(item.querySelector(this.cfg.switchesRule).innerHTML) ? 8 : 0;
 			total += /gateron/i.test(item.querySelector(this.cfg.switchesRule).innerHTML) ? 16 : 0;
 			total += /cherry/i.test(item.querySelector(this.cfg.switchesRule).innerHTML) ? 24 : 0;
 			total += /topre/i.test(item.querySelector(this.cfg.switchesRule).innerHTML) ? 32 : 0;
