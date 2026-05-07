@@ -224,7 +224,7 @@ class OrderBy {
 	}
 }
 
-new OrderBy({
+const orderBy = new OrderBy({
 	containerRule: "section",
 	tiersRule: "ol:not([data-tier=\"x\"])",
 	itemsRule: "li",
