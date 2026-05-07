@@ -116,12 +116,12 @@ class OrderBy {
 			// switch quality
 			total += /gateron/i.test(item.querySelector(this.cfg.switchesRule).innerHTML) ? 16 : 0;
 			total += /cherry/i.test(item.querySelector(this.cfg.switchesRule).innerHTML) ? 24 : 0;
-			total += /topre/i.test(item.querySelector(this.cfg.switchesRule).innerHTML) ? 24 : 0;
+			total += /topre/i.test(item.querySelector(this.cfg.switchesRule).innerHTML) ? 32 : 0;
 			// keycaps quality
-			total += /jtk|xmi|xiami|jkdk/i.test(item.querySelector(this.cfg.keycapsRule).innerHTML) ? 4 : 0;
-			total += /epbt|cannoncaps/i.test(item.querySelector(this.cfg.keycapsRule).innerHTML) ? 8 : 0;
-			total += /gmk|shenpo|keykobo|kkb|jc/i.test(item.querySelector(this.cfg.keycapsRule).innerHTML) ? 16 : 0;
-			total += /dcs|crp/i.test(item.querySelector(this.cfg.keycapsRule).innerHTML) ? 24 : 0;
+			total += /jtk|jkdk|nicepbt/i.test(item.querySelector(this.cfg.keycapsRule).innerHTML) ? 4 : 0;
+			total += /domikey|dmk|pbtfans|epbt|cannoncaps|omnitype/i.test(item.querySelector(this.cfg.keycapsRule).innerHTML) ? 8 : 0;
+			total += /gmk|shenpo|xmi|xiami|keykobo|jc|kap/i.test(item.querySelector(this.cfg.keycapsRule).innerHTML) ? 16 : 0;
+			total += /dss|dcs|crp/i.test(item.querySelector(this.cfg.keycapsRule).innerHTML) ? 24 : 0;
 			// form factor
 			total += /1800|8k/i.test(item.querySelector(this.cfg.sizeRule).innerHTML) ? 8 : 0;
 			total += /alice/i.test(item.querySelector(this.cfg.sizeRule).innerHTML) ? 12 : 0;

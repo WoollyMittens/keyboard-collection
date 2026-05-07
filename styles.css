@@ -179,7 +179,7 @@ ol[data-tier="x"] li:before {
 
 /* state */
 
-li[data-damaged]:after {
+li[data-pending]:after {
   content: "";
   position: absolute;
   right: -0.25rem;
