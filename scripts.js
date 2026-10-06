@@ -75,22 +75,25 @@ class OrderBy {
 			// set the default score
 			let total = 0;
 			// bottom material
-			total += /polycarbonate|acrylic/i.test(item.querySelector(this.cfg.bottomRule).innerHTML) ? 32 : 0;
-			total += /brass|copper/i.test(item.querySelector(this.cfg.bottomRule).innerHTML) ? 96 : 0;
+			total += /polycarbonate|acrylic/i.test(item.querySelector(this.cfg.bottomRule).innerHTML) ? 16 : 0;
+			total += /brass/i.test(item.querySelector(this.cfg.bottomRule).innerHTML) ? 56 : 0;
+			total += /copper/i.test(item.querySelector(this.cfg.bottomRule).innerHTML) ? 64 : 0;
 			// weight type
-			total += /external/i.test(item.querySelector(this.cfg.weightRule).innerHTML) ? 32 : 0;
-			total += /internal|through/i.test(item.querySelector(this.cfg.weightRule).innerHTML) ? 48 : 0;
+			total += /^(?=.*external)(?!.*internal).*$/i.test(item.querySelector(this.cfg.weightRule).innerHTML) ? 16 : 0;
+			total += /^(?=.*through)(?!.*internal).*$/i.test(item.querySelector(this.cfg.weightRule).innerHTML) ? 24 : 0;
+			total += /internal/i.test(item.querySelector(this.cfg.weightRule).innerHTML) ? 32 : 0;
 			// weight material
-			total += /carbon/i.test(item.querySelector(this.cfg.weightRule).innerHTML) ? -32 : 0;
-			total += /steel|zinc/i.test(item.querySelector(this.cfg.weightRule).innerHTML) ? 8 : 0;
-			total += /brass|copper/i.test(item.querySelector(this.cfg.weightRule).innerHTML) ? 16 : 0;
+			total += /steel/i.test(item.querySelector(this.cfg.weightRule).innerHTML) ? 8 : 0;
+			total += /zinc/i.test(item.querySelector(this.cfg.weightRule).innerHTML) ? 16 : 0;
+			total += /brass/i.test(item.querySelector(this.cfg.weightRule).innerHTML) ? 24 : 0;
+			total += /copper/i.test(item.querySelector(this.cfg.weightRule).innerHTML) ? 32 : 0;
 			// pcb standard
 			total += /common/i.test(item.getAttribute('data-standard')) ? 32 : 0;
 			// available spares
 			total += item.querySelector(this.cfg.sparesRule).innerHTML.split(/\.|,/g).length * 4;
 			// socket style
-			total += /hotswap/i.test(item.querySelector(this.cfg.socketsRule).innerHTML) ? 8 : 0;
 			total += /soldered/i.test(item.querySelector(this.cfg.socketsRule).innerHTML) ? 16 : 0;
+			total += /hotswap/i.test(item.querySelector(this.cfg.socketsRule).innerHTML) ? 24 : 0;
 			total += /topre/i.test(item.querySelector(this.cfg.socketsRule).innerHTML) ? 32 : 0;
 			// mounting style
 			total += /sandwich/i.test(item.querySelector(this.cfg.mountRule).innerHTML) ? -16 : 0;
@@ -109,29 +112,28 @@ class OrderBy {
 			total += /fr4/i.test(item.querySelector(this.cfg.plateRule).innerHTML) ? 28 : 0;
 			total += /aluminium/i.test(item.querySelector(this.cfg.plateRule).innerHTML) ? 32 : 0;
 			// actuation style
-			total += /(?=silent)(?=linear)/i.test(item.querySelector(this.cfg.actuationRule).innerHTML) ? -8 : 0;
-			total += /(?=silent)(?=tactile)/i.test(item.querySelector(this.cfg.actuationRule).innerHTML) ? 8 : 0;
+			total += /(?=silent)(?=linear)/i.test(item.querySelector(this.cfg.actuationRule).innerHTML) ? 12 : 0;
+			total += /(?=silent)(?=tactile)/i.test(item.querySelector(this.cfg.actuationRule).innerHTML) ? 16 : 0;
 			total += /tactile/i.test(item.querySelector(this.cfg.actuationRule).innerHTML) ? 24 : 0;
 			total += /linear/i.test(item.querySelector(this.cfg.actuationRule).innerHTML) ? 32 : 0;
 			// switch quality
-			total += /kailh|novelkeys/i.test(item.querySelector(this.cfg.switchesRule).innerHTML) ? -4 : 0;
-			total += /durock/i.test(item.querySelector(this.cfg.switchesRule).innerHTML) ? 4 : 0;
-			total += /sp star|haimu/i.test(item.querySelector(this.cfg.switchesRule).innerHTML) ? 8 : 0;
-			total += /gateron/i.test(item.querySelector(this.cfg.switchesRule).innerHTML) ? 16 : 0;
-			total += /cherry/i.test(item.querySelector(this.cfg.switchesRule).innerHTML) ? 24 : 0;
+			total += /kailh|outemu/i.test(item.querySelector(this.cfg.switchesRule).innerHTML) ? -8 : 0;
+			total += /durock|jwk|novelkeys/i.test(item.querySelector(this.cfg.switchesRule).innerHTML) ? 8 : 0;
+			total += /sp star|haimu|aeboards/i.test(item.querySelector(this.cfg.switchesRule).innerHTML) ? 16 : 0;
+			total += /cherry|gateron/i.test(item.querySelector(this.cfg.switchesRule).innerHTML) ? 24 : 0;
 			total += /topre/i.test(item.querySelector(this.cfg.switchesRule).innerHTML) ? 32 : 0;
 			// keycaps quality
-			total += /jtk|jkdk|nicepbt/i.test(item.querySelector(this.cfg.keycapsRule).innerHTML) ? 4 : 0;
-			total += /domikey|dmk|pbtfans|epbt|cannoncaps|omnitype/i.test(item.querySelector(this.cfg.keycapsRule).innerHTML) ? 8 : 0;
-			total += /gmk|shenpo|xmi|xiami|keykobo|jc|kap/i.test(item.querySelector(this.cfg.keycapsRule).innerHTML) ? 16 : 0;
-			total += /dss|dcs|crp/i.test(item.querySelector(this.cfg.keycapsRule).innerHTML) ? 24 : 0;
+			total += /jtk|jkdk|nicepbt/i.test(item.querySelector(this.cfg.keycapsRule).innerHTML) ? 8 : 0;
+			total += /domikey|dmk|pbtfans|epbt|cannoncaps|omnitype/i.test(item.querySelector(this.cfg.keycapsRule).innerHTML) ? 16 : 0;
+			total += /gmk|shenpo|xmi|xiami|keykobo|jc|kap/i.test(item.querySelector(this.cfg.keycapsRule).innerHTML) ? 24 : 0;
+			total += /dss|dcs|crp/i.test(item.querySelector(this.cfg.keycapsRule).innerHTML) ? 32 : 0;
 			// form factor
-			total += /1800|8k/i.test(item.querySelector(this.cfg.sizeRule).innerHTML) ? 8 : 0;
-			total += /alice/i.test(item.querySelector(this.cfg.sizeRule).innerHTML) ? 12 : 0;
-			total += /60pct|60%/i.test(item.querySelector(this.cfg.sizeRule).innerHTML) ? 16 : 0;
-			total += /frltkl/i.test(item.querySelector(this.cfg.sizeRule).innerHTML) ? 24 : 0;
-			total += /^tkl/i.test(item.querySelector(this.cfg.sizeRule).innerHTML) ? 32 : 0;
-			// layout: ANSI vs ISO --- bottom row: OEM vs Tsangan --- blockers: Full vs HHKB vs WKL
+			total += /65%|75%|65pct|75pct/i.test(item.querySelector(this.cfg.sizeRule).innerHTML) ? 0 : 0;
+			total += /alice|arisu/i.test(item.querySelector(this.cfg.sizeRule).innerHTML) ? 8 : 0;
+			total += /1800|8k/i.test(item.querySelector(this.cfg.sizeRule).innerHTML) ? 16 : 0;
+			total += /60pct|60%/i.test(item.querySelector(this.cfg.sizeRule).innerHTML) ? 24 : 0;
+			total += /^tkl|frltkl/i.test(item.querySelector(this.cfg.sizeRule).innerHTML) ? 32 : 0;
+			// layout
 			total += /iso/i.test(item.querySelector(this.cfg.layoutRule).innerHTML) ? 12 : 0;
 			total += /tsangan|7u/i.test(item.querySelector(this.cfg.layoutRule).innerHTML) ? 12 : 0;
 			total += /hhkb|wkl/i.test(item.querySelector(this.cfg.layoutRule).innerHTML) ? 12 : 0;
